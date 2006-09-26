@@ -259,6 +259,10 @@
     <canonical_units>m s-1</canonical_units>
     <description>A velocity is a vector quantity. &quot;Northward&quot; indicates a vector component which is positive when directed northward (negative southward).</description>
   </entry>
+  <entry id="baseflow_amount">
+    <canonical_units>kg m-2</canonical_units>
+    <description>&quot;Baseflow&quot; is subsurface runoff which takes place below the level of the water table. Runoff is the liquid water which drains from land. &quot;Amount&quot; means mass per unit area.</description>
+  </entry>
   <entry id="bedrock_altitude">
     <canonical_units>m</canonical_units>
     <description>Altitude is the (geometric) height above the geoid, which is the reference geopotential surface. The geoid is similar to mean sea level. &quot;Bedrock&quot; is the solid Earth surface beneath land ice or ocean water.</description>
@@ -410,6 +414,10 @@
   <entry id="coriolis_parameter">
     <canonical_units>s-1</canonical_units>
     <description>The Coriolis parameter is twice the component of the earth's angular velocity about the local vertical i.e. 2 W sin L, where L is latitude and W the angular speed of the earth.</description>
+  </entry>
+  <entry id="correction_for_model_negative_specific_humidity">
+    <canonical_units>1</canonical_units>
+    <description>A numerical correction which is added to modelled negative specific humidities in order to obtain a value of zero.</description>
   </entry>
   <entry id="depth">
     <canonical_units>m</canonical_units>
@@ -624,7 +632,7 @@
     <canonical_units>s</canonical_units>
     <description>The WMO definition of sunshine is that the surface incident radiative flux from the solar beam (i.e. excluding diffuse skylight) exceeds 120 W m-2. &quot;Duration&quot; is the length of time for which a condition holds.</description>
   </entry>
-  <entry id="eastward_atmosphere_dry_static_energy_transport_across_unit_distance">
+<entry id="eastward_atmosphere_dry_static_energy_transport_across_unit_distance">
     <canonical_units>W m-1</canonical_units>
     <description>&quot;Eastward&quot; indicates a vector component which is positive when directed eastward (negative westward). Transport across_unit_distance means expressed per unit distance normal to the direction of transport. Dry static energy is the sum of enthalpy and potential energy (itself the sum of gravitational and centripetal potential energy). Enthalpy can be written either as (1) CpT, where Cp is heat capacity at constant pressure, T is absolute temperature, or (2) U+pV, where U is internal energy, p is pressure and V is volume.</description>
   </entry>
@@ -1278,6 +1286,10 @@
     <canonical_units>W m-2</canonical_units>
     <description>A phrase assuming_condition indicates that the named quantity is the value which would obtain if all aspects of the system were unaltered except for the assumption of the circumstances specified by the condition. &quot;shortwave&quot; means shortwave radiation. &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward). Net upward radiation is the difference between radiation from below (upwelling) and radiation from above (downwelling). In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
   </entry>
+  <entry id="normalized_difference_vegetation_index">
+    <canonical_units>1</canonical_units>
+    <description>&quot;Normalized_difference_vegetation_index&quot;, usually abbreviated to NDVI, is an index calculated from reflectances measured in the visible and near infrared channels.  It is calculated as NDVI = (NIR - R) / (NIR + R) where NIR is the reflectance in the near-infrared band and R is the reflectance in the red visible band.  Reflectance is the ratio of the reflected over the incoming radiation in each spectral band.  The calculated value of NDVI depends on the precise definitions of the spectral bands and these definitions may vary between different models and remote sensing instruments.</description>
+  </entry>
   <entry id="northward_atmosphere_dry_static_energy_transport_across_unit_distance">
     <canonical_units>W m-1</canonical_units>
     <description>&quot;Northward&quot; indicates a vector component which is positive when directed northward (negative southward). Transport across_unit_distance means expressed per unit distance normal to the direction of transport. Dry static energy is the sum of enthalpy and potential energy (itself the sum of gravitational and centripetal potential energy). Enthalpy can be written either as (1) CpT, where Cp is heat capacity at constant pressure, T is absolute temperature, or (2) U+pV, where U is internal energy, p is pressure and V is volume.</description>
@@ -1707,6 +1719,10 @@
     <canonical_units>kg m-2</canonical_units>
     <description>&quot;Amount&quot; means mass per unit area. Runoff is the liquid water which drains from land. If not specified, &quot;runoff&quot; refers to the sum of surface runoff and subsurface drainage.</description>
   </entry>
+  <entry id="runoff_amount_excluding_baseflow">
+    <canonical_units>kg m-2</canonical_units>
+    <description>Runoff is the liquid water which drains from land. &quot;Runoff_excluding_baseflow" is the sum of surface runoff and subsurface runoff excluding baseflow.  Baseflow is subsurface runoff which takes place below the level of the water table.  &quot;Amount&quot; means mass per unit area.</description>
+  </entry>
   <entry id="runoff_flux">
     <canonical_units>kg m-2 s-1</canonical_units>
     <amip>mrro</amip>
@@ -1796,12 +1812,16 @@
   </entry>
   <entry id="sea_surface_height_above_geoid">
     <canonical_units>m</canonical_units>
-    <description>The geoid is a surface of constant geopotential with which mean sea level would coincide if the ocean were at rest. (The volume enclosed between the geoid and the sea floor equals the mean volume of water in the ocean.) In an ocean GCM the geoid is the surface of zero depth, or the rigid lid if the model uses that approximation. &quot;Sea surface height&quot; is a time-varying quantity. By definition of the geoid, the global average of the time-mean sea surface height (i.e. mean sea level) above the geoid must be zero. The standard name for the height of the sea surface above mean sea level is sea_surface_height_above_sea_level.</description>
+    <description>The geoid is a surface of constant geopotential with which mean sea level would coincide if the ocean were at rest. (The volume enclosed between the geoid and the sea floor equals the mean volume of water in the ocean.) In an ocean GCM the geoid is the surface of zero depth, or the rigid lid if the model uses that approximation. &quot;Sea surface height&quot; is a time-varying quantity. By definition of the geoid, the global average of the time-mean sea surface height (i.e. mean sea level) above the geoid must be zero. The standard name for the height of the sea surface above mean sea level is sea_surface_height_above_sea_level. The standard name for the height of the sea surface above the reference ellipsoid is sea_surface_height_above_reference_ellipsoid.</description>
+  </entry>
+  <entry id="sea_surface_height_above_reference_ellipsoid">
+    <canonical_units>m</canonical_units>
+    <description>&quot;Sea surface height&quot; is a time-varying quantity.  A reference ellipsoid is a mathematical figure that approximates the geoid.  The geoid is a surface of constant geopotential with which mean sea level would coincide if the ocean were at rest.  The ellipsoid is an approximation because the geoid is an irregular shape. A number of reference ellipsoids are defined for use in the field of geodesy.  The standard name for the height of the sea surface above the geoid is sea_surface_height_above_geoid.  The standard name for the height of the sea surface above mean sea level is sea_surface_height_above_sea_level.</description>
   </entry>
   <entry id="sea_surface_height_above_sea_level">
     <canonical_units>m</canonical_units>
     <grib>82</grib>
-    <description>sea_level means mean sea level, which is close to the geoid in sea areas. &quot;Sea surface height&quot; is a time-varying quantity. The standard name for the height of the sea surface above the geoid is sea_surface_height_above_geoid.</description>
+    <description>sea_level means mean sea level, which is close to the geoid in sea areas. &quot;Sea surface height&quot; is a time-varying quantity. The standard name for the height of the sea surface above the geoid is sea_surface_height_above_geoid. The standard name for the height of the sea surface above the reference ellipsoid is sea_surface_height_above_reference_ellipsoid.</description>
   </entry>
   <entry id="sea_surface_salinity">
     <canonical_units>1e-3</canonical_units>
@@ -2335,6 +2355,14 @@
     <canonical_units>1</canonical_units>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere.</description>
   </entry>
+  <entry id="surface_eastward_geostrophic_sea_water_velocity">
+    <canonical_units>m s-1</canonical_units>
+    <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  A velocity is a vector quantity. &quot;Eastward&quot; indicates a vector component which is positive when directed eastward (negative westward).  &quot;Geostrophic&quot; indicates that geostrophic balance is assumed.  &quot;Water&quot; means water in all phases.  surface_eastward_sea_water_geostrophic_velocity is the sum of a variable part, surface_eastward_sea_water_geostrophic_velocity_assuming_sea_level_for_geoid, and a constant part due to the stationary component of ocean circulation.</description>
+  </entry>
+  <entry id="surface_eastward_geostrophic_sea_water_velocity_assuming_sea_level_for_geoid">
+    <canonical_units>m s-1</canonical_units>
+    <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  A velocity is a vector quantity. &quot;Eastward&quot; indicates a vector component which is positive when directed eastward (negative westward).  &quot;Geostrophic&quot; indicates that geostrophic balance is assumed.  &quot;Water&quot; means water in all phases.  &quot;sea_level&quot; means mean sea level.  The geoid is a surface of constant geopotential with which mean sea level would coincide if the ocean were at rest.  surface_eastward_sea_water_geostrophic_velocity_assuming_sea_level_for_geoid is the variable part of surface_eastward_sea_water_geostrophic_velocity.  The assumption that sea level is equal to the geoid means that the stationary component of ocean circulation is equal to zero.</description>
+  </entry>
   <entry id="surface_eastward_sea_water_velocity">
     <canonical_units>m s-1</canonical_units>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. &quot;Water&quot; means water in all phases, including frozen i.e. ice and snow. A velocity is a vector quantity. &quot;Eastward&quot; indicates a vector component which is positive when directed eastward (negative westward).</description>
@@ -2352,6 +2380,10 @@
     <canonical_units>W m-2</canonical_units>
     <grib>E211</grib>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. A phrase assuming_condition indicates that the named quantity is the value which would obtain if all aspects of the system were unaltered except for the assumption of the circumstances specified by the condition. &quot;longwave&quot; means longwave radiation. &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward). Net downward radiation is the difference between radiation from above (downwelling) and radiation from below (upwelling). In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
+  </entry>
+  <entry id="surface_net_downward_radiative_flux_where_land">
+    <canonical_units>W m-2</canonical_units>
+    <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward). Net downward radiation is the difference between radiation from above (downwelling) and radiation from below (upwelling). Radiative flux is the sum of shortwave and longwave radiative fluxes. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics. Unless indicated, a quantity is assumed to apply to the whole area of each horizontal grid box. The qualifier where_type specifies instead that the quantity applies only to the part of the grid box of the named type.</description>
   </entry>
   <entry id="surface_net_downward_shortwave_flux">
     <canonical_units>W m-2</canonical_units>
@@ -2376,6 +2408,14 @@
     <canonical_units>W m-2</canonical_units>
     <grib>111 E177</grib>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. &quot;shortwave&quot; means shortwave radiation. &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward). Net upward radiation is the difference between radiation from below (upwelling) and radiation from above (downwelling). In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
+  </entry>
+  <entry id="surface_northward_geostrophic_sea_water_velocity">
+    <canonical_units>m s-1</canonical_units>
+    <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  A velocity is a vector quantity. &quot;Northward&quot; indicates a vector component which is positive when directed northward (negative southward).  &quot;Geostrophic&quot; indicates that geostrophic balance is assumed.  &quot;Water&quot; means water in all phases.  surface_northward_sea_water_geostrophic_velocity is the sum of a variable part, surface_northward_sea_water_geostrophic_velocity_assuming_sea_level_for_geoid, and a constant part due to the stationary component of ocean circulation.</description>
+  </entry>
+  <entry id="surface_northward_geostrophic_sea_water_velocity_assuming_sea_level_for_geoid">
+    <canonical_units>m s-1</canonical_units>
+    <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  A velocity is a vector quantity.  &quot;Northward&quot; indicates a vector component which is positive when directed northward (negative southward). &quot;Geostrophic&quot; indicates that geostrophic balance is assumed.  &quot;Water&quot; means water in all phases.  &quot;sea_level&quot; means mean sea level.  The geoid is a surface of constant geopotential with which mean sea level would coincide if the ocean were at rest.  surface_northward_sea_water_geostrophic_velocity_assuming_sea_level_for_geoid is the variable part of surface_northward_sea_water_geostrophic_velocity.  The assumption that sea level is equal to the geoid means that the stationary component of ocean circulation is equal to zero.</description>
   </entry>
   <entry id="surface_northward_sea_water_velocity">
     <canonical_units>m s-1</canonical_units>
@@ -3182,6 +3222,10 @@
   <entry id="volume_fraction_of_water_in_soil">
     <canonical_units>1</canonical_units>
     <description>&quot;Water&quot; means water in all phases. &quot;Volume fraction&quot; is used in the construction volume_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="volume_fraction_of_water_in_soil_at_critical_point">
+    <canonical_units>1</canonical_units>
+    <description>&quot;Water&quot; means water in all phases. &quot;Volume fraction&quot; is used in the construction volume_fraction_of_X_in_Y, where X is a material constituent of Y.  When soil moisture equals or exceeds the critical point evapotranspiration takes place at the potential rate and is controlled by the ambient meteorological conditions (temperature, wind, relative humidity).  Evapotranspiration is the sum of evaporation and plant transpiration.  Potential evapotranspiration is the rate at which evapotranspiration would occur under ambient conditions from a uniformly vegetated area when the water supply is not limiting.</description>
   </entry>
   <entry id="volume_fraction_of_water_in_soil_at_field_capacity">
     <canonical_units>1</canonical_units>
