@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <standard_name_table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CFStandardNameTable-1.1.xsd">
-  <version_number>2</version_number>
-  <last_modified>2006-09-26T18:12:43Z</last_modified>
+  <version_number>4</version_number>
+  <last_modified>2007-03-09T17:00:00Z</last_modified>
   <institution>Program for Climate Model Diagnosis and Intercomparison</institution>
   <contact>webmaster@pcmdi.llnl.gov</contact>
   <entry id="aerosol_angstrom_exponent">
@@ -1851,7 +1851,7 @@
     <description>Sea surface temperature is usually abbreviated as &quot;SST&quot;. It is the temperature of sea water near the surface (including the part under sea-ice, if any), and not the skin temperature, whose standard name is surface_temperature. For the temperature of sea water at a particular depth or layer, a data variable of sea_water_temperature with a vertical coordinate axis should be used.</description>
   </entry>
   <entry id="sea_surface_wave_directional_variance_spectral_density">
-    <canonical_units>m2 s-1 rad-1</canonical_units>
+    <canonical_units>m2 s rad-1</canonical_units>
     <description>Sea surface wave directional variance spectral density is the variance of the amplitude of the waves within given ranges of direction and wave frequency.</description>
   </entry>
   <entry id="sea_surface_wave_frequency">
@@ -1872,7 +1872,7 @@
     <description>&quot;to_direction&quot; is used in the construction X_to_direction and indicates the direction towards which the velocity vector of X is headed.</description>
   </entry>
   <entry id="sea_surface_wave_variance_spectral_density">
-    <canonical_units>m2 s-1</canonical_units>
+    <canonical_units>m2 s</canonical_units>
     <description>Sea surface wave variance spectral density is the variance of wave amplitude within a range of wave frequency.</description>
   </entry>
   <entry id="sea_surface_wave_zero_upcrossing_period">
@@ -2979,6 +2979,10 @@
   <entry id="toa_instantaneous_shortwave_forcing">
     <canonical_units>W m-2</canonical_units>
     <description>&quot;shortwave&quot; means shortwave radiation. &quot;toa&quot; means top of atmosphere. Instantaneous forcing is the radiative flux change caused instantaneously by an imposed change in radiative forcing agent (greenhouse gases, aerosol, solar radiation, etc.).</description>
+  </entry>
+  <entry id="toa_net_downward_longwave_flux">
+    <canonical_units>W m-2</canonical_units>
+    <description>&quot;longwave&quot; means longwave radiation. &quot;toa&quot; means top of atmosphere.   &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward).  Net downward radiation is the difference between radiation from above (downwelling) and radiation from below (upwelling).  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
   </entry>
   <entry id="toa_net_downward_radiative_flux">
     <canonical_units>W m-2</canonical_units>
