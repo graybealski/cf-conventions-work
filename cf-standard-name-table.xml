@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <standard_name_table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CFStandardNameTable-1.1.xsd">
-  <version_number>4</version_number>
-  <last_modified>2007-03-09T17:00:00Z</last_modified>
+  <version_number>5</version_number>
+  <last_modified>2007-05-12T02:00:00Z</last_modified>
   <institution>Program for Climate Model Diagnosis and Intercomparison</institution>
   <contact>webmaster@pcmdi.llnl.gov</contact>
   <entry id="aerosol_angstrom_exponent">
@@ -183,6 +183,10 @@
     <canonical_units>1</canonical_units>
     <description>&quot;ln_X&quot; means natural logarithm of X. X must be dimensionless. See Appendix D of the CF convention for information about dimensionless vertical coordinates.</description>
   </entry>
+  <entry id="atmosphere_mass_of_air_per_unit_area">
+    <canonical_units>kg m-2</canonical_units>
+    <description>&quot;Mass_of_air&quot; means the mass due solely to the gaseous constituents of the atmosphere.  The standard name for the mass including precipitation and aerosol particles is atmosphere_mass_per_unit_area.</description>
+  </entry>
   <entry id="atmosphere_mass_per_unit_area">
     <canonical_units>kg m-2</canonical_units>
     <description>&quot;X_area&quot; means the horizontal area occupied by X within the grid cell.</description>
@@ -295,6 +299,11 @@
   <entry id="canopy_height">
     <canonical_units>m</canonical_units>
     <description>Height is the vertical distance above the surface. &quot;Canopy&quot; means the plant or vegetation canopy.</description>
+  </entry>
+  <entry id="canopy_temperature">
+    <canonical_units>K</canonical_units>
+    <description>&quot;Canopy&quot; means the plant or vegetation canopy.  &quot;Canopy_temperature&quot; is the bulk temperature of the canopy, not the surface (skin) temperature.
+</description>
   </entry>
   <entry id="canopy_water_amount">
     <canonical_units>kg m-2</canonical_units>
@@ -1094,6 +1103,11 @@
     <canonical_units>Pa</canonical_units>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. &quot;magnitude_of_X&quot; means magnitude of a vector X. &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward).</description>
   </entry>
+  <entry id="mass_concentration_of_condensed_water_in_soil">
+    <canonical_units>kg m-3</canonical_units>
+    <description>Mass concentration means mass per unit volume and is used in the construction mass_concentration_of_X_in_Y, where X is a material constituent of Y.  Condensed water means liquid and ice.
+</description>
+  </entry>
   <entry id="mass_concentration_of_oxygen_in_sea_water">
     <canonical_units>kg m-3</canonical_units>
     <description>Mass concentration means mass per unit volume and is used in the construction mass_concentration_of_X_in_Y, where X is a material constituent of Y.</description>
@@ -1102,6 +1116,14 @@
     <canonical_units>kg m-3</canonical_units>
     <amip>trsul</amip>
     <description>Mass concentration means mass per unit volume and is used in the construction mass_concentration_of_X_in_Y, where X is a material constituent of Y. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).</description>
+  </entry>
+  <entry id="mass_fraction_of_ammonium_dry_aerosol_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  &quot;Mass_fraction_of_ammonium&quot; means that the mass is expressed as mass of NH3.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.</description>
+  </entry>
+  <entry id="mass_fraction_of_black_carbon_dry_aerosol_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.</description>
   </entry>
   <entry id="mass_fraction_of_cloud_condensed_water_in_air">
     <canonical_units>1</canonical_units>
@@ -1133,6 +1155,10 @@
     <canonical_units>1</canonical_units>
     <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).</description>
   </entry>
+  <entry id="mass_fraction_of_dust_dry_aerosol_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.</description>
+  </entry>
   <entry id="mass_fraction_of_frozen_water_in_soil_moisture">
     <canonical_units>1</canonical_units>
     <description>&quot;frozen_water&quot; means ice. &quot;moisture&quot; means water in all phases contained in soil. Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).</description>
@@ -1141,17 +1167,53 @@
     <canonical_units>1</canonical_units>
     <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).</description>
   </entry>
+  <entry id="mass_fraction_of_mercury_dry_aerosol_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.</description>
+  </entry>
+  <entry id="mass_fraction_of_nitrate_dry_aerosol_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y). &quot;Mass_fraction_of_nitrate&quot; means that the mass is expressed as mass of NO3.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.</description>
+  </entry>
   <entry id="mass_fraction_of_ozone_in_air">
     <canonical_units>1</canonical_units>
     <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).</description>
+  </entry>
+  <entry id="mass_fraction_of_particulate_organic_matter_dry_aerosol_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y). Particulate organic matter means all (primary and secondary) particulate organic matter aerosol, expect for black carbon.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.</description>
+  </entry>
+  <entry id="mass_fraction_of_pm1_aerosol_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y). &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets). &quot;Pm1 aerosol&quot; is an air pollutant with an aerodynamic diameter of less than or equal to 1 micrometer.  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol.  To specify the relative humidity and temperature at which the particle size applies, provide scalar coordinate variables with the standard names of, respectively, &quot;relative_humidity&quot; and &quot;air_temperature&quot;.</description>
+  </entry>
+  <entry id="mass_fraction_of_pm10_aerosol_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets). &quot;Pm10 aerosol&quot; is an air pollutant with an aerodynamic diameter of less than or equal to 10 micrometers.  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol.  To specify the relative humidity and temperature at which the particle size applies, provide scalar coordinate variables with the standard names of, respectively, &quot;relative_humidity&quot; and &quot;air_temperature&quot;.</description>
+  </entry>
+  <entry id="mass_fraction_of_pm2p5_aerosol_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets). &quot;Pm2p5 aerosol&quot; is an air pollutant with an aerodynamic diameter of less than or equal to 2.5 micrometers.  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol.  To specify the relative humidity and temperature at which the particle size applies, provide scalar coordinate variables with the standard names of, respectively, &quot;relative_humidity&quot; and &quot;air_temperature&quot;.</description>
   </entry>
   <entry id="mass_fraction_of_precipitation_in_air">
     <canonical_units>1</canonical_units>
     <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).</description>
   </entry>
+  <entry id="mass_fraction_of_primary_particulate_organic_matter_dry_aerosol_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y). Primary particulate organic matter refers to all particulate organic matter aerosol emitted as particles, expect for black carbon.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.</description>
+  </entry>
   <entry id="mass_fraction_of_rain_in_air">
     <canonical_units>1</canonical_units>
     <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).</description>
+  </entry>
+  <entry id="mass_fraction_of_seasalt_dry_aerosol_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.</description>
+  </entry>
+  <entry id="mass_fraction_of_secondary_particulate_organic_matter_dry_aerosol_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  Secondary particulate organic matter aerosol means particulate organic matter formed within the atmosphere from gaseous pre-cursors.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.</description>
   </entry>
   <entry id="mass_fraction_of_snow_in_air">
     <canonical_units>1</canonical_units>
@@ -1165,6 +1227,10 @@
     <canonical_units>1</canonical_units>
     <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y). In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).</description>
   </entry>
+  <entry id="mass_fraction_of_sulfate_dry_aerosol_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  &quot;Mass_fraction_of_sulfate&quot; means that the mass is expressed as mass of SO4.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.</description>
+  </entry>
   <entry id="mass_fraction_of_sulfur_dioxide_in_air">
     <canonical_units>1</canonical_units>
     <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).</description>
@@ -1176,6 +1242,10 @@
   <entry id="mass_fraction_of_water_in_air">
     <canonical_units>1</canonical_units>
     <description>&quot;Water&quot; means water in all phases. Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).</description>
+  </entry>
+  <entry id="mass_fraction_of_water_in_ambient_aerosol_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol.</description>
   </entry>
   <entry id="model_level_number">
     <canonical_units>1</canonical_units>
@@ -1204,9 +1274,86 @@
     <amip>mrsofcs</amip>
     <description>&quot;moisture&quot; means water in all phases contained in soil. &quot;Content&quot; indicates a quantity per unit area. &quot;Layer&quot; means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well. Quantities defined for a soil layer must have a vertical coordinate variable with boundaries indicating the extent of the layer(s). The field capacity of soil is the maximum content of water it can retain against gravitational drainage.</description>
   </entry>
+  <entry id="mole_concentration_of_ammonium_in_sea_water">
+    <canonical_units>mol m-3</canonical_units>
+    <description>Mole concentration means moles (amount of substance) per unit volume and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_concentration_of_diatoms_in_sea_water_expressed_as_nitrogen">
+    <canonical_units>mol m-3</canonical_units>
+    <description>Mole concentration means moles (amount of substance) per unit volume and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.  The construction expressed_as_nitrogen means that the mole concentration is that of nitrogen atoms due to the diatoms.  Diatoms are single-celled phytoplankton with an external skeleton made of silica. Phytoplankton are autotrophic prokaryotic or eukaryotic algae that live near the water surface where there is sufficient light to support photosynthesis.</description>
+  </entry>
+  <entry id="mole_concentration_of_mesozooplankton_in_sea_water_expressed_as_nitrogen">
+    <canonical_units>mol m-3</canonical_units>
+    <description>Mole concentration means moles (amount of substance) per unit volume and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.  The construction expressed_as_nitrogen means that the mole concentration is that of nitrogen atoms due to the mesozooplankton.  Mesozooplankton are large protozoans (single-celled organisms) and small metazoans (multi-celled organisms) sized between 2x10-4 m and 2x10-2 m that feed on other plankton and telonemia.</description>
+  </entry>
+  <entry id="mole_concentration_of_microzooplankton_in_sea_water_expressed_as_nitrogen">
+    <canonical_units>mol m-3</canonical_units>
+    <description>Mole concentration means moles (amount of substance) per unit volume and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.  The construction expressed_as_nitrogen means that the mole concentration is that of nitrogen atoms due to the microzooplankton.  Microzooplankton are protozoans (single-celled organisms) sized between 2x10-5 m and 2x10-4 m that feed on other plankton and telonemia.</description>
+  </entry>
+  <entry id="mole_concentration_of_nitrate_in_sea_water">
+    <canonical_units>mol m-3</canonical_units>
+    <description>Mole concentration means moles (amount of substance) per unit volume and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_concentration_of_organic_detritus_in_sea_water_expressed_as_nitrogen">
+    <canonical_units>mol m-3</canonical_units>
+    <description>Mole concentration means moles (amount of substance) per unit volume and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.  The construction expressed_as_nitrogen means that the mole concentration is that of nitrogen atoms due to the organic detritus.  Organic detritus are particles of debris from decaying plants and animals.</description>
+  </entry>
+  <entry id="mole_concentration_of_organic_detritus_in_sea_water_expressed_as_silicon">
+    <canonical_units>mol m-3</canonical_units>
+    <description>Mole concentration means moles (amount of substance) per unit volume and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.  The construction expressed_as_silicon means that the mole concentration is that of silicon atoms due to the organic detritus.  Organic detritus are particles of debris from decaying plants and animals.</description
+>
+  </entry>
+  <entry id="mole_concentration_of_phytoplankton_in_sea_water_expressed_as_nitrogen">
+    <canonical_units>mol m-3</canonical_units>
+    <description>Mole concentration means moles (amount of substance) per unit volume and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.  The construction expressed_as_nitrogen means that the mole concentration is that of nitrogen atoms due to the phytoplankton.  Phytoplankton are autotrophic prokaryotic or eukaryotic algae that live near the water surface where there is sufficient light to support photosynthesis.</description>
+  </entry>
+  <entry id="mole_concentration_of_silicate_in_sea_water">
+    <canonical_units>mol m-3</canonical_units>
+    <description>Mole concentration means moles (amount of substance) per unit volume and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_fraction_of_alpha_hexachlorocyclohexane_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_fraction_of_carbon_monoxide_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_fraction_of_dimethyl_sulfide_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_fraction_of_hexachlorbiphenyl_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_fraction_of_hydroxyl_radical_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_fraction_of_nitric_acid_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_fraction_of_nitrogen_dioxide_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_fraction_of_nitrogen_monoxide_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
   <entry id="mole_fraction_of_ozone_in_air">
     <canonical_units>1</canonical_units>
     <amip>tro3</amip>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_fraction_of_peroxyacetyl_nitrate_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_fraction_of_sulfur_dioxide_in_air">
+    <canonical_units>1</canonical_units>
     <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
   </entry>
   <entry id="moles_of_nitrate_and_nitrite_per_unit_mass_in_sea_water">
@@ -2181,6 +2328,10 @@
     <amip>orog</amip>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. Altitude is the (geometric) height above the geoid, which is the reference geopotential surface. The geoid is similar to mean sea level.</description>
   </entry>
+  <entry id="surface_brightness_temperature">
+    <canonical_units>K</canonical_units>
+    <description>The surface called "surface" means the lower boundary of the atmosphere.The brightness temperature of a body is the temperature of a black body which radiates the same power per unit solid angle per unit area.</description>
+  </entry>
   <entry id="surface_carbon_dioxide_mole_flux">
     <canonical_units>mol m-2 s-1</canonical_units>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
@@ -2786,6 +2937,10 @@
     <canonical_units>m s-1</canonical_units>
     <description>&quot;tendency_of_X&quot; means derivative of X with respect to time. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock.</description>
   </entry>
+  <entry id="tendency_of_mass_fraction_of_cloud_condensed_water_in_air">
+    <canonical_units>s-1</canonical_units>
+    <description>&quot;Tendency_of_X&quot; means derivative of X with respect to time. Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  &quot;Condensed_water&quot; means liquid and ice.</description>
+  </entry>
   <entry id="tendency_of_mass_fraction_of_cloud_condensed_water_in_air_due_to_advection">
     <canonical_units> s-1</canonical_units>
     <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;tendency_of_X&quot; means derivative of X with respect to time. &quot;condensed_water&quot; means liquid and ice. Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).</description>
@@ -2866,6 +3021,10 @@
   <entry id="tendency_of_specific_humidity_due_to_diffusion">
     <canonical_units>s-1</canonical_units>
     <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;tendency_of_X&quot; means derivative of X with respect to time. &quot;specific&quot; means per unit mass. Specific humidity is the mass fraction of water vapor in (moist) air.</description>
+  </entry>
+  <entry id="tendency_of_specific_humidity_due_to_large_scale_precipitation">
+    <canonical_units>s-1</canonical_units>
+    <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;Tendency_of_X&quot; means derivative of X with respect to time. &quot;Specific&quot; means per unit mass. Specific humidity is the mass fraction of water vapor in (moist) air.</description>
   </entry>
   <entry id="tendency_of_specific_humidity_due_to_model_physics">
     <canonical_units>s-1</canonical_units>
@@ -3211,6 +3370,10 @@
     <canonical_units>1</canonical_units>
     <description>&quot;Volume fraction&quot; is used in the construction volume_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
   </entry>
+  <entry id="volume_fraction_of_condensed_water_in_soil_pores">
+    <canonical_units>1</canonical_units>
+    <description>&quot;Volume fraction&quot; is used in the construction volume_fraction_of_X_in_Y, where X is a material constituent of Y.  &quot;Condensed water&quot; means liquid and ice.  &quot;Volume_fraction_of_condensed_water_in_soil_pores&quot; is the ratio of the volume of condensed water in soil pores to the volume of the pores themselves.</description>
+  </entry>
   <entry id="volume_fraction_of_frozen_water_in_soil">
     <canonical_units>1</canonical_units>
     <description>&quot;frozen_water&quot; means ice. &quot;Volume fraction&quot; is used in the construction volume_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
@@ -3223,21 +3386,21 @@
     <canonical_units>1</canonical_units>
     <description>&quot;Volume fraction&quot; is used in the construction volume_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
   </entry>
-  <entry id="volume_fraction_of_water_in_soil">
+  <entry id="volume_fraction_of_condensed_water_in_soil">
     <canonical_units>1</canonical_units>
-    <description>&quot;Water&quot; means water in all phases. &quot;Volume fraction&quot; is used in the construction volume_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+    <description>&quot;Condensed water&quot; means liquid and ice. &quot;Volume fraction&quot; is used in the construction volume_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
   </entry>
-  <entry id="volume_fraction_of_water_in_soil_at_critical_point">
+  <entry id="volume_fraction_of_condensed_water_in_soil_at_critical_point">
     <canonical_units>1</canonical_units>
-    <description>&quot;Water&quot; means water in all phases. &quot;Volume fraction&quot; is used in the construction volume_fraction_of_X_in_Y, where X is a material constituent of Y.  When soil moisture equals or exceeds the critical point evapotranspiration takes place at the potential rate and is controlled by the ambient meteorological conditions (temperature, wind, relative humidity).  Evapotranspiration is the sum of evaporation and plant transpiration.  Potential evapotranspiration is the rate at which evapotranspiration would occur under ambient conditions from a uniformly vegetated area when the water supply is not limiting.</description>
+    <description>&quot;Condensed water&quot; means liquid and ice. &quot;Volume fraction&quot; is used in the construction volume_fraction_of_X_in_Y, where X is a material constituent of Y.  When soil moisture equals or exceeds the critical point evapotranspiration takes place at the potential rate and is controlled by the ambient meteorological conditions (temperature, wind, relative humidity).  Evapotranspiration is the sum of evaporation and plant transpiration.  Potential evapotranspiration is the rate at which evapotranspiration would occur under ambient conditions from a uniformly vegetated area when the water supply is not limiting.</description>
   </entry>
-  <entry id="volume_fraction_of_water_in_soil_at_field_capacity">
+  <entry id="volume_fraction_of_condensed_water_in_soil_at_field_capacity">
     <canonical_units>1</canonical_units>
-    <description>&quot;Water&quot; means water in all phases. &quot;Volume fraction&quot; is used in the construction volume_fraction_of_X_in_Y, where X is a material constituent of Y. The field capacity of soil is the maximum content of water it can retain against gravitational drainage.</description>
+    <description>&quot;Condensed water&quot; means liquid and ice. &quot;Volume fraction&quot; is used in the construction volume_fraction_of_X_in_Y, where X is a material constituent of Y. The field capacity of soil is the maximum content of water it can retain against gravitational drainage.</description>
   </entry>
-  <entry id="volume_fraction_of_water_in_soil_at_wilting_point">
+  <entry id="volume_fraction_of_condensed_water_in_soil_at_wilting_point">
     <canonical_units>1</canonical_units>
-    <description>&quot;Water&quot; means water in all phases. &quot;Volume fraction&quot; is used in the construction volume_fraction_of_X_in_Y, where X is a material constituent of Y. The wilting point of soil is the water content below which plants cannot extract sufficient water to balance their loss through transpiration.</description>
+    <description>&quot;Condensed water&quot; means liquid and ice. &quot;Volume fraction&quot; is used in the construction volume_fraction_of_X_in_Y, where X is a material constituent of Y. The wilting point of soil is the water content below which plants cannot extract sufficient water to balance their loss through transpiration.</description>
   </entry>
   <entry id="volume_mixing_ratio_of_oxygen_at_stp_in_sea_water">
     <canonical_units>1 </canonical_units>
@@ -3460,9 +3623,6 @@
   <alias id="surface_downwelling_longwave_flux">
     <entry_id>surface_downwelling_longwave_flux_in_air</entry_id>
   </alias>
-  <alias id="surface_downwelling_longwave_flux">
-    <entry_id>surface_downwelling_longwave_flux_in_air_assuming_clear_sky</entry_id>
-  </alias>
   <alias id="surface_downwelling_shortwave_flux">
     <entry_id>surface_downwelling_shortwave_flux_in_air</entry_id>
   </alias>
@@ -3498,5 +3658,17 @@
   </alias>
   <alias id="grid_northward_wind">
     <entry_id>y_wind</entry_id>
+  </alias>
+  <alias id="volume_fraction_of_water_in_soil">
+    <entry_id>volume_fraction_of_condensed_water_in_soil</entry_id>
+  </alias>
+  <alias id="volume_fraction_of_water_in_soil_at_critical_point">
+    <entry_id>volume_fraction_of_condensed_water_in_soil_at_critical_point</entry_id>
+  </alias>
+  <alias id="volume_fraction_of_water_in_soil_at_field_capacity">
+    <entry_id>volume_fraction_of_condensed_water_in_soil_at_field_capacity</entry_id>
+  </alias>
+  <alias id="volume_fraction_of_water_in_soil_at_wilting_point">
+    <entry_id>volume_fraction_of_condensed_water_in_soil_at_wilting_point</entry_id>
   </alias>
 </standard_name_table>
