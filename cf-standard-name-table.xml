@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <standard_name_table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CFStandardNameTable-1.1.xsd">
-  <version_number>5</version_number>
-  <last_modified>2007-05-12T02:00:00Z</last_modified>
+  <version_number>6</version_number>
+  <last_modified>2007-06-25T02:00:00Z</last_modified>
   <institution>Program for Climate Model Diagnosis and Intercomparison</institution>
   <contact>webmaster@pcmdi.llnl.gov</contact>
   <entry id="aerosol_angstrom_exponent">
@@ -836,6 +836,30 @@
     <canonical_units>K m</canonical_units>
     <description>&quot;integral_of_Y_wrt_X&quot; means int Y dX. The data variable should have an axis for X specifying the limits of the integral as bounds. &quot;wrt&quot; means with respect to. &quot;Layer&quot; means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well. Depth is the vertical distance below the surface.</description>
   </entry>
+  <entry id="integral_of_surface_downward_latent_heat_flux_wrt_time">
+    <canonical_units>W s m-2</canonical_units>
+    <description>&quot;integral_of_Y_wrt_X&quot; means int Y dX. The data variable should have an axis for X specifying the limits of the integral as bounds. &quot;wrt&quot; means with respect to.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere. &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward). The surface latent heat flux is the exchange of heat between the surface and the air on account of evaporation (including sublimation). In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
+  </entry>
+  <entry id="integral_of_surface_downward_sensible_heat_flux_wrt_time">
+    <canonical_units>W s m-2</canonical_units>
+    <description>&quot;integral_of_Y_wrt_X&quot; means int Y dX. The data variable should have an axis for X specifying the limits of the integral as bounds. &quot;wrt&quot; means with respect to.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere. &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward).  The surface sensible heat flux, also called &quot;turbulent&quot; heat flux, is the exchange of heat between the surface and the air by motion of air. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
+  </entry>
+  <entry id="integral_of_surface_net_downward_longwave_flux_wrt_time">
+    <canonical_units>W s m-2</canonical_units>
+    <description>&quot;integral_of_Y_wrt_X&quot; means int Y dX. The data variable should have an axis for X specifying the limits of the integral as bounds. &quot;wrt&quot; means with respect to.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward). Net downward radiation is the difference between radiation from above (downwelling) and radiation from below (upwelling). &quot;Longwave&quot; means longwave radiation.  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
+  </entry>
+  <entry id="integral_of_surface_net_downward_shortwave_flux_wrt_time">
+    <canonical_units>W s m-2</canonical_units>
+    <description>&quot;integral_of_Y_wrt_X&quot; means int Y dX. The data variable should have an axis for X specifying the limits of the integral as bounds. &quot;wrt&quot; means with respect to.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward). Net downward radiation is the difference between radiation from above (downwelling) and radiation from below (upwelling). &quot;Shortwave&quot; means shortwave radiation.  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
+  </entry>
+  <entry id="integral_of_toa_net_downward_shortwave_flux_wrt_time">
+    <canonical_units>W s m-2</canonical_units>
+    <description>&quot;integral_of_Y_wrt_X&quot; means int Y dX. The data variable should have an axis for X specifying the limits of the integral as bounds. &quot;wrt&quot; means with respect to.  &quot;toa&quot; means top of atmosphere. &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward). Net downward radiation is the difference between radiation from above (downwelling) and radiation from below (upwelling).  &quot;Shortwave&quot; means shortwave radiation.  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
+  </entry>
+  <entry id="integral_of_toa_outgoing_longwave_flux_wrt_time">
+    <canonical_units>W s m-2</canonical_units>
+    <description>&quot;integral_of_Y_wrt_X&quot; means int Y dX. The data variable should have an axis for X specifying the limits of the integral as bounds. &quot;wrt&quot; means with respect to.  &quot;toa&quot; means top of atmosphere.  &quot;Longwave&quot; means longwave radiation.  The TOA outgoing longwave flux is the upwelling thermal radiative flux, often called the &quot;outgoing longwave radiation&quot; or &quot;OLR&quot;. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
+  </entry>
   <entry id="isccp_cloud_area_fraction">
     <canonical_units>1</canonical_units>
     <amip>clisccp</amip>
@@ -1323,7 +1347,7 @@
     <canonical_units>1</canonical_units>
     <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
   </entry>
-  <entry id="mole_fraction_of_hexachlorbiphenyl_in_air">
+  <entry id="mole_fraction_of_hexachlorobiphenyl_in_air">
     <canonical_units>1</canonical_units>
     <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
   </entry>
@@ -2522,6 +2546,22 @@
     <canonical_units>m2 s-2</canonical_units>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. Geopotential is the sum of the specific gravitational potential energy relative to the geoid and the specific centripetal potential energy.</description>
   </entry>
+  <entry id="surface_geostrophic_sea_water_x_velocity">
+    <canonical_units>m s-1</canonical_units>
+    <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  A velocity is a vector quantity. &quot;x&quot; indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.  &quot;Geostrophic&quot; indicates that geostrophic balance is assumed.  surface_geostrophic_sea_water_x_velocity is the sum of a variable part, surface_geostrophic_sea_water_x_velocity_assuming_sea_level_for_geoid, and a constant part due to the stationary component of ocean circulation.</description>
+  </entry>
+  <entry id="surface_geostrophic_sea_water_x_velocity_assuming_sea_level_for_geoid">
+    <canonical_units>m s-1</canonical_units>
+    <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  A velocity is a vector quantity. &quot;x&quot; indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.  &quot;Geostrophic&quot; indicates that geostrophic balance is assumed.  &quot;sea_level&quot; means mean sea level. The geoid is a surface of constant geopotential with which mean sea level would coincide if the ocean were at rest.  surface_geostrophic_sea_water_x_velocity_assuming_sea_level_for_geoid is the variable part of surface_geostrophic_sea_water_x_velocity.  The assumption that sea level is equal to the geoid means that the stationary component of ocean circulation is equal to zero.</description>
+  </entry>
+  <entry id="surface_geostrophic_sea_water_y_velocity">
+    <canonical_units>m s-1</canonical_units>
+    <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  A velocity is a vector quantity. &quot;y&quot; indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.  &quot;Geostrophic&quot; indicates that geostrophic balance is assumed.  surface_geostrophic_sea_water_y_velocity is the sum of a variable part, surface_geostrophic_sea_water_y_velocity_assuming_sea_level_for_geoid, and a constant part due to the stationary component of ocean circulation.</description>
+  </entry>
+  <entry id="surface_geostrophic_sea_water_y_velocity_assuming_sea_level_for_geoid">
+    <canonical_units>m s-1</canonical_units>
+    <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  A velocity is a vector quantity. &quot;y&quot; indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.  &quot;Geostrophic&quot; indicates that geostrophic balance is assumed.  &quot;sea_level&quot; means mean sea level. The geoid is a surface of constant geopotential with which mean sea level would coincide if the ocean were at rest.  surface_geostrophic_sea_water_x_velocity_assuming_sea_level_for_geoid is the variable part of surface_geostrophic_sea_water_x_velocity.  The assumption that sea level is equal to the geoid means that the stationary component of ocean circulation is equal to zero.</description>
+  </entry>
   <entry id="surface_net_downward_longwave_flux">
     <canonical_units>W m-2</canonical_units>
     <amip>rls</amip>
@@ -2531,6 +2571,10 @@
     <canonical_units>W m-2</canonical_units>
     <grib>E211</grib>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. A phrase assuming_condition indicates that the named quantity is the value which would obtain if all aspects of the system were unaltered except for the assumption of the circumstances specified by the condition. &quot;longwave&quot; means longwave radiation. &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward). Net downward radiation is the difference between radiation from above (downwelling) and radiation from below (upwelling). In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
+  </entry>
+  <entry id="surface_net_downward_radiative_flux">
+    <canonical_units>W m-2</canonical_units>
+    <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward). Net downward radiation is the difference between radiation from above (downwelling) and radiation from below (upwelling). Radiative flux is the sum of shortwave and longwave radiative fluxes. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
   </entry>
   <entry id="surface_net_downward_radiative_flux_where_land">
     <canonical_units>W m-2</canonical_units>
