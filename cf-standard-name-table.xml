@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <standard_name_table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CFStandardNameTable-1.1.xsd">
-  <version_number>6</version_number>
-  <last_modified>2007-06-25T02:00:00Z</last_modified>
+  <version_number>7</version_number>
+  <last_modified>2007-11-20T02:00:00Z</last_modified>
   <institution>Program for Climate Model Diagnosis and Intercomparison</institution>
   <contact>webmaster@pcmdi.llnl.gov</contact>
   <entry id="aerosol_angstrom_exponent">
@@ -212,6 +212,38 @@
     <canonical_units>1</canonical_units>
     <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path. The atmosphere optical thickness applies to radiation passing through the entire atmosphere. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).</description>
   </entry>
+  <entry id="atmosphere_optical_thickness_due_to_black_carbon_ambient_aerosol">
+    <canonical_units>1</canonical_units>
+    <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path. The atmosphere optical thickness applies to radiation passing through the entire atmosphere. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  &quot;Ambient aerosol&quot; is aerosol that has taken up ambient water through hygroscopic growth.  The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol.  Black carbon aerosol is composed of elemental carbon.  It is strongly light absorbing.</description>
+  </entry>
+  <entry id="atmosphere_optical_thickness_due_to_dust_ambient_aerosol">
+    <canonical_units>1</canonical_units>
+    <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path. The atmosphere optical thickness applies to radiation passing through the entire atmosphere. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  &quot;Ambient aerosol&quot; is aerosol that has taken up ambient water through hygroscopic growth.  The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol.</description>
+  </entry>
+  <entry id="atmosphere_optical_thickness_due_to_particulate_organic_matter_ambient_aerosol">
+    <canonical_units>1</canonical_units>
+    <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path. The atmosphere optical thickness applies to radiation passing through the entire atmosphere. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  &quot;Ambient aerosol&quot; is aerosol that has taken up ambient water through hygroscopic growth.  The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol.</description>
+  </entry>
+  <entry id="atmosphere_optical_thickness_due_to_pm10_ambient_aerosol">
+    <canonical_units>1</canonical_units>
+    <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path. The atmosphere optical thickness applies to radiation passing through the entire atmosphere. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  &quot;Ambient aerosol&quot; is aerosol that has taken up ambient water through hygroscopic growth.  The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol.  &quot;Pm10 aerosol&quot; is an air pollutant with an aerodynamic diameter of less than or equal to 10 micrometers.</description>
+  </entry>
+  <entry id="atmosphere_optical_thickness_due_to_pm1_ambient_aerosol">
+    <canonical_units>1</canonical_units>
+    <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path. The atmosphere optical thickness applies to radiation passing through the entire atmosphere. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  &quot;Ambient aerosol&quot; is aerosol that has taken up ambient water through hygroscopic growth.  The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol.  &quot;Pm1 aerosol&quot; is an air pollutant with an aerodynamic diameter of less than or equal to 1 micrometer.</description>
+  </entry>
+  <entry id="atmosphere_optical_thickness_due_to_pm2p5_ambient_aerosol">
+    <canonical_units>1</canonical_units>
+    <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path. The atmosphere optical thickness applies to radiation passing through the entire atmosphere. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  &quot;Ambient aerosol&quot; is aerosol that has taken up ambient water through hygroscopic growth.  The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol.  &quot;Pm2p5 aerosol&quot; is an air pollutant with an aerodynamic diameter of less than or equal to 2.5 micrometers.</description>
+  </entry>
+  <entry id="atmosphere_optical_thickness_due_to_seasalt_ambient_aerosol">
+    <canonical_units>1</canonical_units>
+    <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path. The atmosphere optical thickness applies to radiation passing through the entire atmosphere. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  &quot;Ambient aerosol&quot; is aerosol that has taken up ambient water through hygroscopic growth.  The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol.</description>
+  </entry>
+  <entry id="atmosphere_optical_thickness_due_to_water_in_ambient_aerosol">
+    <canonical_units>1</canonical_units>
+    <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path. The atmosphere optical thickness applies to radiation passing through the entire atmosphere. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets). &quot;atmosphere_optical_thickness_due_to_water_in_ambient_aerosol&quot; refers to the optical thickness due to the water that is associated with aerosol particles due to hygroscopic growth in ambient air, affecting the particle's radius and refractive index.  It corresponds to the difference between the total dry aerosol optical thickness and the total ambient aerosol optical thickness.</description>
+  </entry>
   <entry id="atmosphere_potential_energy_content">
     <canonical_units>J m-2</canonical_units>
     <description>&quot;Content&quot; indicates a quantity per unit area. The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. Potential energy is the sum of the gravitational potential energy relative to the geoid and the centripetal potential energy. (The geopotential is the specific potential energy.)</description>
@@ -266,6 +298,10 @@
   <entry id="baseflow_amount">
     <canonical_units>kg m-2</canonical_units>
     <description>&quot;Baseflow&quot; is subsurface runoff which takes place below the level of the water table. Runoff is the liquid water which drains from land. &quot;Amount&quot; means mass per unit area.</description>
+  </entry>
+  <entry id="beaufort_wind_force">
+    <canonical_units>1</canonical_units>
+    <description>&quot;Beaufort wind force&quot; is an index assigned on the Beaufort wind force scale and relates a qualitative description of the degree of disturbance or destruction caused by wind to the speed of the wind.  The Beaufort wind scale varies between 0 (qualitatively described as calm, smoke rises vertically, sea appears glassy) (wind speeds in the range 0 - 0.2 m s-1) and 12 (hurricane, wave heights in excess of 14 m) (wind speeds in excess of 32.7 m s-1).</description>
   </entry>
   <entry id="bedrock_altitude">
     <canonical_units>m</canonical_units>
@@ -1143,11 +1179,11 @@
   </entry>
   <entry id="mass_fraction_of_ammonium_dry_aerosol_in_air">
     <canonical_units>1</canonical_units>
-    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  &quot;Mass_fraction_of_ammonium&quot; means that the mass is expressed as mass of NH3.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.</description>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  &quot;Mass_fraction_of_ammonium&quot; means that the mass is expressed as mass of NH4.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.</description>
   </entry>
   <entry id="mass_fraction_of_black_carbon_dry_aerosol_in_air">
     <canonical_units>1</canonical_units>
-    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.</description>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  Black carbon aerosol is composed of elemental carbon.  It is strongly light absorbing.</description>
   </entry>
   <entry id="mass_fraction_of_cloud_condensed_water_in_air">
     <canonical_units>1</canonical_units>
@@ -1205,15 +1241,15 @@
   </entry>
   <entry id="mass_fraction_of_particulate_organic_matter_dry_aerosol_in_air">
     <canonical_units>1</canonical_units>
-    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y). Particulate organic matter means all (primary and secondary) particulate organic matter aerosol, expect for black carbon.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.</description>
-  </entry>
-  <entry id="mass_fraction_of_pm1_aerosol_in_air">
-    <canonical_units>1</canonical_units>
-    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y). &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets). &quot;Pm1 aerosol&quot; is an air pollutant with an aerodynamic diameter of less than or equal to 1 micrometer.  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol.  To specify the relative humidity and temperature at which the particle size applies, provide scalar coordinate variables with the standard names of, respectively, &quot;relative_humidity&quot; and &quot;air_temperature&quot;.</description>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  &quot;particulate_organic_matter_dry_aerosol&quot; means all particulate organic matter dry aerosol except black carbon.  It is the sum of primary_particulate_organic_matter_dry_aerosol and secondary_particulate_organic_matter_dry_aerosol.</description>
   </entry>
   <entry id="mass_fraction_of_pm10_aerosol_in_air">
     <canonical_units>1</canonical_units>
     <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets). &quot;Pm10 aerosol&quot; is an air pollutant with an aerodynamic diameter of less than or equal to 10 micrometers.  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol.  To specify the relative humidity and temperature at which the particle size applies, provide scalar coordinate variables with the standard names of, respectively, &quot;relative_humidity&quot; and &quot;air_temperature&quot;.</description>
+  </entry>
+  <entry id="mass_fraction_of_pm1_aerosol_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y). &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets). &quot;Pm1 aerosol&quot; is an air pollutant with an aerodynamic diameter of less than or equal to 1 micrometer.  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol.  To specify the relative humidity and temperature at which the particle size applies, provide scalar coordinate variables with the standard names of, respectively, &quot;relative_humidity&quot; and &quot;air_temperature&quot;.</description>
   </entry>
   <entry id="mass_fraction_of_pm2p5_aerosol_in_air">
     <canonical_units>1</canonical_units>
@@ -1225,7 +1261,7 @@
   </entry>
   <entry id="mass_fraction_of_primary_particulate_organic_matter_dry_aerosol_in_air">
     <canonical_units>1</canonical_units>
-    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y). Primary particulate organic matter refers to all particulate organic matter aerosol emitted as particles, expect for black carbon.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.</description>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  &quot;Primary particulate organic matter &quot; means all organic matter emitted directly to the atmosphere as particles except black carbon.  The sum of primary_particulate_organic_matter_dry_aerosol and secondary_particulate_organic_matter_dry_aerosol is particulate_organic_matter_dry_aerosol.</description>
   </entry>
   <entry id="mass_fraction_of_rain_in_air">
     <canonical_units>1</canonical_units>
@@ -1237,7 +1273,7 @@
   </entry>
   <entry id="mass_fraction_of_secondary_particulate_organic_matter_dry_aerosol_in_air">
     <canonical_units>1</canonical_units>
-    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  Secondary particulate organic matter aerosol means particulate organic matter formed within the atmosphere from gaseous pre-cursors.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.</description>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  &quot;Secondary particulate organic matter &quot; means particulate organic matter formed within the atmosphere from gaseous precursors.  The sum of primary_particulate_organic_matter_dry_aerosol and secondary_particulate_organic_matter_dry_aerosol is particulate_organic_matter_dry_aerosol.</description>
   </entry>
   <entry id="mass_fraction_of_snow_in_air">
     <canonical_units>1</canonical_units>
@@ -1339,6 +1375,14 @@
     <canonical_units>1</canonical_units>
     <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
   </entry>
+  <entry id="mole_fraction_of_benzene_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_fraction_of_carbon_dioxide_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
   <entry id="mole_fraction_of_carbon_monoxide_in_air">
     <canonical_units>1</canonical_units>
     <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
@@ -1347,11 +1391,43 @@
     <canonical_units>1</canonical_units>
     <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
   </entry>
+  <entry id="mole_fraction_of_ethane_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_fraction_of_ethene_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_fraction_of_ethyne_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_fraction_of_formaldehyde_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_fraction_of_gaseous_divalent_mercury_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.  &quot;Divalent mercury&quot; means all compounds in which the mercury has two binding sites to other ion(s) in a salt or to other atom(s) in a molecule. </description>
+  </entry>
+  <entry id="mole_fraction_of_gaseous_elemental_mercury_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
   <entry id="mole_fraction_of_hexachlorobiphenyl_in_air">
     <canonical_units>1</canonical_units>
     <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
   </entry>
   <entry id="mole_fraction_of_hydroxyl_radical_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_fraction_of_isoprene_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_fraction_of_methane_in_air">
     <canonical_units>1</canonical_units>
     <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
   </entry>
@@ -1376,7 +1452,23 @@
     <canonical_units>1</canonical_units>
     <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
   </entry>
+  <entry id="mole_fraction_of_propane_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_fraction_of_propene_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
   <entry id="mole_fraction_of_sulfur_dioxide_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_fraction_of_toluene_in_air">
+    <canonical_units>1</canonical_units>
+    <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
+  </entry>
+  <entry id="mole_fraction_of_xylene_in_air">
     <canonical_units>1</canonical_units>
     <description>Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.</description>
   </entry>
@@ -2893,6 +2985,211 @@
   <entry id="tendency_of_atmosphere_kinetic_energy_content_due_to_advection">
     <canonical_units>W m-2</canonical_units>
     <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;tendency_of_X&quot; means derivative of X with respect to time. &quot;Content&quot; indicates a quantity per unit area. The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_alpha_hexachlorocyclohexane_due_to_dry_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Dry deposition&quot; means gravitational settling, impact scavenging and turbulent deposition.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_alpha_hexachlorocyclohexane_due_to_emission">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time. &quot;Content&quot; indicates a quantity per unit area.  &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface).  &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_alpha_hexachlorocyclohexane_due_to_re_emission">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Re-emission&quot; refers to emission that is not from a primary source; it refers to emission of a species that has previously been deposited and accumulated in soils or water.  &quot;Re-emission&quot; is a process entirely distinct from &quot;emission&quot; which is used in some standard names.
+</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_alpha_hexachlorocyclohexane_due_to_wet_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Wet deposition&quot; means deposition by precipitation.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_ammonia_due_to_dry_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Dry deposition&quot; means gravitational settling, impact scavenging and turbulent deposition.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_ammonia_due_to_emission">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface).  &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_ammonia_due_to_wet_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Wet deposition&quot; means deposition by precipitation.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_black_carbon_dry_aerosol_due_to_dry_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  Black carbon aerosol is composed of elemental carbon.  It is strongly light absorbing.  &quot;Dry deposition&quot; means gravitational settling, impact scavenging and turbulent deposition.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_black_carbon_dry_aerosol_due_to_emission">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  Black carbon aerosol is composed of elemental carbon.  It is strongly light absorbing.  &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface).  &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_black_carbon_dry_aerosol_due_to_wet_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  Black carbon aerosol is composed of elemental carbon.  It is strongly light absorbing.  &quot;Wet deposition&quot; means deposition by precipitation.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_carbon_monoxide_due_to_emission">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface).  &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_dimethyl_sulfide_due_to_dry_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Dry deposition&quot; means gravitational settling, impact scavenging and turbulent deposition.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_dimethyl_sulfide_due_to_emission">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface).  &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_dimethyl_sulfide_due_to_wet_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Wet deposition&quot; means deposition by precipitation.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_dust_dry_aerosol_due_to_dry_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  &quot;Dry deposition&quot; means gravitational settling, impact scavenging and turbulent deposition.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_dust_dry_aerosol_due_to_emission">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface).  &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_dust_dry_aerosol_due_to_wet_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  &quot;Wet deposition&quot; means deposition by precipitation.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_gaseous_divalent_mercury_due_to_dry_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Divalent mercury&quot; means all compounds in which the mercury has two binding sites to other ion(s) in a salt or to other atom(s) in a molecule.  &quot;Dry deposition&quot; means gravitational settling, impact scavenging and turbulent deposition.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_gaseous_divalent_mercury_due_to_emission">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Divalent mercury&quot; means all compounds in which the mercury has two binding sites to other ion(s) in a salt or to other atom(s) in a molecule.  &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface).  &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_gaseous_divalent_mercury_due_to_wet_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Divalent mercury&quot; means all compounds in which the mercury has two binding sites to other ion(s) in a salt or to other atom(s) in a molecule.  &quot;Wet deposition&quot; means deposition by precipitation.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_gaseous_elemental_mercury_due_to_dry_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Dry deposition&quot; means gravitational settling, impact scavenging and turbulent deposition.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_gaseous_elemental_mercury_due_to_emission">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface).  &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_gaseous_elemental_mercury_due_to_wet_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Wet deposition&quot; means deposition by precipitation.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_hexachlorobiphenyl_due_to_dry_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Dry deposition&quot; means gravitational settling, impact scavenging and turbulent deposition.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_hexachlorobiphenyl_due_to_emission">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface).  &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_hexachlorobiphenyl_due_to_re_emission">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Re-emission&quot; refers to emission that is not from a primary source; it refers to emission of a species that has previously been deposited and accumulated in soils or water.  &quot;Re-emission&quot; is a process entirely distinct from &quot;emission&quot; which is used in some standard names.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_hexachlorobiphenyl_due_to_wet_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Wet deposition&quot; means deposition by precipitation.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_mercury_dry_aerosol_due_to_dry_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  &quot;Dry deposition&quot; means gravitational settling, impact scavenging and turbulent deposition.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_mercury_dry_aerosol_due_to_emission">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water. &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface).  &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_mercury_dry_aerosol_due_to_wet_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  &quot;Wet deposition&quot; means deposition by precipitation.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_nitric_acid_due_to_dry_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Dry deposition&quot; means gravitational settling, impact scavenging and turbulent deposition.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_nitric_acid_due_to_wet_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Wet deposition&quot; means deposition by precipitation.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_nitrogen_dioxide_due_to_dry_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Dry deposition&quot; means gravitational settling, impact scavenging and turbulent deposition.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_nox_expressed_as_nitrogen_due_to_emission">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Nox&quot; means nitric oxide (NO) and nitrogen dioxide (NO2). &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface).  &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_ozone_due_to_dry_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Dry deposition&quot; means gravitational settling, impact scavenging and turbulent deposition.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_ozone_due_to_dry_deposition_into_stomata">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Dry deposition&quot; means gravitational settling, impact scavenging and turbulent deposition.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_particulate_organic_matter_dry_aerosol_due_to_dry_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  &quot;particulate_organic_matter_dry_aerosol&quot; means all particulate organic matter dry aerosol except black carbon.  It is the sum of primary_particulate_organic_matter_dry_aerosol and secondary_particulate_organic_matter_dry_aerosol.  &quot;Dry deposition&quot; means gravitational settling, impact scavenging and turbulent deposition.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_particulate_organic_matter_dry_aerosol_due_to_net_production_and_emission">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  &quot;Net production&quot; means the net result of all chemical reactions within the atmosphere that produce or destroy a particular species. &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface).  &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names.  &quot;particulate_organic_matter_dry_aerosol&quot; means all particulate organic matter dry aerosol except black carbon.  It is the sum of primary_particulate_organic_matter_dry_aerosol (which is emitted into the atmosphere) and secondary_particulate_organic_matter_dry_aerosol (which is produced within the atmosphere).  </description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_particulate_organic_matter_dry_aerosol_due_to_wet_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  &quot;particulate_organic_matter_dry_aerosol&quot; means all particulate organic matter dry aerosol except black carbon.  It is the sum of primary_particulate_organic_matter_dry_aerosol and secondary_particulate_organic_matter_dry_aerosol.  &quot;Wet deposition&quot; means deposition by precipitation.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_primary_particulate_organic_matter_dry_aerosol_due_to_dry_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  &quot;Primary particulate organic matter &quot; means all organic matter emitted directly to the atmosphere as particles except black carbon.  The sum of primary_particulate_organic_matter_dry_aerosol and secondary_particulate_organic_matter_dry_aerosol is particulate_organic_matter_dry_aerosol.  &quot;Dry deposition&quot; means gravitational settling, impact scavenging and turbulent deposition.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_primary_particulate_organic_matter_dry_aerosol_due_to_emission">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  &quot;Primary particulate organic matter &quot; means all organic matter emitted directly to the atmosphere as particles except black carbon.  The sum of primary_particulate_organic_matter_dry_aerosol and secondary_particulate_organic_matter_dry_aerosol is particulate_organic_matter_dry_aerosol.  &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface).  &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_primary_particulate_organic_matter_dry_aerosol_due_to_wet_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  &quot;Primary particulate organic matter &quot; means all organic matter emitted directly to the atmosphere as particles except black carbon.  The sum of primary_particulate_organic_matter_dry_aerosol and secondary_particulate_organic_matter_dry_aerosol is particulate_organic_matter_dry_aerosol.  &quot;Wet deposition&quot; means deposition by precipitation.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_seasalt_dry_aerosol_due_to_dry_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  &quot;Dry deposition&quot; means gravitational settling, impact scavenging and turbulent deposition.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_seasalt_dry_aerosol_due_to_emission">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface).  &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_seasalt_dry_aerosol_due_to_wet_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  &quot;Wet deposition&quot; means deposition by precipitation.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_secondary_particulate_organic_matter_dry_aerosol_due_to_dry_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  &quot;Secondary particulate organic matter &quot; means particulate organic matter formed within the atmosphere from gaseous precursors.  The sum of primary_particulate_organic_matter_dry_aerosol and secondary_particulate_organic_matter_dry_aerosol is particulate_organic_matter_dry_aerosol.  &quot;Dry deposition&quot; means gravitational settling, impact scavenging and turbulent deposition.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_secondary_particulate_organic_matter_dry_aerosol_due_to_net_production">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  &quot;Secondary particulate organic matter &quot; means particulate organic matter formed within the atmosphere from gaseous precursors.  The sum of primary_particulate_organic_matter_dry_aerosol and secondary_particulate_organic_matter_dry_aerosol is particulate_organic_matter_dry_aerosol.  &quot;Net production&quot; means the net result of all chemical reactions within the atmosphere that produce or destroy a particular species.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_secondary_particulate_organic_matter_dry_aerosol_due_to_wet_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.  &quot;Secondary particulate organic matter &quot; means particulate organic matter formed within the atmosphere from gaseous precursors.  The sum of primary_particulate_organic_matter_dry_aerosol and secondary_particulate_organic_matter_dry_aerosol is particulate_organic_matter_dry_aerosol.  &quot;Wet deposition&quot; means deposition by precipitation.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_sulfur_dioxide_due_to_dry_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Dry deposition&quot; means gravitational settling, impact scavenging and turbulent deposition.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_sulfur_dioxide_due_to_emission">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface).  &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_sulfur_dioxide_due_to_wet_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Content&quot; indicates a quantity per unit area.  &quot;Wet deposition&quot; means deposition by precipitation.</description>
   </entry>
   <entry id="tendency_of_atmosphere_mass_per_unit_area">
     <canonical_units>kg m-2 s-1</canonical_units>
