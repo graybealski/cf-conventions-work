@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <standard_name_table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CFStandardNameTable-1.1.xsd">
-  <version_number>12</version_number>
-  <last_modified>2009-07-06T12:05:02Z</last_modified>
+  <version_number>13</version_number>
+  <last_modified>2010-03-11T11:12:25Z</last_modified>
   <institution>Program for Climate Model Diagnosis and Intercomparison</institution>
   <contact>webmaster@pcmdi.llnl.gov</contact>
   <entry id="age_of_stratospheric_air">
@@ -104,6 +104,14 @@
     <canonical_units>m</canonical_units>
     <description>Altitude is the (geometric) height above the geoid, which is the reference geopotential surface. The geoid is similar to mean sea level.</description>
   </entry>
+  <entry id="angle_of_emergence">
+    <canonical_units>degree</canonical_units>
+    <description>The angle of emergence is that between the direction of a beam of radiation emerging from the surface of a medium and the normal to that surface.</description>
+  </entry>
+  <entry id="angle_of_incidence">
+    <canonical_units>degree</canonical_units>
+    <description>The angle of incidence is that between the direction of approach of a beam of radiation toward a surface and the normal to that surface.</description>
+  </entry>
   <entry id="angle_of_rotation_from_east_to_x">
     <canonical_units>degree</canonical_units>
     <description>The quantity with standard name angle_of_rotation_from_east_to_x is the angle, anticlockwise reckoned positive, between due East and (dr/di)jk, where r(i,j,k) is the vector 3D position of the point with coordinate indices (i,j,k).  It could be used for rotating vector fields between model space and latitude-longitude space.</description>
@@ -134,6 +142,30 @@
     <grib>41</grib>
     <description>Absolute vorticity is the sum of relative vorticity and the upward component of vorticity due to the Earth's rotation.</description>
   </entry>
+  <entry id="atmosphere_absorption_optical_thickness_due_to_ambient_aerosol">
+    <canonical_units> 1 </canonical_units>
+    <description>The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path.  A coordinate variable of radiation_wavelength or radiation_frequency can be specified to indicate that the optical thickness applies at specific wavelengths or frequencies. &quot;Absorption optical thickness&quot; means that part of the atmosphere optical thickness that is caused by the absorption of incident radiation. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  &quot;Ambient aerosol&quot; is aerosol that has taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase. </description>
+  </entry>
+  <entry id="atmosphere_absorption_optical_thickness_due_to_black_carbon_ambient_aerosol">
+    <canonical_units> 1 </canonical_units>
+    <description>The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path.  A coordinate variable of radiation_wavelength or radiation_frequency can be specified to indicate that the optical thickness applies at specific wavelengths or frequencies. &quot;Absorption optical thickness&quot; means that part of the atmosphere optical thickness that is caused by the absorption of incident radiation. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  &quot;Ambient aerosol&quot; is aerosol that has taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase. </description>
+  </entry>
+  <entry id="atmosphere_absorption_optical_thickness_due_to_dust_ambient_aerosol">
+    <canonical_units> 1 </canonical_units>
+    <description>The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path.  A coordinate variable of radiation_wavelength or radiation_frequency can be specified to indicate that the optical thickness applies at specific wavelengths or frequencies. &quot;Absorption optical thickness&quot; means that part of the atmosphere optical thickness that is caused by the absorption of incident radiation. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  &quot;Ambient aerosol&quot; is aerosol that has taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase. </description>
+  </entry>
+  <entry id="atmosphere_absorption_optical_thickness_due_to_particulate_organic_matter_ambient_aerosol">
+    <canonical_units> 1 </canonical_units>
+    <description>The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path.  A coordinate variable of radiation_wavelength or radiation_frequency can be specified to indicate that the optical thickness applies at specific wavelengths or frequencies. &quot;Absorption optical thickness&quot; means that part of the atmosphere optical thickness that is caused by the absorption of incident radiation. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  &quot;Ambient aerosol&quot; is aerosol that has taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase. </description>
+  </entry>
+  <entry id="atmosphere_absorption_optical_thickness_due_to_seasalt_ambient_aerosol">
+    <canonical_units> 1 </canonical_units>
+    <description>The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path.  A coordinate variable of radiation_wavelength or radiation_frequency can be specified to indicate that the optical thickness applies at specific wavelengths or frequencies. &quot;Absorption optical thickness&quot; means that part of the atmosphere optical thickness that is caused by the absorption of incident radiation. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  &quot;Ambient aerosol&quot; is aerosol that has taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase. </description>
+  </entry>
+  <entry id="atmosphere_absorption_optical_thickness_due_to_sulfate_ambient_aerosol">
+    <canonical_units> 1 </canonical_units>
+    <description>The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path.  A coordinate variable of radiation_wavelength or radiation_frequency can be specified to indicate that the optical thickness applies at specific wavelengths or frequencies. &quot;Absorption optical thickness&quot; means that part of the atmosphere optical thickness that is caused by the absorption of incident radiation. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  &quot;Ambient aerosol&quot; is aerosol that has taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase. </description>
+  </entry>
   <entry id="atmosphere_boundary_layer_thickness">
     <canonical_units>m</canonical_units>
     <amip>zmla</amip>
@@ -163,9 +195,13 @@
     <canonical_units>kg m-2</canonical_units>
     <description>Convective cloud is that produced by the convection schemes in an atmosphere model.  &quot;Content&quot; indicates a quantity per unit area. The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.</description>
   </entry>
-  <entry id="atmosphere_convective_mass_flux">
+  <entry id="atmosphere_net_upward_convective_mass_flux">
     <canonical_units>kg m-2 s-1</canonical_units>
-    <description>In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics. The atmosphere convective mass flux is the vertical transport of mass for a field of cumulus clouds or thermals, given by the product of air density and vertical velocity. For an area-average, cell_methods should specify whether the average is over all the area or the area of updrafts only.</description>
+    <description>In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics. The atmosphere convective mass flux is the vertical transport of mass for a field of cumulus clouds or thermals, given by the product of air density and vertical velocity. Net upward convective mass flux is the difference between the updraft mass flux and the downdraft mass flux. &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward). For an area-average, cell_methods should specify whether the average is over all the area or the area of updrafts and/or downdrafts only.</description>
+  </entry>
+  <entry id="atmosphere_downdraft_convective_mass_flux">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The atmosphere convective mass flux is the vertical transport of mass for a field of cumulus clouds or thermals, given by the product of air density and vertical velocity. For an area-average, cell_methods should specify whether the average is over all the area or the area of updrafts and/or downdrafts only.  &quot;Downdraft&quot; means that the flux is positive in the downward direction (negative upward).</description>
   </entry>
   <entry id="atmosphere_dry_energy_content">
     <canonical_units>J m-2</canonical_units>
@@ -1034,6 +1070,14 @@
     <canonical_units>W m-2</canonical_units>
     <description>&quot;shortwave&quot; means shortwave radiation. Net absorbed radiation is the difference between absorbed and emitted radiation.</description>
   </entry>
+  <entry id="atmosphere_net_upward_deep_convective_mass_flux">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward).  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The atmosphere convective mass flux is the vertical transport of mass for a field of cumulus clouds or thermals, given by the product of air density and vertical velocity. For an area-average, cell_methods should specify whether the average is over all the area or the area of updrafts and/or downdrafts only.  Net upward convective mass flux is the difference between the updraft mass flux and the downdraft mass flux.</description>
+  </entry>
+  <entry id="atmosphere_net_upward_shallow_convective_mass_flux">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>&quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward).  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The atmosphere convective mass flux is the vertical transport of mass for a field of cumulus clouds or thermals, given by the product of air density and vertical velocity. For an area-average, cell_methods should specify whether the average is over all the area or the area of updrafts and/or downdrafts only.  Net upward convective mass flux is the difference between the updraft mass flux and the downdraft mass flux.</description>
+  </entry>
   <entry id="atmosphere_northward_stress_due_to_gravity_wave_drag">
     <canonical_units>Pa</canonical_units>
     <amip>tauvgwd</amip>
@@ -1051,9 +1095,9 @@
     <canonical_units> m-2</canonical_units>
     <description> &quot;Content&quot; indicates a quantity per unit area.  The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. </description>
   </entry>
-  <entry id="atmosphere_optical_thickness_due_to_aerosol">
+  <entry id="atmosphere_optical_thickness_due_to_ambient_aerosol">
     <canonical_units>1</canonical_units>
-    <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path. The atmosphere optical thickness applies to radiation passing through the entire atmosphere. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).</description>
+    <description>The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path.  A coordinate variable of radiation_wavelength or radiation_frequency can be specified to indicate that the optical thickness applies at specific wavelengths or frequencies. The atmosphere optical thickness applies to radiation passing through the entire atmosphere.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  &quot;Ambient aerosol&quot; is aerosol that has taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.</description>
   </entry>
   <entry id="atmosphere_optical_thickness_due_to_black_carbon_ambient_aerosol">
     <canonical_units>1</canonical_units>
@@ -1123,6 +1167,10 @@
   <entry id="atmosphere_sulfate_content">
     <canonical_units>kg m-2</canonical_units>
     <description>&quot;Content&quot; indicates a quantity per unit area. The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.</description>
+  </entry>
+  <entry id="atmosphere_updraft_convective_mass_flux">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description>In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The atmosphere convective mass flux is the vertical transport of mass for a field of cumulus clouds or thermals, given by the product of air density and vertical velocity. For an area-average, cell_methods should specify whether the average is over all the area or the area of updrafts and/or downdrafts only.  &quot;Updraft&quot; means that the flux is  positive in the updward direction (negative downward).</description>
   </entry>
   <entry id="atmosphere_water_content">
     <canonical_units>kg m-2</canonical_units>
@@ -1252,9 +1300,9 @@
     <canonical_units>J m-2</canonical_units>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;wrt&quot; means with respect to. &quot;Content&quot; indicates a quantity per unit area. &quot;Layer&quot; means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well. See Appendix D of the CF convention for information about dimensionless vertical coordinates.</description>
   </entry>
-  <entry id="change_over_time_in_atmospheric_water_content_due_to_advection">
+  <entry id="change_over_time_in_atmosphere_water_content_due_to_advection">
     <canonical_units>kg m-2</canonical_units>
-    <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;change_over_time_in_X&quot; means change in a quantity X over a time-interval, which should be defined by the bounds of the time coordinate. &quot;Content&quot; indicates a quantity per unit area. &quot;Water&quot; means water in all phases.</description>
+    <description>&quot;change_over_time_in_X&quot; means change in a quantity X over a time-interval, which should be defined by the bounds of the time coordinate.  &quot;Content&quot; indicates a quantity per unit area.  The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  &quot;Water&quot; means water in all phases.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.</description>
   </entry>
   <entry id="change_over_time_in_surface_snow_amount">
     <canonical_units>kg m-2</canonical_units>
@@ -1405,6 +1453,14 @@
     <canonical_units>1</canonical_units>
     <description>The term &quot;Exner function&quot; is applied to various quantities in the literature. &quot;Dimensionless Exner function&quot; is the standard name of (p/p0)^(R/Cp), where p is pressure, p0 a reference pressure, R the gas constant and Cp the specific heat at constant pressure. This quantity is also the ratio of in-situ to potential temperature. Standard names for other variants can be defined on request.</description>
   </entry>
+  <entry id="direction_of_radial_vector_away_from_instrument">
+    <canonical_units>degree</canonical_units>
+    <description>The direction_of_radial_vector_away_from_instrument is the direction in which the instrument itself is pointing. The direction is measured positive clockwise from due north. The &quot;instrument&quot; (examples are radar and lidar) is the device used to make an observation. &quot;direction_of_X&quot; means direction of a  vector, a bearing.</description>
+  </entry>
+  <entry id="direction_of_sea_ice_displacement">
+    <canonical_units>degrees</canonical_units>
+    <description>&quot;direction_of_X&quot; means direction of a  vector, a bearing.  &quot;Displacement&quot; means the change in geospatial position of an object that has moved over time. If possible, the time interval over which the motion took place should be specified using a bounds variable for the time coordinate variable.  A displacement can be represented as a vector. Such a vector should however not be interpreted as describing a rectilinear, constant speed motion but merely as an indication that the start point of the vector is found at the tip of the vector after the time interval associated with the displacement variable.  A displacement does not prescribe a trajectory. Sea ice displacement can be defined as a two-dimensional vector, with no vertical component. In that case, &quot;displacement&quot; is also the distance across the earth's surface calculated from the change in a moving object's geospatial position between the start and end of the time interval associated with the displacement variable. The &quot;direction of displacement&quot; is the angle between due north and the displacement vector.</description>
+  </entry>
   <entry id="direction_of_sea_ice_velocity">
     <canonical_units>degree</canonical_units>
     <grib>93</grib>
@@ -1496,6 +1552,10 @@
     <canonical_units>W m-2</canonical_units>
     <description>&quot;longwave&quot; means longwave radiation. Downwelling radiation is radiation from above. It does not mean &quot;net downward&quot;. When thought of as being incident on a surface, a radiative flux is sometimes called &quot;irradiance&quot;. In addition, it is identical with the quantity measured by a cosine-collector light-meter and sometimes called &quot;vector irradiance&quot;. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
   </entry>
+  <entry id="downwelling_longwave_flux_in_air_assuming_clear_sky">
+    <canonical_units>W m-2</canonical_units>
+    <description>Downwelling radiation is radiation from above. It does not mean &quot;net downward&quot;.  When thought of as being incident on a surface, a radiative flux is sometimes called &quot;irradiance&quot;.  In addition, it is identical with the quantity measured by a cosine-collector light-meter and sometimes called &quot;vector irradiance&quot;.  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  A phrase assuming_condition  indicates that the named quantity is the value which would obtain if all  aspects of the system were unaltered except for the assumption of the  circumstances specified by the condition.  &quot;longwave&quot; means longwave radiation. </description>
+  </entry>
   <entry id="downwelling_longwave_radiance_in_air">
     <canonical_units>W m-2 sr-1</canonical_units>
     <description>&quot;longwave&quot; means longwave radiation. Downwelling radiation is radiation from above. It does not mean &quot;net downward&quot;. Radiance is the radiative flux in a particular direction, per unit of solid angle. The direction from which it is coming must be specified, for instance with a coordinate of zenith_angle. If the radiation does not depend on direction, a standard name of isotropic radiance should be chosen instead.</description>
@@ -1547,6 +1607,10 @@
   <entry id="downwelling_shortwave_flux_in_air">
     <canonical_units>W m-2</canonical_units>
     <description>&quot;shortwave&quot; means shortwave radiation. Downwelling radiation is radiation from above. It does not mean &quot;net downward&quot;. When thought of as being incident on a surface, a radiative flux is sometimes called &quot;irradiance&quot;. In addition, it is identical with the quantity measured by a cosine-collector light-meter and sometimes called &quot;vector irradiance&quot;. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
+  </entry>
+  <entry id="downwelling_shortwave_flux_in_air_assuming_clear_sky">
+    <canonical_units>W m-2</canonical_units>
+    <description>Downwelling radiation is radiation from above. It does not mean &quot;net downward&quot;.  When thought of as being incident on a surface, a radiative flux is sometimes called &quot;irradiance&quot;.  In addition, it is identical with the quantity measured by a cosine-collector light-meter and sometimes called &quot;vector irradiance&quot;.  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  A phrase assuming_condition  indicates that the named quantity is the value which would obtain if all  aspects of the system were unaltered except for the assumption of the  circumstances specified by the condition.  &quot;shortwave&quot; means shortwave radiation. </description>
   </entry>
   <entry id="downwelling_shortwave_flux_in_sea_water">
     <canonical_units> W m-2</canonical_units>
@@ -1629,6 +1693,10 @@
     <amip>tauucorr</amip>
     <description>&quot;Eastward&quot; indicates a vector component which is positive when directed eastward (negative westward). Momentum flux is dimensionally equivalent to stress and pressure. It is a tensor quantity. Flux correction is also called &quot;flux adjustment&quot;. A positive flux correction is downward i.e. added to the ocean. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
   </entry>
+  <entry id="eastward_sea_ice_displacement">
+    <canonical_units>m</canonical_units>
+    <description>&quot;Eastward&quot; indicates a vector component which is positive when directed eastward (negative westward).  &quot;Displacement&quot; means the change in geospatial position of an object that has moved over time. If possible, the time interval over which the motion took place should be specified using a bounds variable for the time coordinate variable.  A displacement can be represented as a vector. Such a vector should however not be interpreted as describing a rectilinear, constant speed motion but merely as an indication that the start point of the vector is found at the tip of the vector after the time interval associated with the displacement variable.  A displacement does not prescribe a trajectory. Sea ice displacement can be defined as a two-dimensional vector, with no vertical component. An eastward displacement is the distance calculated from the change in a moving object's longitude between the start and end of the time interval associated with the displacement variable.</description>
+  </entry>
   <entry id="eastward_sea_ice_velocity">
     <canonical_units>m s-1</canonical_units>
     <grib>95</grib>
@@ -1638,6 +1706,10 @@
     <canonical_units>m s-1</canonical_units>
     <grib>49</grib>
     <description>A velocity is a vector quantity. &quot;Eastward&quot; indicates a vector component which is positive when directed eastward (negative westward).</description>
+  </entry>
+  <entry id="eastward_sea_water_velocity_assuming_no_tide">
+    <canonical_units>m s-1</canonical_units>
+    <description>A velocity is a vector quantity.  &quot;Eastward&quot; indicates a vector component which is positive when directed eastward (negative westward).  A phrase assuming_condition  indicates that the named quantity is the value which would obtain if all  aspects of the system were unaltered except for the assumption of the  circumstances specified by the condition. </description>
   </entry>
   <entry id="eastward_transformed_eulerian_mean_air_velocity">
     <canonical_units>m s-1</canonical_units>
@@ -1977,67 +2049,67 @@
   <entry id="land_ice_area_fraction">
     <canonical_units>1</canonical_units>
     <amip>sftgif</amip>
-    <description>&quot;X_area_fraction&quot; means the fraction of horizontal area occupied by X. &quot;X_area&quot; means the horizontal area occupied by X within the grid cell. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock.</description>
+    <description> &quot;X_area_fraction&quot; means the fraction of horizontal area occupied by X.  &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves. </description>
   </entry>
   <entry id="land_ice_basal_melt_rate">
     <canonical_units>m s-1</canonical_units>
-    <description>&quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock. The land ice basal melt rate is the rate at which ice is lost per unit area at the base of the ice.</description>
+    <description> &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.  The land ice basal melt rate is the rate at which ice is lost per unit area at the base of the ice. </description>
   </entry>
   <entry id="land_ice_basal_x_velocity">
     <canonical_units>m s-1</canonical_units>
-    <description>A velocity is a vector quantity. &quot;x&quot; indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock.</description>
+    <description>A velocity is a vector quantity. &quot;x&quot; indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.</description>
   </entry>
   <entry id="land_ice_basal_y_velocity">
     <canonical_units>m s-1</canonical_units>
-    <description>A velocity is a vector quantity. &quot;y&quot; indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock.</description>
+    <description>A velocity is a vector quantity. &quot;y&quot; indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.</description>
   </entry>
   <entry id="land_ice_calving_rate">
     <canonical_units>m s-1</canonical_units>
-    <description>&quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock. The land ice calving rate is the rate at which ice is lost per unit area through calving into the ocean.</description>
+    <description>&quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves. The land ice calving rate is the rate at which ice is lost per unit area through calving into the ocean.</description>
   </entry>
   <entry id="land_ice_lwe_basal_melt_rate">
     <canonical_units>m s-1</canonical_units>
-    <description>&quot;lwe&quot; means liquid water equivalent. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock. The land ice basal melt rate is the rate at which ice is lost per unit area at the base of the ice.</description>
+    <description>&quot;lwe&quot; means liquid water equivalent. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves. The land ice basal melt rate is the rate at which ice is lost per unit area at the base of the ice.</description>
   </entry>
   <entry id="land_ice_lwe_calving_rate">
     <canonical_units>m s-1</canonical_units>
-    <description>&quot;lwe&quot; means liquid water equivalent. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock. The land ice calving rate is the rate at which ice is lost per unit area through calving into the ocean.</description>
+    <description>&quot;lwe&quot; means liquid water equivalent. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves. The land ice calving rate is the rate at which ice is lost per unit area through calving into the ocean.</description>
   </entry>
   <entry id="land_ice_lwe_surface_specific_mass_balance">
     <canonical_units>m s-1</canonical_units>
-    <description>&quot;lwe&quot; means liquid water equivalent. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock. Specific mass balance means the net rate at which ice is added per unit area at the land ice surface.</description>
+    <description>&quot;lwe&quot; means liquid water equivalent. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves. Specific mass balance means the net rate at which ice is added per unit area at the land ice surface.</description>
   </entry>
   <entry id="land_ice_sigma_coordinate">
     <canonical_units>1</canonical_units>
-    <description>&quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock.</description>
+    <description>&quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.</description>
   </entry>
   <entry id="land_ice_surface_specific_mass_balance">
     <canonical_units>m s-1</canonical_units>
-    <description>&quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock. Specific mass balance means the net rate at which ice is added per unit area at the land ice surface.</description>
+    <description>&quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves. Specific mass balance means the net rate at which ice is added per unit area at the land ice surface.</description>
   </entry>
   <entry id="land_ice_temperature">
     <canonical_units>K</canonical_units>
-    <description>&quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock.</description>
+    <description>&quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.</description>
   </entry>
   <entry id="land_ice_thickness">
     <canonical_units>m</canonical_units>
-    <description>&quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock.</description>
+    <description>&quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves. &quot;Thickness&quot; means the vertical extent of a layer.</description>
   </entry>
   <entry id="land_ice_vertical_mean_x_velocity">
     <canonical_units>m s-1</canonical_units>
-    <description>A velocity is a vector quantity. &quot;x&quot; indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock. The vertical mean land ice velocity is the average from the bedrock to the surface of the ice.</description>
+    <description>A velocity is a vector quantity. &quot;x&quot; indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves. The vertical mean land ice velocity is the average from the bedrock to the surface of the ice.</description>
   </entry>
   <entry id="land_ice_vertical_mean_y_velocity">
     <canonical_units>m s-1</canonical_units>
-    <description>A velocity is a vector quantity. &quot;y&quot; indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock. The vertical mean land ice velocity is the average from the bedrock to the surface of the ice.</description>
+    <description>A velocity is a vector quantity. &quot;y&quot; indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves. The vertical mean land ice velocity is the average from the bedrock to the surface of the ice.</description>
   </entry>
   <entry id="land_ice_x_velocity">
     <canonical_units>m s-1</canonical_units>
-    <description>A velocity is a vector quantity. &quot;x&quot; indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock.</description>
+    <description>A velocity is a vector quantity. &quot;x&quot; indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.</description>
   </entry>
   <entry id="land_ice_y_velocity">
     <canonical_units>m s-1</canonical_units>
-    <description>A velocity is a vector quantity. &quot;y&quot; indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock.</description>
+    <description>A velocity is a vector quantity. &quot;y&quot; indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.</description>
   </entry>
   <entry id="large_scale_cloud_area_fraction">
     <canonical_units>1</canonical_units>
@@ -4035,9 +4107,9 @@
     <canonical_units>mol kg-1</canonical_units>
     <description>moles_of_X_per_unit_mass_inY is also called &quot;molality&quot; of X in Y, where X is a material constituent of Y.</description>
   </entry>
-  <entry id="moles_per_unit_mass_of_cfc11_in_sea_water">
+  <entry id="moles_of_cfc11_per_unit_mass_in_sea_water">
     <canonical_units> mol kg-1</canonical_units>
-    <description> The chemical formula of CFC11 is CFCl3. The IUPAC name fof CFC11 is trichloro-fluoro-methane.</description>
+    <description>moles_of_X_per_unit_mass_inY is also called &quot;molality&quot; of X in Y, where X is a material constituent of Y.  A chemical species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. The chemical formula of CFC11 is CFCl3. The IUPAC name fof CFC11 is trichloro-fluoro-methane.</description>
   </entry>
   <entry id="net_downward_longwave_flux_in_air">
     <canonical_units>W m-2</canonical_units>
@@ -4195,6 +4267,10 @@
     <amip>sltovovrt</amip>
     <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;Northward&quot; indicates a vector component which is positive when directed northward (negative southward). Northward transport by (meridional) overturning is geometrically defined as being the part due to the vertical integral of the product of zonal means of velocity and tracer. The velocity does not include &quot;bolus&quot; or Gent-McWilliams velocity.</description>
   </entry>
+  <entry id="northward_sea_ice_displacement">
+    <canonical_units>m</canonical_units>
+    <description>&quot;Northward&quot; indicates a vector component which is positive when directed northward (negative southward).  &quot;Displacement&quot; means the change in geospatial position of an object that has moved over time. If possible, the time interval over which the motion took place should be specified using a bounds variable for the time coordinate variable.  A displacement can be represented as a vector. Such a vector should however not be interpreted as describing a rectilinear, constant speed motion but merely as an indication that the start point of the vector is found at the tip of the vector after the time interval associated with the displacement variable.  A displacement does not prescribe a trajectory. Sea ice displacement can be defined as a two-dimensional vector, with no vertical component. A northward displacement is the distance calculated from the change in a moving object's latitude between the start and end of the time interval associated with the displacement variable.</description>
+  </entry>
   <entry id="northward_sea_ice_velocity">
     <canonical_units>m s-1</canonical_units>
     <grib>96</grib>
@@ -4204,6 +4280,10 @@
     <canonical_units>m s-1</canonical_units>
     <grib>50</grib>
     <description>A velocity is a vector quantity. &quot;Northward&quot; indicates a vector component which is positive when directed northward (negative southward).</description>
+  </entry>
+  <entry id="northward_sea_water_velocity_assuming_no_tide">
+    <canonical_units>m s-1</canonical_units>
+    <description>A velocity is a vector quantity.  &quot;Northward&quot; indicates a vector component which is positive when directed northward (negative southward).  A phrase assuming_condition  indicates that the named quantity is the value which would obtain if all  aspects of the system were unaltered except for the assumption of the  circumstances specified by the condition. </description>
   </entry>
   <entry id="northward_transformed_eulerian_mean_air_velocity">
     <canonical_units>m s-1</canonical_units>
@@ -4227,6 +4307,22 @@
     <canonical_units>s-1</canonical_units>
     <grib>46</grib>
     <description>&quot;Northward&quot; indicates a vector component which is positive when directed northward (negative southward). Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) Wind shear is the derivative of wind with respect to height.</description>
+  </entry>
+  <entry id="number_of_days_with_air_temperature_above_threshold">
+    <canonical_units> 1 </canonical_units>
+    <description>Air temperature is the bulk temperature of the air, not the surface (skin) temperature.  A variable whose standard name has the form number_of_days_with_X_below|above_threshold is a count of the number of days on which the condition X_below|above_threshold is satisfied.  It must have a coordinate variable or scalar coordinate variable with the a standard name of X to supply the threshold(s). It must have a climatological time variable, and a cell_methods entry for within days which describes the processing of quantity X before the threshold is applied. A number_of_days is an extensive quantity in time, and the cell_methods entry for over days should be &quot;sum&quot;.</description>
+  </entry>
+  <entry id="number_of_days_with_air_temperature_below_threshold">
+    <canonical_units> 1 </canonical_units>
+    <description>Air temperature is the bulk temperature of the air, not the surface (skin) temperature.  A variable whose standard name has the form number_of_days_with_X_below|above_threshold is a count of the number of days on which the condition X_below|above_threshold is satisfied.  It must have a coordinate variable or scalar coordinate variable with the a standard name of X to supply the threshold(s). It must have a climatological time variable, and a cell_methods entry for within days which describes the processing of quantity X before the threshold is applied. A number_of_days is an extensive quantity in time, and the cell_methods entry for over days should be &quot;sum&quot;.</description>
+  </entry>
+  <entry id="number_of_days_with_lwe_thickness_of_precipitation_amount_above_threshold">
+    <canonical_units> 1 </canonical_units>
+    <description> &quot;Amount&quot; means mass per unit area.  The construction lwe_thickness_of_X_amount or _content means the vertical extent of a layer of liquid water having the same mass per unit area.  &quot;lwe&quot; means liquid water equivalent.  A variable whose standard name has the form number_of_days_with_X_below|above_threshold is a count of the number of days on which the condition X_below|above_threshold is satisfied.  It must have a coordinate variable or scalar coordinate variable with the a standard name of X to supply the threshold(s). It must have a climatological time variable, and a cell_methods entry for within days which describes the processing of quantity X before the threshold is applied. A number_of_days is an extensive quantity in time, and the cell_methods entry for over days should be &quot;sum&quot;.</description>
+  </entry>
+  <entry id="number_of_days_with_wind_speed_above_threshold">
+    <canonical_units> 1 </canonical_units>
+    <description>Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.)  The wind speed is the magnitude of the wind velocity.  A variable whose standard name has the form number_of_days_with_X_below|above_threshold is a count of the number of days on which the condition X_below|above_threshold is satisfied.  It must have a coordinate variable or scalar coordinate variable with the a standard name of X to supply the threshold(s). It must have a climatological time variable, and a cell_methods entry for within days which describes the processing of quantity X before the threshold is applied. A number_of_days is an extensive quantity in time, and the cell_methods entry for over days should be &quot;sum&quot;.</description>
   </entry>
   <entry id="ocean_barotropic_mass_streamfunction">
     <canonical_units> kg s-1</canonical_units>
@@ -4475,9 +4571,9 @@
     <canonical_units>W m-3</canonical_units>
     <description>&quot;spectral&quot; means per unit wavelength or as a function of wavelength; spectral quantities are sometimes called &quot;monochromatic&quot;. Radiation wavelength has standard name radiation_wavelength. Omnidirectional spherical irradiance is the radiation incident on unit area of a spherical (or &quot;4-pi&quot;) collector. It is sometimes called &quot;scalar irradiance&quot;. Radiation incident on a 2-pi collector has standard names of &quot;spherical irradiance&quot; which specify up/downwelling.</description>
   </entry>
-  <entry id="optical_thickness_of_atmosphere_layer_due_to_aerosol">
+  <entry id="optical_thickness_of_atmosphere_layer_due_to_ambient_aerosol">
     <canonical_units>1</canonical_units>
-    <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;Layer&quot; means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well. The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).</description>
+    <description>&quot;Layer&quot; means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.  The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path.  A coordinate variable of radiation_wavelength or radiation_frequency can be specified to indicate that the optical thickness applies at specific wavelengths or frequencies. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  &quot;Ambient aerosol&quot; is aerosol that has taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.</description>
   </entry>
   <entry id="planetary_albedo">
     <canonical_units>1</canonical_units>
@@ -4627,10 +4723,6 @@
     <canonical_units>Pa m s-2</canonical_units>
     <description>&quot;product_of_X_and_Y&quot; means X*Y. &quot;Northward&quot; indicates a vector component which is positive when directed northward (negative southward). Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) &quot;omegaX&quot; is used for brevity to mean &quot;lagrangian_tendency_of_air_pressure in standard names constructed as a combination of omega with some other quantity.</description>
   </entry>
-  <entry id="product_of_northward_wind_and_specific_humdity">
-    <canonical_units>m s-1</canonical_units>
-    <description>&quot;product_of_X_and_Y&quot; means X*Y. &quot;specific&quot; means per unit mass. &quot;Northward&quot; indicates a vector component which is positive when directed northward (negative southward). Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.)</description>
-  </entry>
   <entry id="product_of_northward_wind_and_specific_humidity">
     <canonical_units>m s-1</canonical_units>
     <amip>mpvhusa</amip>
@@ -4678,6 +4770,10 @@
   <entry id="pseudo_equivalent_temperature">
     <canonical_units>K</canonical_units>
     <description></description>
+  </entry>
+  <entry id="radial_sea_water_velocity_away_from_instrument">
+    <canonical_units>m s-1</canonical_units>
+    <description>A velocity is a vector quantity.  Radial velocity away from instrument means the component of the velocity along the line of sight of the instrument where positive implies movement away from the instrument (i.e. outward). The &quot;instrument&quot; (examples are radar and lidar) is the device used to make an observation.</description>
   </entry>
   <entry id="radial_velocity_of_scatterers_away_from_instrument">
     <canonical_units>m s-1</canonical_units>
@@ -4775,6 +4871,10 @@
     <canonical_units>m</canonical_units>
     <description>sea_level means mean sea level, which is close to the geoid in sea areas.</description>
   </entry>
+  <entry id="sea_floor_depth_below_sea_surface">
+    <canonical_units>m</canonical_units>
+    <description>The sea_floor_depth_below_sea_surface is the vertical distance between the sea surface and the seabed as measured at a given point in space including the variance caused by tides and possibly waves.</description>
+  </entry>
   <entry id="sea_ice_albedo">
     <canonical_units> 1 </canonical_units>
     <description>The albedo of sea ice.</description>
@@ -4786,6 +4886,10 @@
   <entry id="sea_ice_area">
     <canonical_units>m2</canonical_units>
     <description>&quot;X_area&quot; means the horizontal area occupied by X within the grid cell.</description>
+  </entry>
+  <entry id="sea_ice_displacement">
+    <canonical_units>m</canonical_units>
+    <description>&quot;Displacement&quot; means the change in geospatial position of an object that has moved over time. If possible, the time interval over which the motion took place should be specified using a bounds variable for the time coordinate variable.  A displacement can be represented as a vector. Such a vector should however not be interpreted as describing a rectilinear, constant speed motion but merely as an indication that the start point of the vector is found at the tip of the vector after the time interval associated with the displacement variable.  A displacement does not prescribe a trajectory. Sea ice displacement can be defined as a two-dimensional vector, with no vertical component. In that case, &quot;displacement&quot; is also the distance across the earth's surface calculated from the change in a moving object's geospatial position between the start and end of the time interval associated with the displacement variable.</description>
   </entry>
   <entry id="sea_ice_area_fraction">
     <canonical_units>1</canonical_units>
@@ -4800,10 +4904,6 @@
   <entry id="sea_ice_extent">
     <canonical_units>m2</canonical_units>
     <description></description>
-  </entry>
-  <entry id="sea_surface_height_above_reference_ellipsoid">
-    <canonical_units>m</canonical_units>
-    <description>&quot;Sea surface height&quot; is a time-varying quantity.  A reference ellipsoid is a mathematical figure that approximates the geoid.  The geoid is a surface of constant geopotential with which mean sea level would coincide if the ocean were at rest.  The ellipsoid is an approximation because the geoid is an irregular shape. A number of reference ellipsoids are defined for use in the field of geodesy.  The standard name for the height of the sea surface above the geoid is sea_surface_height_above_geoid.  The standard name for the height of the sea surface above mean sea level is sea_surface_height_above_sea_level.</description>
   </entry>
   <entry id="sea_ice_freeboard">
     <canonical_units>m</canonical_units>
@@ -4836,9 +4936,17 @@
     <canonical_units>m3</canonical_units>
     <description></description>
   </entry>
+  <entry id="sea_ice_x_displacement">
+    <canonical_units>m</canonical_units>
+    <description>&quot;x&quot; indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.  &quot;Displacement&quot; means the change in geospatial position of an object that has moved over time. If possible, the time interval over which the motion took place should be specified using a bounds variable for the time coordinate variable.  A displacement can be represented as a vector. Such a vector should however not be interpreted as describing a rectilinear, constant speed motion but merely as an indication that the start point of the vector is found at the tip of the vector after the time interval associated with the displacement variable.  A displacement does not prescribe a trajectory. Sea ice displacement can be defined as a two-dimensional vector, with no vertical component. An x displacement is calculated from the difference in the moving object's grid x coordinate between the start and end of the time interval associated with the displacement variable.</description>
+  </entry>
   <entry id="sea_ice_x_velocity">
     <canonical_units>m s-1</canonical_units>
     <description>A velocity is a vector quantity. &quot;x&quot; indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.</description>
+  </entry>
+  <entry id="sea_ice_y_displacement">
+    <canonical_units>m</canonical_units>
+    <description>&quot;y&quot; indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.  &quot;Displacement&quot; means the change in geospatial position of an object that has moved over time. If possible, the time interval over which the motion took place should be specified using a bounds variable for the time coordinate variable.  A displacement can be represented as a vector. Such a vector should however not be interpreted as describing a rectilinear, constant speed motion but merely as an indication that the start point of the vector is found at the tip of the vector after the time interval associated with the displacement variable.  A displacement does not prescribe a trajectory. Sea ice displacement can be defined as a two-dimensional vector, with no vertical component. A y displacement is calculated from the difference in the moving object's grid y coordinate between the start and end of the time interval associated with the displacement variable.</description>
   </entry>
   <entry id="sea_ice_y_velocity">
     <canonical_units>m s-1</canonical_units>
@@ -4965,6 +5073,10 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
     <canonical_units>s</canonical_units>
     <description>The wave directional spectrum can be written as a  five dimensional function S(t,x,y,f,theta) where t is time, x and y are horizontal coordinates (such as longitude and latitude), f is frequency and theta is direction.  S has the standard name sea_surface_wave_directional_variance_spectral_density.  S can be integrated over direction to give S1= integral(S dtheta) and this quantity has the standard name sea_surface_wave_variance_spectral_density.  Frequency moments, M(n) of S1 can then be calculated as follows: M(n) = integral(S1 f^n df), where f^n is f to the power of n.  The second wave period, T(m2) is calculated as the square root of the ratio M(0)/M(2).</description>
   </entry>
+  <entry id="sea_surface_wave_period_at_variance_spectral_density_maximum">
+    <canonical_units>s</canonical_units>
+    <description>A period is an interval of time, or the time-period of an oscillation.  The sea_surface_wave_period_at_variance_spectral_density_maximum, sometimes called peak wave period, is the period of the most energetic waves in the total wave spectrum at a specific location.</description>
+  </entry>
   <entry id="sea_surface_wave_significant_height">
     <canonical_units>m</canonical_units>
     <grib>100</grib>
@@ -5089,6 +5201,10 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
   <entry id="sea_water_y_velocity">
     <canonical_units>m s-1</canonical_units>
     <description>A velocity is a vector quantity. &quot;y&quot; indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.</description>
+  </entry>
+  <entry id="secchi_depth_of_sea_water">
+    <canonical_units>m</canonical_units>
+    <description> Depth is the vertical distance below the surface.  A Secchi disk is a patterned disk that is used to measure water transparency in oceans and lakes. The disk is lowered into the water and the depth at which the pattern is no longer visible is the called the secchi depth.</description>
   </entry>
   <entry id="snow_density">
     <canonical_units>kg m-3</canonical_units>
@@ -5255,6 +5371,22 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
   <entry id="speed_of_sound_in_sea_water">
     <canonical_units>m s-1</canonical_units>
     <description>Speed is the magnitude of velocity.</description>
+  </entry>
+  <entry id="spell_length_of_days_with_air_temperature_above_threshold">
+    <canonical_units>day</canonical_units>
+    <description>Air temperature is the bulk temperature of the air, not the surface (skin) temperature.  A spell is the number of consecutive days on which the condition X_below|above_threshold is satisified.  A variable whose standard name has the form spell_length_of_days_with_X_below|above_threshold must have a coordinate variable or scalar coordinate variable with the a standard name of X to supply the threshold(s). It must have a climatological time variable, and a cell_method entry for within days which describes the processing of quantity X before the threshold is applied. A spell_length_of_days is an intensive quantity in time, and the cell_methods entry for over days can be any of the methods listed in Appendix E appropriate for intensive quantities e.g. &quot;maximum&quot;, &quot;minimum&quot; or &quot;mean&quot;.</description>
+  </entry>
+  <entry id="spell_length_of_days_with_air_temperature_below_threshold">
+    <canonical_units>day</canonical_units>
+    <description>Air temperature is the bulk temperature of the air, not the surface (skin) temperature.  A spell is the number of consecutive days on which the condition X_below|above_threshold is satisified.  A variable whose standard name has the form spell_length_of_days_with_X_below|above_threshold must have a coordinate variable or scalar coordinate variable with the a standard name of X to supply the threshold(s). It must have a climatological time variable, and a cell_method entry for within days which describes the processing of quantity X before the threshold is applied. A spell_length_of_days is an intensive quantity in time, and the cell_methods entry for over days can be any of the methods listed in Appendix E appropriate for intensive quantities e.g. &quot;maximum&quot;, &quot;minimum&quot; or &quot;mean&quot;.</description>
+  </entry>
+  <entry id="spell_length_of_days_with_lwe_thickness_of_precipitation_amount_above_threshold">
+    <canonical_units>day</canonical_units>
+    <description>&quot;Amount&quot; means mass per unit area.  The construction lwe_thickness_of_X_amount or _content means the vertical extent of a layer of liquid water having the same mass per unit area.  &quot;lwe&quot; means liquid water equivalent.  A spell is the number of consecutive days on which the condition X_below|above_threshold is satisified.  A variable whose standard name has the form spell_length_of_days_with_X_below|above_threshold must have a coordinate variable or scalar coordinate variable with the a standard name of X to supply the threshold(s). It must have a climatological time variable, and a cell_method entry for within days which describes the processing of quantity X before the threshold is applied. A spell_length_of_days is an intensive quantity in time, and the cell_methods entry for over days can be any of the methods listed in Appendix E appropriate for intensive quantities e.g. &quot;maximum&quot;, &quot;minimum&quot; or &quot;mean&quot;.</description>
+  </entry>
+  <entry id="spell_length_of_days_with_lwe_thickness_of_precipitation_amount_below_threshold">
+    <canonical_units>day</canonical_units>
+    <description>&quot;Amount&quot; means mass per unit area.  The construction lwe_thickness_of_X_amount or _content means the vertical extent of a layer of liquid water having the same mass per unit area.  &quot;lwe&quot; means liquid water equivalent.  A spell is the number of consecutive days on which the condition X_below|above_threshold is satisified.  A variable whose standard name has the form spell_length_of_days_with_X_below|above_threshold must have a coordinate variable or scalar coordinate variable with the a standard name of X to supply the threshold(s). It must have a climatological time variable, and a cell_method entry for within days which describes the processing of quantity X before the threshold is applied. A spell_length_of_days is an intensive quantity in time, and the cell_methods entry for over days can be any of the methods listed in Appendix E appropriate for intensive quantities e.g. &quot;maximum&quot;, &quot;minimum&quot; or &quot;mean&quot;.</description>
   </entry>
   <entry id="square_of_air_temperature">
     <canonical_units>K2</canonical_units>
@@ -5632,6 +5764,10 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
     <canonical_units>Pa</canonical_units>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. &quot;Water&quot; means water in all phases, including frozen i.e. ice and snow. The partial pressure of a dissolved gas in sea water is the partial pressure in air with which it would be in equilibrium. The partial pressure of a gaseous constituent of air is the pressure which it alone would exert with unchanged temperature and number of moles per unit volume.</description>
   </entry>
+  <entry id="surface_ratio_of_upwelling_radiance_emerging_from_sea_water_to_downwelling_radiative_flux_in_air">
+    <canonical_units>sr^-1</canonical_units>
+    <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  &quot;ratio_of_X_to_Y&quot;  means X/Y.  Upwelling radiation is radiation from below. It does not mean &quot;net upward&quot;.  Downwelling radiation is radiation from above. It does not mean &quot;net downward&quot;.    Radiance is the radiative flux in a particular direction, per unit of solid angle.  The direction towards which it is going must be specified, for instance with a coordinate of angle_of_emergence.  Radiative flux is the sum of shortwave and longwave radiative fluxes.  When thought of as being incident on a surface, a radiative flux is sometimes called &quot;irradiance&quot;.   In relation to satellite ocean color products the quantity named surface_ratio_of_upwelling_radiance_emerging_from_sea_water_to_downwelling_radiative_flux_in_air is sometimes called &quot;remote sensing reflectance&quot; and has a  bidirectional dependence. The direction of the downwelling flux can be specified using a coordinate with the standard name angle_of_incidence.</description>
+  </entry>
   <entry id="surface_roughness_length">
     <canonical_units>m</canonical_units>
     <grib>83 E173</grib>
@@ -5844,6 +5980,10 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
     <canonical_units>K s-1</canonical_units>
     <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;tendency_of_X&quot; means derivative of X with respect to time. Air temperature is the bulk temperature of the air, not the surface (skin) temperature.</description>
   </entry>
+  <entry id="tendency_of_air_temperature_due_to_convection">
+    <canonical_units>K s-1</canonical_units>
+    <description>Air temperature is the bulk temperature of the air, not the surface (skin) temperature.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time. </description>
+  </entry>
   <entry id="tendency_of_air_temperature_due_to_diabatic_processes">
     <canonical_units>K s-1</canonical_units>
     <amip>tnt</amip>
@@ -5858,10 +5998,10 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
     <amip>tntdc</amip>
     <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;tendency_of_X&quot; means derivative of X with respect to time. Air temperature is the bulk temperature of the air, not the surface (skin) temperature.</description>
   </entry>
-  <entry id="tendency_of_air_temperature_due_to_large_scale_precipitation">
+  <entry id="tendency_of_air_temperature_due_to_stratiform_precipitation">
     <canonical_units>K s-1</canonical_units>
     <amip>tntlsp</amip>
-    <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;tendency_of_X&quot; means derivative of X with respect to time. Air temperature is the bulk temperature of the air, not the surface (skin) temperature.</description>
+    <description>Air temperature is the bulk temperature of the air, not the surface (skin) temperature. In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes). The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;tendency_of_X&quot; means derivative of X with respect to time.</description>
   </entry>
   <entry id="tendency_of_air_temperature_due_to_longwave_heating">
     <canonical_units>K s-1</canonical_units>
@@ -5871,6 +6011,10 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
   <entry id="tendency_of_air_temperature_due_to_longwave_heating_assuming_clear_sky">
     <canonical_units>K s-1</canonical_units>
     <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. A phrase assuming_condition indicates that the named quantity is the value which would obtain if all aspects of the system were unaltered except for the assumption of the circumstances specified by the condition. &quot;tendency_of_X&quot; means derivative of X with respect to time. &quot;longwave&quot; means longwave radiation. Air temperature is the bulk temperature of the air, not the surface (skin) temperature.</description>
+  </entry>
+  <entry id="tendency_of_air_temperature_due_to_model_physics">
+    <canonical_units>K s-1</canonical_units>
+    <description>Air temperature is the bulk temperature of the air, not the surface (skin) temperature.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time. </description>
   </entry>
   <entry id="tendency_of_air_temperature_due_to_moist_convection">
     <canonical_units>K s-1</canonical_units>
@@ -5889,6 +6033,10 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
   <entry id="tendency_of_air_temperature_due_to_shortwave_heating_assuming_clear_sky">
     <canonical_units>K s-1</canonical_units>
     <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. A phrase assuming_condition indicates that the named quantity is the value which would obtain if all aspects of the system were unaltered except for the assumption of the circumstances specified by the condition. &quot;tendency_of_X&quot; means derivative of X with respect to time. &quot;shortwave&quot; means shortwave radiation. Air temperature is the bulk temperature of the air, not the surface (skin) temperature.</description>
+  </entry>
+  <entry id="tendency_of_air_temperature_due_to_stratiform_cloud_and_precipitation_and_boundary_layer_mixing">
+    <canonical_units>K s-1</canonical_units>
+    <description>Air temperature is the bulk temperature of the air, not the surface (skin) temperature.  In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time. </description>
   </entry>
   <entry id="tendency_of_air_temperature_due_to_turbulence">
     <canonical_units>K s-1</canonical_units>
@@ -6886,7 +7034,7 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
   </entry>
   <entry id="tendency_of_land_ice_thickness">
     <canonical_units>m s-1</canonical_units>
-    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock.</description>
+    <description>&quot;tendency_of_X&quot; means derivative of X with respect to time. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.  &quot;Thickness&quot; means the vertical extent of a layer..</description>
   </entry>
   <entry id="tendency_of_mass_fraction_of_cloud_condensed_water_in_air">
     <canonical_units>s-1</canonical_units>
@@ -6952,6 +7100,10 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
     <canonical_units>s-1</canonical_units>
     <description> Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of X to the mass of Y (including X).  A chemical species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. Aggregation is the clumping together of frozen cloud particles to produce snowflakes. In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time. </description>
   </entry>
+  <entry id="tendency_of_mass_fraction_of_stratiform_cloud_ice_in_air_due_to_convective_detrainment">
+    <canonical_units>s-1</canonical_units>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of X to the mass of Y (including X).  A chemical species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time. </description>
+  </entry>
   <entry id="tendency_of_mass_fraction_of_stratiform_cloud_ice_in_air_due_to_deposition_and_sublimation">
     <canonical_units>s-1</canonical_units>
     <description> Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of X to the mass of Y (including X).  A chemical species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. Sublimation is the conversion of solid into vapor. Deposition is the opposite of sublimation, i.e. it is the conversion of vapor into solid.  Deposition is distinct from the processes of dry deposition and wet deposition of atmospheric aerosol particles, which are referred to in some standard names. In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time. </description>
@@ -6960,7 +7112,7 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
     <canonical_units>s-1</canonical_units>
     <description> Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of X to the mass of Y (including X).  A chemical species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. Evaporation is the conversion of liquid or solid into vapor.  (The conversion of solid alone into vapor is called &quot;sublimation&quot;.)  In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time. </description>
   </entry>
-  <entry id="tendency_of_mass_fraction_of_stratiform_cloud_ice_in_air_due_to_heterogeneous_nucleation_from_cloud_liquid">
+  <entry id="tendency_of_mass_fraction_of_stratiform_cloud_ice_in_air_due_to_heterogeneous_nucleation_from_cloud_liquid_water">
     <canonical_units>s-1</canonical_units>
     <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, whereX is a material constituent of Y. It means the ratio of the mass of X to the mass of Y (including X).  A chemical species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).  The specification of a physical process by the phrase due_to_process means that the quantity named isa  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time.  Heterogeneous nucleation occurs when a small particle of a substance other than water acts as a freezing or condensation nucleus.</description>
   </entry>
@@ -6976,7 +7128,7 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
     <canonical_units>s-1</canonical_units>
     <description> Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of X to the mass of Y (including X).  A chemical species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time. </description>
   </entry>
-  <entry id="tendency_of_mass_fraction_of_stratiform_cloud_ice_in_air_due_to_melting_to_cloud_liquid">
+  <entry id="tendency_of_mass_fraction_of_stratiform_cloud_ice_in_air_due_to_melting_to_cloud_liquid_water">
     <canonical_units>s-1</canonical_units>
     <description> Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of X to the mass of Y (including X).  A chemical species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time. </description>
   </entry>
@@ -6984,7 +7136,7 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
     <canonical_units>s-1</canonical_units>
     <description> Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of X to the mass of Y (including X).  A chemical species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time. </description>
   </entry>
-  <entry id="tendency_of_mass_fraction_of_stratiform_cloud_ice_in_air_due_to_riming_from_cloud_liquid">
+  <entry id="tendency_of_mass_fraction_of_stratiform_cloud_ice_in_air_due_to_riming_from_cloud_liquid_water">
     <canonical_units>s-1</canonical_units>
     <description> Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of X to the mass of Y (including X).  A chemical species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. Riming is the rapid freezing of supercooled water onto a surface. In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time. </description>
   </entry>
@@ -7035,6 +7187,10 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
   <entry id="tendency_of_mass_fraction_of_stratiform_cloud_liquid_water_in_air_due_to_condensation_and_evaporation_from_turbulence">
     <canonical_units>s-1</canonical_units>
     <description> Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of X to the mass of Y (including X).  A chemical species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. Evaporation is the conversion of liquid or solid into vapor. Condensation is the conversion of vapor into liquid. In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time. </description>
+  </entry>
+  <entry id="tendency_of_mass_fraction_of_stratiform_cloud_liquid_water_in_air_due_to_convective_detrainment">
+    <canonical_units>s-1</canonical_units>
+    <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of X to the mass of Y (including X).  A chemical species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time. </description>
   </entry>
   <entry id="tendency_of_mass_fraction_of_stratiform_cloud_liquid_water_in_air_due_to_heterogeneous_nucleation">
     <canonical_units>s-1</canonical_units>
@@ -7209,14 +7365,18 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
     <canonical_units>s-1</canonical_units>
     <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;tendency_of_X&quot; means derivative of X with respect to time. &quot;specific&quot; means per unit mass. Specific humidity is the mass fraction of water vapor in (moist) air.</description>
   </entry>
-  <entry id="tendency_of_specific_humidity_due_to_large_scale_precipitation">
+  <entry id="tendency_of_specific_humidity_due_to_stratiform_precipitation">
     <canonical_units>s-1</canonical_units>
-    <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;Tendency_of_X&quot; means derivative of X with respect to time. &quot;Specific&quot; means per unit mass. Specific humidity is the mass fraction of water vapor in (moist) air.</description>
+    <description>Specific humidity is the mass fraction of water vapor in (moist) air. In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes). The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;Tendency_of_X&quot; means derivative of X with respect to time. &quot;Specific&quot; means per unit mass.</description>
   </entry>
   <entry id="tendency_of_specific_humidity_due_to_model_physics">
     <canonical_units>s-1</canonical_units>
     <amip>tnmrd</amip>
     <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;tendency_of_X&quot; means derivative of X with respect to time. &quot;specific&quot; means per unit mass. Specific humidity is the mass fraction of water vapor in (moist) air.</description>
+  </entry>
+  <entry id="tendency_of_specific_humidity_due_to_stratiform_cloud_and_precipitation_and_boundary_layer_mixing">
+    <canonical_units>K s-1</canonical_units>
+    <description>Specific humidity is the mass fraction of water vapor in (moist) air.  In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;specific&quot; means per unit mass. </description>
   </entry>
   <entry id="tendency_of_surface_air_pressure">
     <canonical_units>Pa s-1</canonical_units>
@@ -7570,6 +7730,10 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
     <canonical_units>W m-2</canonical_units>
     <description>&quot;longwave&quot; means longwave radiation. Upwelling radiation is radiation from below. It does not mean &quot;net upward&quot;. When thought of as being incident on a surface, a radiative flux is sometimes called &quot;irradiance&quot;. In addition, it is identical with the quantity measured by a cosine-collector light-meter and sometimes called &quot;vector irradiance&quot;. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
   </entry>
+  <entry id="upwelling_longwave_flux_in_air_assuming_clear_sky">
+    <canonical_units>W m-2 </canonical_units>
+    <description>Upwelling radiation is radiation from below. It does not mean &quot;net upward&quot;.  When thought of as being incident on a surface, a radiative flux is sometimes called &quot;irradiance&quot;.  In addition, it is identical with the quantity measured by a cosine-collector light-meter and sometimes called &quot;vector irradiance&quot;.  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  A phrase assuming_condition  indicates that the named quantity is the value which would obtain if all  aspects of the system were unaltered except for the assumption of the  circumstances specified by the condition.  &quot;longwave&quot; means longwave radiation. </description>
+  </entry>
   <entry id="upwelling_longwave_radiance_in_air">
     <canonical_units>W m-2 sr-1</canonical_units>
     <description>&quot;longwave&quot; means longwave radiation. Upwelling radiation is radiation from below. It does not mean &quot;net upward&quot;. Radiance is the radiative flux in a particular direction, per unit of solid angle. The direction towards which it is going must be specified, for instance with a coordinate of zenith_angle. If the radiation does not depend on direction, a standard name of isotropic radiance should be chosen instead.</description>
@@ -7577,6 +7741,10 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
   <entry id="upwelling_shortwave_flux_in_air">
     <canonical_units>W m-2</canonical_units>
     <description>&quot;shortwave&quot; means shortwave radiation. Upwelling radiation is radiation from below. It does not mean &quot;net upward&quot;. When thought of as being incident on a surface, a radiative flux is sometimes called &quot;irradiance&quot;. In addition, it is identical with the quantity measured by a cosine-collector light-meter and sometimes called &quot;vector irradiance&quot;. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
+  </entry>
+  <entry id="upwelling_shortwave_flux_in_air_assuming_clear_sky">
+    <canonical_units>W m-2</canonical_units>
+    <description>Upwelling radiation is radiation from below. It does not mean &quot;net upward&quot;.  When thought of as being incident on a surface, a radiative flux is sometimes called &quot;irradiance&quot;.  In addition, it is identical with the quantity measured by a cosine-collector light-meter and sometimes called &quot;vector irradiance&quot;.  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  A phrase assuming_condition  indicates that the named quantity is the value which would obtain if all  aspects of the system were unaltered except for the assumption of the  circumstances specified by the condition.  &quot;shortwave&quot; means shortwave radiation. </description>
   </entry>
   <entry id="upwelling_shortwave_radiance_in_air">
     <canonical_units>W m-2 sr-1</canonical_units>
@@ -8316,5 +8484,38 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
   </alias>
   <alias id="tendency_of_moles_of_nitrous_oxide_in_atmosphere">
     <entry_id>tendency_of_atmosphere_moles_of_nitrous_oxide</entry_id>
+  </alias>
+  <alias id="atmosphere_convective_mass_flux">
+   <entry_id>atmosphere_net_upward_convective_mass_flux</entry_id>
+  </alias>
+  <alias id="atmosphere_optical_thickness_due_to_aerosol">
+    <entry_id>atmosphere_optical_thickness_due_to_ambient_aerosol</entry_id>
+  </alias>
+  <alias id="change_over_time_in_atmospheric_water_content_due_to_advection">
+    <entry_id>change_over_time_in_atmosphere_water_content_due_to_advection</entry_id>
+  </alias>
+  <alias id="moles_per_unit_mass_of_cfc11_in_sea_water">
+    <entry_id>moles_of_cfc11_per_unit_mass_in_sea_water</entry_id>
+  </alias>
+  <alias id="optical_thickness_of_atmosphere_layer_due_to_aerosol">
+    <entry_id>optical_thickness_of_atmosphere_layer_due_to_ambient_aerosol</entry_id>
+  </alias>
+  <alias id="product_of_northward_wind_and_specific_humdity">
+    <entry_id>product_of_northward_wind_and_specific_humidity</entry_id>
+  </alias>
+  <alias id="tendency_of_air_temperature_due_to_large_scale_precipitation">
+    <entry_id>tendency_of_air_temperature_due_to_stratiform_precipitation</entry_id>
+  </alias>
+  <alias id="tendency_of_mass_fraction_of_stratiform_cloud_ice_in_air_due_to_heterogeneous_nucleation_from_cloud_liquid">
+    <entry_id>tendency_of_mass_fraction_of_stratiform_cloud_ice_in_air_due_to_heterogeneous_nucleation_from_cloud_liquid_water</entry_id>
+  </alias>
+  <alias id="tendency_of_mass_fraction_of_stratiform_cloud_ice_in_air_due_to_melting_to_cloud_liquid">
+    <entry_id>tendency_of_mass_fraction_of_stratiform_cloud_ice_in_air_due_to_melting_to_cloud_liquid_water</entry_id>
+  </alias>
+  <alias id="tendency_of_mass_fraction_of_stratiform_cloud_ice_in_air_due_to_riming_from_cloud_liquid">
+    <entry_id>tendency_of_mass_fraction_of_stratiform_cloud_ice_in_air_due_to_riming_from_cloud_liquid_water</entry_id>
+  </alias>
+  <alias id="tendency_of_specific_humidity_due_to_large_scale_precipitation">
+    <entry_id>tendency_of_specific_humidity_due_to_stratiform_precipitation</entry_id>
   </alias>
 </standard_name_table>
