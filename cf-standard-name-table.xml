@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <standard_name_table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CFStandardNameTable-1.1.xsd">
-  <version_number>14</version_number>
-  <last_modified>2010-05-12T04:54:55Z</last_modified>
+  <version_number>15</version_number>
+  <last_modified>2010-07-26T08:53:14Z</last_modified>
   <institution>Program for Climate Model Diagnosis and Intercomparison</institution>
   <contact>webmaster@pcmdi.llnl.gov</contact>
   <entry id="age_of_stratospheric_air">
@@ -660,9 +660,9 @@
     <canonical_units> kg m-2</canonical_units>
     <description> &quot;Content&quot; indicates a quantity per unit area.  The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water. The chemical formula for the sulfate anion is SO4(2-).</description>
   </entry>
-  <entry id="atmosphere_mass_content_of_sulfate_expressed_as_sulfur_dry_aerosol">
-    <canonical_units> kg m-2</canonical_units>
-    <description> &quot;Content&quot; indicates a quantity per unit area.  The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water. The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.</description>
+  <entry id="atmosphere_mass_content_of_sulfate_dry_aerosol_expressed_as_sulfur">
+    <canonical_units>kg m-2</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area.  The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets). Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water. The chemical formula for the sulfate anion is SO4(2-).</description>
   </entry>
   <entry id="atmosphere_mass_content_of_sulfur_dioxide">
     <canonical_units> kg m-2</canonical_units>
@@ -1475,11 +1475,6 @@
     <grib>47</grib>
     <description>&quot;direction_of_X&quot; means direction of a vector, a bearing. A velocity is a vector quantity.</description>
   </entry>
-  <entry id="dissipation_in_atmosphere_boundary_layer">
-    <canonical_units>W m-2</canonical_units>
-    <grib>E145</grib>
-    <description></description>
-  </entry>
   <entry id="divergence_of_sea_ice_velocity">
     <canonical_units>s-1</canonical_units>
     <grib>98</grib>
@@ -1727,9 +1722,9 @@
     <canonical_units>m s-1</canonical_units>
     <description>&quot;Eastward&quot; indicates a vector component which is positive when directed eastward (negative westward).</description>
   </entry>
-  <entry id="eastward_water_vapor_flux">
+  <entry id="eastward_water_vapor_flux_in_air">
     <canonical_units>kg m-2 s-1</canonical_units>
-    <description>&quot;Eastward&quot; indicates a vector component which is positive when directed eastward (negative westward). In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
+    <description> &quot;Eastward&quot; indicates a vector component which is positive when directed eastward (negative westward).  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics. </description>
   </entry>
   <entry id="eastward_water_vapor_transport_across_unit_distance_in_atmosphere_layer">
     <canonical_units>kg m-1 s-1</canonical_units>
@@ -1944,7 +1939,7 @@
   </entry>
   <entry id="histogram_of_equivalent_reflectivity_factor_over_height_above_reference_ellipsoid">
     <canonical_units> 1 </canonical_units>
-    <description> &quot;Equivalent reflectivity factor&quot;  is the radar reflectivity factor that is calculated from the measured radar return power assuming the target is composed of liquid water droplets whose diameter is less than one tenth of the radar wavelength, i.e., treating the droplets as Rayleigh scatterers.  The actual radar reflectivity factor would depend on the size distribution and composition of the particles within the target volume and these are  often unknown. &quot;histogram_of_X[_over_Z]&quot; means histogram (i.e. number of counts for each  range of X) of variations (over Z) of X.   The data variable should have an  axis for X. </description>
+    <description> &quot;Equivalent reflectivity factor&quot;  is the radar reflectivity factor that is calculated from the measured radar return power assuming the target is composed of liquid water droplets whose diameter is less than one tenth of the radar wavelength, i.e., treating the droplets as Rayleigh scatterers.  The actual radar reflectivity factor would depend on the size distribution and composition of the particles within the target volume and these are  often unknown. &quot;histogram_of_X[_over_Z]&quot; means histogram (i.e. number of counts for each  range of X) of variations (over Z) of X.   The data variable should have an  axis for X.  A reference ellipsoid is a regular mathematical figure that approximates the irregular shape of the geoid. A number of reference ellipsoids are defined for use in the field of geodesy.</description>
   </entry>
   <entry id="horizontal_atmosphere_dry_energy_transport">
     <canonical_units>W m-2</canonical_units>
@@ -2044,6 +2039,11 @@
     <canonical_units>J m-2</canonical_units>
     <description>&quot;Content&quot; indicates a quantity per unit area. &quot;Layer&quot; means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.</description>
   </entry>
+  <entry id="kinetic_energy_dissipation_in_atmosphere_boundary_layer">
+    <canonical_units>W m-2</canonical_units>
+    <grib>E145</grib>
+    <description></description>
+  </entry>
   <entry id="lagrangian_tendency_of_air_pressure">
     <canonical_units>Pa s-1</canonical_units>
     <grib>39 E135</grib>
@@ -2131,44 +2131,6 @@
     <canonical_units>m s-1</canonical_units>
     <description>A velocity is a vector quantity. &quot;y&quot; indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y. &quot;Land ice&quot; means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.</description>
   </entry>
-  <entry id="large_scale_cloud_area_fraction">
-    <canonical_units>1</canonical_units>
-    <description>&quot;X_area_fraction&quot; means the fraction of horizontal area occupied by X. &quot;X_area&quot; means the horizontal area occupied by X within the grid cell. Cloud area fraction is also called &quot;cloud amount&quot; and &quot;cloud cover&quot;. The cloud area fraction is for the whole atmosphere column, as seen from the surface or the top of the atmosphere. The cloud area fraction in a layer of the atmosphere has the standard name cloud_area_fraction_in_atmosphere_layer.</description>
-  </entry>
-  <entry id="large_scale_graupel_flux">
-    <canonical_units> kg m-2 s-1</canonical_units>
-    <description> In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics. </description>
-  </entry>
-  <entry id="large_scale_precipitation_amount">
-    <canonical_units>kg m-2</canonical_units>
-    <grib>62</grib>
-    <description>&quot;Amount&quot; means mass per unit area.</description>
-  </entry>
-  <entry id="large_scale_precipitation_flux">
-    <canonical_units>kg m-2 s-1</canonical_units>
-    <description>In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
-  </entry>
-  <entry id="large_scale_rainfall_amount">
-    <canonical_units>kg m-2</canonical_units>
-    <description>&quot;Amount&quot; means mass per unit area.</description>
-  </entry>
-  <entry id="large_scale_rainfall_flux">
-    <canonical_units>kg m-2 s-1</canonical_units>
-    <description>In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
-  </entry>
-  <entry id="large_scale_rainfall_rate">
-    <canonical_units>m s-1</canonical_units>
-    <description></description>
-  </entry>
-  <entry id="large_scale_snowfall_amount">
-    <canonical_units>kg m-2</canonical_units>
-    <grib>79</grib>
-    <description>&quot;Amount&quot; means mass per unit area.</description>
-  </entry>
-  <entry id="large_scale_snowfall_flux">
-    <canonical_units>kg m-2 s-1</canonical_units>
-    <description>In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
-  </entry>
   <entry id="latitude">
     <canonical_units>degree_north</canonical_units>
     <amip>latitude</amip>
@@ -2178,13 +2140,13 @@
     <canonical_units>1</canonical_units>
     <description>&quot;X_area&quot; means the horizontal area occupied by X within the grid cell.</description>
   </entry>
-  <entry id="liquid_water_content_of_snow_layer">
-    <canonical_units>kg m-2</canonical_units>
-    <description>&quot;Content&quot; indicates a quantity per unit area.</description>
-  </entry>
   <entry id="liquid_water_content_of_soil_layer">
     <canonical_units>kg m-2</canonical_units>
     <description>&quot;Content&quot; indicates a quantity per unit area. &quot;Layer&quot; means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well. Quantities defined for a soil layer must have a vertical coordinate variable with boundaries indicating the extent of the layer(s).</description>
+  </entry>
+  <entry id="liquid_water_content_of_surface_snow">
+    <canonical_units>kg m-2</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere. </description>
   </entry>
   <entry id="litter_carbon_content">
     <canonical_units>kg m-2</canonical_units>
@@ -2207,14 +2169,6 @@
     <canonical_units>m s-1</canonical_units>
     <description>&quot;lwe&quot; means liquid water equivalent.</description>
   </entry>
-  <entry id="lwe_large_scale_precipitation_rate">
-    <canonical_units>m s-1</canonical_units>
-    <description>&quot;lwe&quot; means liquid water equivalent.</description>
-  </entry>
-  <entry id="lwe_large_scale_snowfall_rate">
-    <canonical_units>m s-1</canonical_units>
-    <description>&quot;lwe&quot; means liquid water equivalent.</description>
-  </entry>
   <entry id="lwe_precipitation_rate">
     <canonical_units>m s-1</canonical_units>
     <description>&quot;lwe&quot; means liquid water equivalent.</description>
@@ -2222,6 +2176,14 @@
   <entry id="lwe_snowfall_rate">
     <canonical_units>m s-1</canonical_units>
     <description>&quot;lwe&quot; means liquid water equivalent.</description>
+  </entry>
+  <entry id="lwe_stratiform_precipitation_rate">
+    <canonical_units>m s-1</canonical_units>
+    <description> Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud.  &quot;lwe&quot; means liquid water equivalent. </description>
+  </entry>
+  <entry id="lwe_stratiform_snowfall_rate">
+    <canonical_units>m s-1</canonical_units>
+    <description> Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud.  &quot;lwe&quot; means liquid water equivalent. </description>
   </entry>
   <entry id="lwe_thickness_of_atmosphere_water_vapor_content">
     <canonical_units>m</canonical_units>
@@ -2245,15 +2207,6 @@
     <canonical_units>m</canonical_units>
     <description>&quot;frozen_water&quot; means ice. &quot;lwe&quot; means liquid water equivalent. The construction lwe_thickness_of_X_amount or _content means the vertical extent of a layer of liquid water having the same mass per unit area. &quot;Content&quot; indicates a quantity per unit area. &quot;Layer&quot; means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well. Quantities defined for a soil layer must have a vertical coordinate variable with boundaries indicating the extent of the layer(s).</description>
   </entry>
-  <entry id="lwe_thickness_of_large_scale_precipitation_amount">
-    <canonical_units>m</canonical_units>
-    <grib>E142</grib>
-    <description>&quot;lwe&quot; means liquid water equivalent. &quot;Amount&quot; means mass per unit area. The construction lwe_thickness_of_X_amount or _content means the vertical extent of a layer of liquid water having the same mass per unit area.</description>
-  </entry>
-  <entry id="lwe_thickness_of_large_scale_snowfall_amount">
-    <canonical_units>m</canonical_units>
-    <description>&quot;lwe&quot; means liquid water equivalent. &quot;Amount&quot; means mass per unit area. The construction lwe_thickness_of_X_amount or _content means the vertical extent of a layer of liquid water having the same mass per unit area.</description>
-  </entry>
   <entry id="lwe_thickness_of_moisture_content_of_soil_layer">
     <canonical_units>m</canonical_units>
     <description>&quot;lwe&quot; means liquid water equivalent. &quot;moisture&quot; means water in all phases contained in soil. The construction lwe_thickness_of_X_amount or _content means the vertical extent of a layer of liquid water having the same mass per unit area. &quot;Content&quot; indicates a quantity per unit area. &quot;Layer&quot; means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well. Quantities defined for a soil layer must have a vertical coordinate variable with boundaries indicating the extent of the layer(s).</description>
@@ -2271,6 +2224,15 @@
     <canonical_units>m</canonical_units>
     <grib>E140</grib>
     <description>&quot;lwe&quot; means liquid water equivalent. &quot;moisture&quot; means water in all phases contained in soil. The construction lwe_thickness_of_X_amount or _content means the vertical extent of a layer of liquid water having the same mass per unit area. &quot;Content&quot; indicates a quantity per unit area. The &quot;soil content&quot; of a quantity refers to the vertical integral from the surface down to the bottom of the soil model. For the content between specified levels in the soil, standard names including content_of_soil_layer are used.</description>
+  </entry>
+  <entry id="lwe_thickness_of_stratiform_precipitation_amount">
+    <canonical_units>m</canonical_units>
+    <grib>E142</grib>
+    <description> &quot;Amount&quot; means mass per unit area.  &quot;lwe&quot; means liquid water equivalent. The construction lwe_thickness_of_X_amount or _content means the vertical extent of a layer of liquid water having the same mass per unit area.  Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud. </description>
+  </entry>
+  <entry id="lwe_thickness_of_stratiform_snowfall_amount">
+    <canonical_units>m</canonical_units>
+    <description> &quot;Amount&quot; means mass per unit area.  &quot;lwe&quot; means liquid water equivalent.  The construction lwe_thickness_of_X_amount or _content means the vertical extent of a layer of liquid water having the same mass per unit area.  Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud.</description>
   </entry>
   <entry id="lwe_thickness_of_surface_snow_amount">
     <canonical_units>m</canonical_units>
@@ -2297,6 +2259,11 @@
   <entry id="magnitude_of_derivative_of_position_wrt_y_coordinate_index">
     <canonical_units>m</canonical_units>
     <description>The quantity with standard name magnitude_of_derivative_of_position_wrt_y_coordinate_index (known in differential geometry as a &quot;scale factor&quot;) is | (dr/dj)ik|, where r(i,j,k) is the vector 3D position of the point with coordinate indices (i,j,k). It is a measure of the gridblock spacing in the y-direction.</description>
+  </entry>
+  <entry id="magnitude_of_sea_ice_displacement">
+    <canonical_units>m</canonical_units>
+    <description> &quot;magnitude_of_X&quot; means magnitude of a vector X.   'Displacement' means the change in geospatial position of an object that has moved over time. If possible, the time interval over which the motion took place should be specified using a bounds variable for the time coordinate variable.  A displacement can be represented as a vector. Such a vector should however not be interpreted as describing a rectilinear, constant speed motion but merely as an indication that the start point of the vector is found at the
+tip of the vector after the time interval associated with the displacement variable.  A displacement does not prescribe a trajectory. Sea ice displacement can be defined as a two-dimensional vector, with no vertical component.</description>
   </entry>
   <entry id="magnitude_of_surface_downward_stress">
     <canonical_units>Pa</canonical_units>
@@ -4501,9 +4468,9 @@
     <canonical_units>m s-1</canonical_units>
     <description>&quot;Northward&quot; indicates a vector component which is positive when directed northward (negative southward).</description>
   </entry>
-  <entry id="northward_water_vapor_flux">
+  <entry id="northward_water_vapor_flux_in_air">
     <canonical_units>kg m-2 s-1</canonical_units>
-    <description>&quot;Northward&quot; indicates a vector component which is positive when directed northward (negative southward). In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
+    <description> &quot;Northward&quot; indicates a vector component which is positive when directed northward (negative southward).  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics. </description>
   </entry>
   <entry id="northward_water_vapor_transport_across_unit_distance_in_atmosphere_layer">
     <canonical_units>kg m-1 s-1</canonical_units>
@@ -5103,10 +5070,6 @@
     <canonical_units>m2</canonical_units>
     <description>&quot;X_area&quot; means the horizontal area occupied by X within the grid cell.</description>
   </entry>
-  <entry id="sea_ice_displacement">
-    <canonical_units>m</canonical_units>
-    <description>&quot;Displacement&quot; means the change in geospatial position of an object that has moved over time. If possible, the time interval over which the motion took place should be specified using a bounds variable for the time coordinate variable.  A displacement can be represented as a vector. Such a vector should however not be interpreted as describing a rectilinear, constant speed motion but merely as an indication that the start point of the vector is found at the tip of the vector after the time interval associated with the displacement variable.  A displacement does not prescribe a trajectory. Sea ice displacement can be defined as a two-dimensional vector, with no vertical component. In that case, &quot;displacement&quot; is also the distance across the earth's surface calculated from the change in a moving object's geospatial position between the start and end of the time interval associated with the displacement variable.</description>
-  </entry>
   <entry id="sea_ice_area_fraction">
     <canonical_units>1</canonical_units>
     <grib>91</grib>
@@ -5433,31 +5396,32 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
   </entry>
   <entry id="sinking_mole_flux_of_aragonite_expressed_as_carbon_in_sea_water">
     <canonical_units>mol m-2 s-1</canonical_units>
-    <description> The phrase 'expressed_as' is used in the construction A_expressed_as_B,where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  'Sinking' is the gravitational settling of particulate matter within a body of water. Aragonite is a  mineral that is a polymorph of calcium carbonate. The chemical formula of aragonite is CaCO3. Standard names also exist for calcite, another polymorph of calcium carbonate.</description>
+    <description> The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.   'Sinking' is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid. Aragonite is a mineral that is a polymorph of calcium carbonate. The chemical formula of aragonite is CaCO3. Standard names also exist for calcite, another polymorph of calcium carbonate.</description>
   </entry>
   <entry id="sinking_mole_flux_of_calcite_expressed_as_carbon_in_sea_water">
     <canonical_units>mol m-2 s-1</canonical_units>
-    <description> The phrase 'expressed_as' is used in the construction A_expressed_as_B,where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  'Sinking' is the gravitational settling of particulate matter within a body of water. Calcite is a mineral that is a polymorph of calcium carbonate. The chemical formula of calcite is CaCO3. Standard names also exist for aragonite, another polymorph of calcium carbonate.</description>
+    <description> The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.   'Sinking' is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid. Calcite is a mineral that is a polymorph of calcium carbonate. The chemical formula of
+calcite is CaCO3. Standard names also exist for aragonite, another polymorph of calcium carbonate.</description>
   </entry>
   <entry id="sinking_mole_flux_of_particulate_iron_in_sea_water">
     <canonical_units>mol m-2 s-1</canonical_units>
-    <description> In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  'Sinking' is the gravitational settling of particulate matter within a body of water.</description>
+    <description> In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.   'Sinking' is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid.</description>
   </entry>
   <entry id="sinking_mole_flux_of_particulate_organic_matter_expressed_as_carbon_in_sea_water">
     <canonical_units>mol m-2 s-1</canonical_units>
-    <description> The phrase 'expressed_as' is used in the construction A_expressed_as_B,where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  'Sinking' is the gravitational settling of particulate matter within a body of water.</description>
+    <description> The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.   'Sinking' is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid.</description>
   </entry>
   <entry id="sinking_mole_flux_of_particulate_organic_nitrogen_in_sea_water">
     <canonical_units>mol m-2 s-1</canonical_units>
-    <description> In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  'Sinking' is the gravitational settling of particulate matter within a body of water.</description>
+    <description> In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.   'Sinking' is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid.</description>
   </entry>
   <entry id="sinking_mole_flux_of_particulate_organic_phosphorus_in_sea_water">
     <canonical_units>mol m-2 s-1</canonical_units>
-    <description> In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  'Sinking' is the gravitational settling of particulate matter within a body of water.</description>
+    <description> In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.   'Sinking' is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid.</description>
   </entry>
   <entry id="sinking_mole_flux_of_particulate_silicon_in_sea_water">
     <canonical_units>mol m-2 s-1</canonical_units>
-    <description> In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.   'Sinking' is the gravitational settling of particulate matter within a body of water.</description>
+    <description> In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.   'Sinking' is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid.</description>
   </entry>
   <entry id="snow_density">
     <canonical_units>kg m-3</canonical_units>
@@ -5466,19 +5430,6 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
   <entry id="snow_grain_size">
     <canonical_units>m</canonical_units>
     <description></description>
-  </entry>
-  <entry id="snow_soot_content">
-    <canonical_units>kg m-2</canonical_units>
-    <description>&quot;Content&quot; indicates a quantity per unit area.</description>
-  </entry>
-  <entry id="snow_temperature">
-    <canonical_units>K</canonical_units>
-    <grib>E238</grib>
-    <description>Snow temperature is the bulk temperature of the snow, not the surface (skin) temperature.</description>
-  </entry>
-  <entry id="snow_thermal_energy_content">
-    <canonical_units>J m-2</canonical_units>
-    <description>&quot;Content&quot; indicates a quantity per unit area. Thermal energy is the total vibrational energy, kinetic and potential, of all the molecules and atoms in a substance.</description>
   </entry>
   <entry id="snowfall_amount">
     <canonical_units>kg m-2</canonical_units>
@@ -5558,6 +5509,10 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
   <entry id="solar_zenith_angle">
     <canonical_units>degree</canonical_units>
     <description>Solar zenith angle is the the angle between the line of sight to the sun and the local vertical.</description>
+  </entry>
+  <entry id="soot_content_of_surface_snow">
+    <canonical_units>kg m-2</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere. </description>
   </entry>
   <entry id="sound_frequency">
     <canonical_units>s-1</canonical_units>
@@ -5689,6 +5644,10 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
     <canonical_units> kg2 s-2</canonical_units>
     <description> &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward).  Ocean transport means transport by all processes, both sea water and sea ice.  &quot;square_of_X&quot; means X*X. </description>
   </entry>
+  <entry id="stratiform_cloud_area_fraction">
+    <canonical_units> 1 </canonical_units>
+    <description> &quot;X_area_fraction&quot; means the fraction of horizontal area occupied by X.  Cloud area fraction is also called &quot;cloud amount&quot; and &quot;cloud cover&quot;.  The cloud area fraction is for the whole atmosphere column, as seen from the surface or the top of the atmosphere. The cloud area fraction in a layer of the atmosphere has the standard name cloud_area_fraction_in_atmosphere_layer.  In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes). </description>
+  </entry>
   <entry id="stratiform_cloud_area_fraction_in_atmosphere_layer">
     <canonical_units>1</canonical_units>
     <description>&quot;Layer&quot; means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well. &quot;X_area_fraction&quot; means the fraction of horizontal area occupied by X. &quot;X_area&quot; means the horizontal area occupied by X within the grid cell. Cloud area fraction is also called &quot;cloud amount&quot; and &quot;cloud cover&quot;. In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).</description>
@@ -5696,6 +5655,40 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
   <entry id="stratiform_cloud_longwave_emissivity">
     <canonical_units> 1 </canonical_units>
     <description> Emissivity is the ratio of the power emitted by an object to the power that would be emitted by a perfect black body having the same temperature as the object. The emissivity is assumed to be an integral over all wavelengths, unless a coordinate of radiation_wavelength or radiation_frequency is included to specify either the wavelength or frequency. In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).  &quot;longwave&quot; means longwave radiation. </description>
+  </entry>
+  <entry id="stratiform_graupel_flux">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud. </description>
+  </entry>
+  <entry id="stratiform_precipitation_amount">
+    <canonical_units>kg m-2</canonical_units>
+    <grib>62</grib>
+    <description> Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud.  &quot;Amount&quot; means mass per unit area. </description>
+  </entry>
+  <entry id="stratiform_precipitation_flux">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud. </description>
+  </entry>
+  <entry id="stratiform_rainfall_amount">
+    <canonical_units>kg m-2</canonical_units>
+    <description> Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud.  &quot;Amount&quot; means mass per unit area. </description>
+  </entry>
+  <entry id="stratiform_rainfall_flux">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud. </description>
+  </entry>
+  <entry id="stratiform_rainfall_rate">
+    <canonical_units>m s-1</canonical_units>
+    <description> Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud. </description>
+  </entry>
+  <entry id="stratiform_snowfall_amount">
+    <canonical_units>kg m-2</canonical_units>
+    <grib>79</grib>
+    <description> Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud.  &quot;Amount&quot; means mass per unit area. </description>
+  </entry>
+  <entry id="stratiform_snowfall_flux">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud. </description>
   </entry>
   <entry id="subsurface_runoff_amount">
     <canonical_units>kg m-2</canonical_units>
@@ -5741,10 +5734,6 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
     <canonical_units>K</canonical_units>
     <description>The surface called "surface" means the lower boundary of the atmosphere.The brightness temperature of a body is the temperature of a black body which radiates the same power per unit solid angle per unit area.</description>
   </entry>
-  <entry id="surface_carbon_dioxide_mole_flux">
-    <canonical_units>mol m-2 s-1</canonical_units>
-    <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
-  </entry>
   <entry id="surface_carbon_dioxide_partial_pressure_difference_between_air_and_sea_water">
     <canonical_units>Pa</canonical_units>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. &quot;Water&quot; means water in all phases, including frozen i.e. ice and snow. The partial pressure of a gaseous constituent of air is the pressure which it alone would exert with unchanged temperature and number of moles per unit volume.</description>
@@ -5779,6 +5768,11 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
   <entry id="surface_downward_mass_flux_of_carbon_dioxide_expressed_as_carbon">
     <canonical_units>kg m-2 s-1</canonical_units>
     <description> &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward).  The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  The chemical formula for carbon dioxide is CO2.</description>
+  </entry>
+  <entry id="surface_downward_mole_flux_of_carbon_dioxide">
+    <canonical_units>mol m-2 s-1</canonical_units>
+    <description> &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward).  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  The chemical formula for carbon dioxide is CO2. The standard name surface_upward_mole_flux_of_carbon_dioxide should be used to label data in which the flux is positive when directed
+upward. The standard name &quot;surface_carbon_dioxide_mole_flux&quot; is deprecated because it does not specify in which direction the flux is positive.  Any data having the standard name &quot;surface_carbon_dioxide_mole_flux&quot; should be examined carefully to determine which sign convention was used.</description>
   </entry>
   <entry id="surface_downward_mole_flux_of_molecular_oxygen">
     <canonical_units>mol m-2 s-1</canonical_units>
@@ -6135,6 +6129,11 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
     <amip>hfls</amip>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward). The surface latent heat flux is the exchange of heat between the surface and the air on account of evaporation (including sublimation). In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
   </entry>
+  <entry id="surface_upward_mole_flux_of_carbon_dioxide">
+    <canonical_units>mol m-2 s-1</canonical_units>
+    <description> &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward).  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  The chemical formula for carbon dioxide is CO2. The standard name surface_downward_mole_flux_of_carbon_dioxide should be used to label data in which the flux is positive when directed
+downward. The standard name &quot;surface_carbon_dioxide_mole_flux&quot; is deprecated because it does not specify in which direction the flux is positive.  Any data having the standard name &quot;surface_carbon_dioxide_mole_flux&quot; should be examined carefully to determine which sign convention was used.</description>
+  </entry>
   <entry id="surface_upward_mole_flux_of_dimethyl_sulfide">
     <canonical_units>mol m-2 s-1</canonical_units>
     <description> &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward).  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  Thechemical formula for dimethyl sulfide is (CH3)2S.  Dimethyl sulfide is sometimes referredto as DMS.</description>
@@ -6231,6 +6230,11 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
   <entry id="temperature_flux_due_to_runoff_expressed_as_heat_flux_into_sea_water">
     <canonical_units> W m-2</canonical_units>
     <description> Runoff is the liquid water which drains from land. If not specified, &quot;runoff&quot; refers to the sum of surface runoff and subsurface drainage.  The quantity with standard name temperature_flux_due_to_runoff_expressed_as_heat_flux_into_sea_water is the heat carried by the transfer of water into the liquid ocean by the process of runoff. This quantity additonally includes melt water from sea ice and icebergs. It is calculated relative to the heat that would be transported by runoff water entering the sea at zero degrees Celsius.  It is calculated as the product QrunoffCpTrunoff, where Q runoff is the mass flux of liquid runoff entering the sea water (kg m-2 s-1), Cp is the specific heat capacity of water, and Trunoff is the temperature in degrees Celsius of the runoff water. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase. </description>
+  </entry>
+  <entry id="temperature_in_surface_snow">
+    <canonical_units>K</canonical_units>
+    <grib>E238</grib>
+    <description> &quot;Temperature in surface snow&quot; is the bulk temperature of the snow, not the surface (skin) temperature.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere. </description>
   </entry>
   <entry id="temperature_of_sensor_for_oxygen_in_sea_water">
     <canonical_units>K</canonical_units>
@@ -6788,21 +6792,21 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
     <canonical_units> kg m-2 s-1</canonical_units>
     <description> &quot;Content&quot; indicates a quantity per unit area.  The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time.  The chemical formula for the sulfate anion is SO4(2-). &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names.</description>
   </entry>
-  <entry id="tendency_of_atmosphere_mass_content_of_sulfate_expressed_as_sulfur_dry_aerosol_due_to_dry_deposition">
-    <canonical_units> kg m-2 s-1</canonical_units>
-    <description> &quot;Content&quot; indicates a quantity per unit area.  The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Dry deposition&quot; is the sum of turbulent deposition and gravitational settling. The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.</description>
+  <entry id="tendency_of_atmosphere_mass_content_of_sulfate_dry_aerosol_expressed_as_sulfur_due_to_dry_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area.  The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water. The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;Dry deposition&quot; is the sum of turbulent deposition and gravitational settling. &quot;tendency_of_X&quot; means derivative of X with respect to time. The chemical formula for the sulfate anion is SO4(2-).</description>
   </entry>
-  <entry id="tendency_of_atmosphere_mass_content_of_sulfate_expressed_as_sulfur_dry_aerosol_due_to_gravitational_settling">
-    <canonical_units> kg m-2 s-1</canonical_units>
-    <description> &quot;Content&quot; indicates a quantity per unit area.  The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time.  The sum of turbulent deposition and gravitational settling is dry deposition. The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.</description>
+  <entry id="tendency_of_atmosphere_mass_content_of_sulfate_dry_aerosol_expressed_as_sulfur_due_to_gravitational_settling">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area.  The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water. The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. The sum of turbulent deposition and gravitational settling is dry deposition. &quot;tendency_of_X&quot; means derivative of X with respect to time. The chemical formula for the sulfate anion is SO4(2-).</description>
   </entry>
-  <entry id="tendency_of_atmosphere_mass_content_of_sulfate_expressed_as_sulfur_dry_aerosol_due_to_turbulent_deposition">
-    <canonical_units> kg m-2 s-1</canonical_units>
-    <description> &quot;Content&quot; indicates a quantity per unit area.  The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time.  The sum of turbulent deposition and gravitational settling is dry deposition. The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.</description>
+  <entry id="tendency_of_atmosphere_mass_content_of_sulfate_dry_aerosol_expressed_as_sulfur_due_to_turbulent_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area.  The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water. The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. The sum of turbulent deposition and gravitational settling is dry deposition. &quot;tendency_of_X&quot; means derivative of X with respect to time.  The chemical formula for the sulfate anion is SO4(2-).</description>
   </entry>
-  <entry id="tendency_of_atmosphere_mass_content_of_sulfate_expressed_as_sulfur_dry_aerosol_due_to_wet_deposition">
-    <canonical_units> kg m-2 s-1</canonical_units>
-    <description> &quot;Content&quot; indicates a quantity per unit area.  The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Wet deposition&quot; means deposition by precipitation. The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.</description>
+  <entry id="tendency_of_atmosphere_mass_content_of_sulfate_dry_aerosol_expressed_as_sulfur_due_to_wet_deposition">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area.  The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets). Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water. The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;Wet deposition&quot; means deposition by precipitation. &quot;tendency_of_X&quot; means derivative of X with respect to time. The chemical formula for the sulfate anion is SO4(2-).</description>
   </entry>
   <entry id="tendency_of_atmosphere_mass_content_of_sulfur_dioxide_due_to_dry_deposition">
     <canonical_units>kg m-2 s-1</canonical_units>
@@ -7577,13 +7581,13 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
     <canonical_units>mol m-3 s-1</canonical_units>
     <description> 'Mole concentration' means number of moles per unit volume, also called&quot;molarity&quot;, and is used in the construction mole_concentration_of_X_in_Y, whereX is a material constituent of Y.  A chemical or biological species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Inorganic nitrogen&quot; describes a family of chemical species which, in an ocean model, usually includes nitrite, nitrate and ammonium which act as nitrogennutrients. &quot;Inorganic nitrogen&quot; is the term used in standard names for all species belonging to the family that are represented within a given model. The list of individual species that are included in a quantity having a group chemical standard name can vary between models.  Where possible, the data variable should be accompanied by a complete description of the species represented, for example, by using a comment attribute.</description>
   </entry>
-  <entry id="tendency_of_mole_concentration_of_dissolved_inorganic_phosphate_in_sea_water_due_to_biological_processes">
+  <entry id="tendency_of_mole_concentration_of_dissolved_inorganic_phosphorus_in_sea_water_due_to_biological_processes">
     <canonical_units>mol m-3 s-1</canonical_units>
-    <description> 'Mole concentration' means number of moles per unit volume, also called&quot;molarity&quot;, and is used in the construction mole_concentration_of_X_in_Y, whereX is a material constituent of Y.  A chemical or biological species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time. &quot;Dissolved inorganic phosphorus/phosphate&quot; means phosphate ions in solution.  The chemical formula of the phosphate anion is PO4 with a charge of minus three.</description>
+    <description>  'Mole concentration' means number of moles per unit volume, also called &quot;molarity&quot;, and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.  A chemical or biological species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;tendency_of_X&quot; means derivative of X with respect to time. Dissolved inorganic phosphorus/phosphate means phosphate ions in solution.</description>
   </entry>
-  <entry id="tendency_of_mole_concentration_of_dissolved_inorganic_silicate_in_sea_water_due_to_biological_processes">
+  <entry id="tendency_of_mole_concentration_of_dissolved_inorganic_silicon_in_sea_water_due_to_biological_processes">
     <canonical_units>mol m-3 s-1</canonical_units>
-    <description> 'Mole concentration' means number of moles per unit volume, also called&quot;molarity&quot;, and is used in the construction mole_concentration_of_X_in_Y, whereX is a material constituent of Y.  A chemical or biological species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Dissolved inorganic silicon/silicate&quot; means silicate ions in solution.</description>
+    <description>  'Mole concentration' means number of moles per unit volume, also called &quot;molarity&quot;, and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.  A chemical or biological species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time.  Dissolved inorganic silicon/silicate means silicate ions in solution.</description>
   </entry>
   <entry id="tendency_of_mole_concentration_of_dissolved_iron_in_sea_water_due_to_dissolution_from_inorganic_particles">
     <canonical_units>mol m-3 s-1</canonical_units>
@@ -7940,19 +7944,15 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
     <canonical_units>m s-2</canonical_units>
     <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;tendency_of_X&quot; means derivative of X with respect to time. Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) The wind speed is the magnitude of the wind velocity.</description>
   </entry>
+  <entry id="thermal_energy_content_of_surface_snow">
+    <canonical_units>J m-2</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area. Thermal energy is the total vibrational energy, kinetic and potential, of all the molecules and atoms in a substance. The surface called &quot;surface&quot; means the lower boundary of the atmosphere. </description>
+  </entry>
   <entry id="thickness_of_convective_rainfall_amount">
     <canonical_units>m</canonical_units>
     <description>&quot;Amount&quot; means mass per unit area. The construction thickness_of_[X_]rainfall_amount means the accumulated &quot;depth&quot; of rainfall i.e. the thickness of a layer of liquid water having the same mass per unit area as the rainfall amount.</description>
   </entry>
   <entry id="thickness_of_convective_snowfall_amount">
-    <canonical_units>m</canonical_units>
-    <description>&quot;Amount&quot; means mass per unit area. The construction thickness_of_[X_]snowfall_amount means the accumulated &quot;depth&quot; of snow which fell i.e. the thickness of the layer of snow at its own density. There are corresponding standard names for liquid water equivalent (lwe) thickness.</description>
-  </entry>
-  <entry id="thickness_of_large_scale_rainfall_amount">
-    <canonical_units>m</canonical_units>
-    <description>&quot;Amount&quot; means mass per unit area. The construction thickness_of_[X_]rainfall_amount means the accumulated &quot;depth&quot; of rainfall i.e. the thickness of a layer of liquid water having the same mass per unit area as the rainfall amount.</description>
-  </entry>
-  <entry id="thickness_of_large_scale_snowfall_amount">
     <canonical_units>m</canonical_units>
     <description>&quot;Amount&quot; means mass per unit area. The construction thickness_of_[X_]snowfall_amount means the accumulated &quot;depth&quot; of snow which fell i.e. the thickness of the layer of snow at its own density. There are corresponding standard names for liquid water equivalent (lwe) thickness.</description>
   </entry>
@@ -7963,6 +7963,14 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
   <entry id="thickness_of_snowfall_amount">
     <canonical_units>m</canonical_units>
     <description>&quot;Amount&quot; means mass per unit area. The construction thickness_of_[X_]snowfall_amount means the accumulated &quot;depth&quot; of snow which fell i.e. the thickness of the layer of snow at its own density. There are corresponding standard names for liquid water equivalent (lwe) thickness.</description>
+  </entry>
+  <entry id="thickness_of_stratiform_rainfall_amount">
+    <canonical_units>m</canonical_units>
+    <description> &quot;Amount&quot; means mass per unit area. The construction thickness_of_[X_]rainfall_amount means the accumulated &quot;depth&quot; of rainfall i.e. the thickness of a layer of liquid water having the same mass per unit area as the rainfall amount.  Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud. </description>
+  </entry>
+  <entry id="thickness_of_stratiform_snowfall_amount">
+    <canonical_units>m</canonical_units>
+    <description> &quot;Amount&quot; means mass per unit area. The construction thickness_of_[X_]snowfall_amount means the accumulated &quot;depth&quot; of snow which fell i.e. the thickness of the layer of snow at its own density. There are corresponding standard names for liquid water equivalent (lwe) thickness.  Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud. </description>
   </entry>
   <entry id="thunderstorm_probability">
     <canonical_units>1</canonical_units>
@@ -8465,19 +8473,27 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
     <canonical_units>kg m-2 s-1</canonical_units>
     <description>&quot;Water&quot; means water in all phases. Sublimation is the conversion of solid into vapor. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
   </entry>
+  <entry id="water_surface_height_above_reference_datum">
+    <canonical_units>m</canonical_units>
+    <description>'Water surface height above reference datum' means the height of the upper surface of a body of liquid water, such as sea, lake or river, above an arbitrary reference datum. The altitude of the datum should be provided in a variable with standard name water_surface_reference_datum_altitude. The surface called &quot;surface&quot; means the lower boundary of the atmosphere.</description>
+  </entry>
+  <entry id="water_surface_reference_datum_altitude">
+    <canonical_units>m</canonical_units>
+    <description> Altitude is the (geometric) height above the geoid, which is the reference geopotential surface. The geoid is similar to mean sea level. 'Water surface reference datum altitude' means the altitude of the arbitrary datum referred to by a quantity with standard name 'water_surface_height_above_reference_datum'. The surface called &quot;surface&quot; means the lower boundary of the atmosphere. </description>
+  </entry>
   <entry id="water_vapor_content_of_atmosphere_layer">
     <canonical_units>kg m-2</canonical_units>
     <description>&quot;Content&quot; indicates a quantity per unit area. &quot;Layer&quot; means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.</description>
   </entry>
-  <entry id="water_vapor_pressure">
+  <entry id="water_vapor_partial_pressure_in_air">
     <canonical_units>Pa</canonical_units>
     <grib>55</grib>
-    <description>Vapor pressure is the partial pressure of a constituent of air, such as water, which exists as liquid or solid under &quot;normal&quot; conditions. &quot;Water&quot; is specified when the term is being applied to water.</description>
+    <description> The partial pressure of a gaseous constituent of air is the pressure which it alone would exert with unchanged temperature and number of moles per unit volume. </description>
   </entry>
-  <entry id="water_vapor_saturation_deficit">
+  <entry id="water_vapor_saturation_deficit_in_air">
     <canonical_units>Pa</canonical_units>
     <grib>56</grib>
-    <description>Water vapor saturation deficit is the difference between the saturation water vapor pressure and the actual water vapor pressure.</description>
+    <description> Water vapor saturation deficit is the difference between the saturationwater vapor partial pressure and the actual water vapor partial pressure in air.</description>
   </entry>
   <entry id="water_volume_transport_into_sea_water_from_rivers">
     <canonical_units>m3 s-1</canonical_units>
@@ -9006,5 +9022,107 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
   </alias>
   <alias id="tendency_of_specific_humidity_due_to_large_scale_precipitation">
     <entry_id>tendency_of_specific_humidity_due_to_stratiform_precipitation</entry_id>
+  </alias>
+  <alias id="atmosphere_mass_content_of_sulfate_expressed_as_sulfur_dry_aerosol">
+    <entry_id>atmosphere_mass_content_of_sulfate_dry_aerosol_expressed_as_sulfur</entry_id>
+  </alias>
+  <alias id="dissipation_in_atmosphere_boundary_layer">
+    <entry_id>kinetic_energy_dissipation_in_atmosphere_boundary_layer</entry_id>
+  </alias>
+  <alias id="eastward_water_vapor_flux">
+    <entry_id>eastward_water_vapor_flux_in_air</entry_id>
+  </alias>
+  <alias id="large_scale_cloud_area_fraction">
+    <entry_id>stratiform_cloud_area_fraction</entry_id>
+  </alias>
+  <alias id="large_scale_graupel_flux">
+    <entry_id>stratiform_graupel_flux</entry_id>
+  </alias>
+  <alias id="large_scale_precipitation_amount">
+    <entry_id>stratiform_precipitation_amount</entry_id>
+  </alias>
+  <alias id="large_scale_precipitation_flux">
+    <entry_id>stratiform_precipitation_flux</entry_id>
+  </alias>
+  <alias id="large_scale_rainfall_amount">
+    <entry_id>stratiform_rainfall_amount</entry_id>
+  </alias>
+  <alias id="large_scale_rainfall_flux">
+    <entry_id>stratiform_rainfall_flux</entry_id>
+  </alias>
+  <alias id="large_scale_rainfall_rate">
+    <entry_id>stratiform_rainfall_rate</entry_id>
+  </alias>
+  <alias id="large_scale_snowfall_amount">
+    <entry_id>stratiform_snowfall_amount</entry_id>
+  </alias>
+  <alias id="large_scale_snowfall_flux">
+    <entry_id>stratiform_snowfall_flux</entry_id>
+  </alias>
+  <alias id="liquid_water_content_of_snow_layer">
+    <entry_id>liquid_water_content_of_surface_snow</entry_id>
+  </alias>
+  <alias id="lwe_large_scale_precipitation_rate">
+    <entry_id>lwe_stratiform_precipitation_rate</entry_id>
+  </alias>
+  <alias id="lwe_large_scale_snowfall_rate">
+    <entry_id>lwe_stratiform_snowfall_rate</entry_id>
+  </alias>
+  <alias id="lwe_thickness_of_large_scale_precipitation_amount">
+    <entry_id>lwe_thickness_of_stratiform_precipitation_amount</entry_id>
+  </alias>
+  <alias id="lwe_thickness_of_large_scale_snowfall_amount">
+    <entry_id>lwe_thickness_of_stratiform_snowfall_amount</entry_id>
+  </alias>
+  <alias id="northward_water_vapor_flux">
+    <entry_id>northward_water_vapor_flux_in_air</entry_id>
+  </alias>
+  <alias id="sea_ice_displacement">
+    <entry_id>magnitude_of_sea_ice_displacement</entry_id>
+  </alias>
+  <alias id="snow_soot_content">
+    <entry_id>soot_content_of_surface_snow</entry_id>
+  </alias>
+  <alias id="snow_temperature">
+    <entry_id>temperature_in_surface_snow</entry_id>
+  </alias>
+  <alias id="snow_thermal_energy_content">
+    <entry_id>thermal_energy_content_of_surface_snow</entry_id>
+  </alias>
+  <alias id="surface_carbon_dioxide_mole_flux">
+    <entry_id>surface_downward_mole_flux_of_carbon_dioxide</entry_id>
+  </alias>
+  <alias id="surface_carbon_dioxide_mole_flux">
+    <entry_id>surface_upward_mole_flux_of_carbon_dioxide</entry_id>
+  </alias>
+  <alias id="tendency_of_atmosphere_mass_content_of_sulfate_expressed_as_sulfur_dry_aerosol_due_to_dry_deposition">
+    <entry_id>tendency_of_atmosphere_mass_content_of_sulfate_dry_aerosol_expressed_as_sulfur_due_to_dry_deposition</entry_id>
+  </alias>
+  <alias id="tendency_of_atmosphere_mass_content_of_sulfate_expressed_as_sulfur_dry_aerosol_due_to_gravitational_settling">
+    <entry_id>tendency_of_atmosphere_mass_content_of_sulfate_dry_aerosol_expressed_as_sulfur_due_to_gravitational_settling</entry_id>
+  </alias>
+  <alias id="tendency_of_atmosphere_mass_content_of_sulfate_expressed_as_sulfur_dry_aerosol_due_to_turbulent_deposition">
+    <entry_id>tendency_of_atmosphere_mass_content_of_sulfate_dry_aerosol_expressed_as_sulfur_due_to_turbulent_deposition</entry_id>
+  </alias>
+  <alias id="tendency_of_atmosphere_mass_content_of_sulfate_expressed_as_sulfur_dry_aerosol_due_to_wet_deposition">
+    <entry_id>tendency_of_atmosphere_mass_content_of_sulfate_dry_aerosol_expressed_as_sulfur_due_to_wet_deposition</entry_id>
+  </alias>
+  <alias id="tendency_of_mole_concentration_of_dissolved_inorganic_phosphate_in_sea_water_due_to_biological_processes">
+    <entry_id>tendency_of_mole_concentration_of_dissolved_inorganic_phosphorus_in_sea_water_due_to_biological_processes</entry_id>
+  </alias>
+  <alias id="tendency_of_mole_concentration_of_dissolved_inorganic_silicate_in_sea_water_due_to_biological_processes">
+    <entry_id>tendency_of_mole_concentration_of_dissolved_inorganic_silicon_in_sea_water_due_to_biological_processes</entry_id>
+  </alias>
+  <alias id="thickness_of_large_scale_rainfall_amount">
+    <entry_id>thickness_of_stratiform_rainfall_amount</entry_id>
+  </alias>
+  <alias id="thickness_of_large_scale_snowfall_amount">
+    <entry_id>thickness_of_stratiform_snowfall_amount</entry_id>
+  </alias>
+  <alias id="water_vapor_pressure">
+    <entry_id>water_vapor_partial_pressure_in_air</entry_id>
+  </alias>
+  <alias id="water_vapor_saturation_deficit">
+    <entry_id>water_vapor_saturation_deficit_in_air</entry_id>
   </alias>
 </standard_name_table>
