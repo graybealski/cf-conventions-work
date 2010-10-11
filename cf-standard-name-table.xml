@@ -1,12 +1,20 @@
 <?xml version="1.0"?>
 <standard_name_table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CFStandardNameTable-1.1.xsd">
-  <version_number>15</version_number>
-  <last_modified>2010-07-26T08:53:14Z</last_modified>
+  <version_number>16</version_number>
+  <last_modified>2010-10-11T12:16:51Z</last_modified>
   <institution>Program for Climate Model Diagnosis and Intercomparison</institution>
   <contact>webmaster@pcmdi.llnl.gov</contact>
+  <entry id="age_of_sea_ice">
+    <canonical_units>year</canonical_units>
+    <description> &quot;Age of sea ice&quot; means the length of time elapsed since the ice formed.</description>
+  </entry>
   <entry id="age_of_stratospheric_air">
     <canonical_units>s</canonical_units>
     <description>&quot;Age of stratospheric air&quot; means an estimate of the time since a parcel of stratospheric air was last in contact with the troposphere.</description>
+  </entry>
+  <entry id="age_of_surface_snow">
+    <canonical_units>day</canonical_units>
+    <description> &quot;Age of surface snow&quot; means the length of time elapsed since the snow accumulated on the earth's surface. The surface called &quot;surface&quot; means the lower boundary of the atmosphere. </description>
   </entry>
   <entry id="air_density">
     <canonical_units>kg m-3</canonical_units>
@@ -688,6 +696,10 @@
     <canonical_units> kg m-2</canonical_units>
     <description> &quot;Content&quot; indicates a quantity per unit area.  The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  The chemical formula for xylene is C6H4C2H6. In chemistry, xylene is a generic term for a group of three isomers of dimethylbenzene. The IUPAC names for the isomers are 1,2-dimethylbenzene, 1,3-dimethylbenzene and 1,4-dimethylbenzene. Xylene is an aromatic hydrocarbon. There are standard names that refer to aromatic_compounds as a group, as well as those for individual species.</description>
   </entry>
+  <entry id="atmosphere_mass_of_carbon_dioxide">
+    <canonical_units>kg</canonical_units>
+    <description> The chemical formula for carbon dioxide is CO2.</description>
+  </entry>
 <entry id="atmosphere_mass_of_air_per_unit_area">
     <canonical_units>kg m-2</canonical_units>
     <description>&quot;Mass_of_air&quot; means the mass due solely to the gaseous constituents of the atmosphere.  The standard name for the mass including precipitation and aerosol particles is atmosphere_mass_per_unit_area.</description>
@@ -1284,6 +1296,19 @@
     <canonical_units>kg m-2</canonical_units>
     <description>&quot;Amount&quot; means mass per unit area. &quot;Water&quot; means water in all phases, including frozen i.e. ice and snow. &quot;Canopy&quot; means the plant or vegetation canopy. The canopy water is the water on the canopy.</description>
   </entry>
+  <entry id="carbon_content_of_products_of_anthropogenic_land_use_change">
+    <canonical_units>kg m-2</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area.  &quot;products_of_anthropogenic_land_use_change&quot; means the different end-products of wood that has been removed from the environment by deforestation. Examples are paper, cardboard, furniture and timber for construction. Models that simulate land use changes have one or more pools of carbon that represent these products in order to conserve carbon and allow its eventual release into the atmosphere, for example, when the products decompose in landfill sites. &quot;Anthropogenic&quot; means influenced, caused, or created by human activity.
+</description>
+  </entry>
+  <entry id="carbon_mass_flux_into_soil_from_litter">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics. &quot;Litter&quot; is dead plant material in or above the soil.</description>
+  </entry>
+  <entry id="carbon_mass_flux_into_soil_from_vegetation_excluding_litter">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Vegetation&quot; means any plants e.g. trees, shrubs, grass.  &quot;Litter&quot; is dead plant material in or above the soil. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics. </description>
+  </entry>
   <entry id="cell_area">
     <canonical_units>m2</canonical_units>
     <description>&quot;Cell_area&quot; is the horizontal area of a gridcell.</description>
@@ -1354,6 +1379,14 @@
   <entry id="cloud_top_altitude">
     <canonical_units>m</canonical_units>
     <description>cloud_top refers to the top of the highest cloud. Altitude is the (geometric) height above the geoid, which is the reference geopotential surface. The geoid is similar to mean sea level.</description>
+  </entry>
+  <entry id="compressive_strength_of_sea_ice">
+    <canonical_units>Pa m</canonical_units>
+    <description> &quot;Compressive strength&quot; is a measure of the capacity of a material to withstand compressive forces.  If compressive forces are exerted on a material in excess of its compressive strength, fracturing will occur.</description>
+  </entry>
+  <entry id="convection_time_fraction">
+    <canonical_units> 1 </canonical_units>
+    <description> &quot;Time fraction&quot; means a fraction of a time interval. The interval in question must be specified by the values or bounds of the time coordinate variable associated with the data. &quot;X_time_fraction&quot; means the fraction of the time interval during which X occurs.</description>
   </entry>
   <entry id="convective_cloud_area_fraction">
     <canonical_units>1</canonical_units>
@@ -1452,6 +1485,14 @@
   <entry id="difference_of_air_pressure_from_model_reference">
     <canonical_units>Pa</canonical_units>
     <description>In some atmosphere models, the difference of air pressure from model reference is a prognostic variable, instead of the air pressure itself. The model reference air pressure is a model-dependent constant.</description>
+  </entry>
+  <entry id="diffuse_downwelling_shortwave_flux_in_air">
+    <canonical_units>W m-2</canonical_units>
+    <description> Downwelling radiation is radiation from above. It does not mean &quot;net downward&quot;.  When thought of as being incident on a surface, a radiative flux is sometimes called &quot;irradiance&quot;.  In addition, it is identical with the quantity measured by a cosine-collector light-meter and sometimes called &quot;vector irradiance&quot;.  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  &quot;shortwave&quot; means shortwave radiation. &quot;Diffuse&quot; radiation is radiation that has been scattered by particles in the atmosphere such as cloud droplets and aerosols.</description>
+  </entry>
+  <entry id="diffuse_downwelling_shortwave_flux_in_air_assuming_clear_sky">
+    <canonical_units>W m-2</canonical_units>
+    <description> Downwelling radiation is radiation from above. It does not mean &quot;net downward&quot;.  When thought of as being incident on a surface, a radiative flux is sometimes called &quot;irradiance&quot;.  In addition, it is identical with the quantity measured by a cosine-collector light-meter and sometimes called &quot;vector irradiance&quot;.  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  A phrase assuming_condition  indicates that the named quantity is the value which would obtain if all  aspects of the system were unaltered except for the assumption of the  circumstances specified by the condition.  &quot;shortwave&quot; means shortwave radiation. &quot;Diffuse&quot; radiation is radiation that has been scattered by particles in the atmosphere such as cloud droplets and aerosols.</description>
   </entry>
   <entry id="dimensionless_exner_function">
     <canonical_units>1</canonical_units>
@@ -1691,6 +1732,11 @@
     <canonical_units>kg m-1 s-1</canonical_units>
     <description>&quot;Eastward&quot; indicates a vector component which is positive when directed eastward (negative westward). Transport across_unit_distance means expressed per unit distance normal to the direction of transport.</description>
   </entry>
+  <entry id="eastward_derivative_of_northward_sea_ice_velocity">
+    <canonical_units>s-1</canonical_units>
+    <description> A velocity is a vector quantity.  &quot;Eastward&quot; indicates a vector component which is positive when directed eastward (negative westward).  &quot;Northward&quot; indicates a vector component which is positive when directed northward (negative southward).  Sea ice velocity is defined as a two-dimensional vector, with no vertical component.  &quot;component_derivative_of_X&quot; means  derivative of X with respect to distance in the component  direction, which may be northward, southward, eastward, westward, x or y. The last two indicate derivatives along the axes of the grid, in the case where they
+are not true longitude and latitude.  The named quantity is a component of the strain rate tensor for sea ice.</description>
+  </entry>
   <entry id="eastward_mass_flux_of_air">
     <canonical_units>kg m-2 s-1</canonical_units>
     <description>&quot;Eastward&quot; indicates a vector component which is positive when directed eastward (negative westward). In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
@@ -1740,6 +1786,10 @@
     <canonical_units>s-1</canonical_units>
     <grib>45</grib>
     <description>&quot;Eastward&quot; indicates a vector component which is positive when directed eastward (negative westward). Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) Wind shear is the derivative of wind with respect to height.</description>
+  </entry>
+  <entry id="effective_radius_of_cloud_liquid_water_particle_at_liquid_water_cloud_top">
+    <canonical_units>m</canonical_units>
+    <description> The effective radius of a size distribution of particles, such as aerosols, cloud droplets or ice crystals, is the area weighted mean radius of particle size. It is calculated as the ratio of the third to the second moment of the particle size distribution. cloud_top refers to the top of the highest cloud. </description>
   </entry>
   <entry id="effective_radius_of_convective_cloud_ice_particle">
     <canonical_units> m</canonical_units>
@@ -1810,6 +1860,10 @@
     <canonical_units>K m2 kg-1 s-1</canonical_units>
     <amip>vorpot</amip>
     <description></description>
+  </entry>
+  <entry id="fast_soil_pool_carbon_content">
+    <canonical_units>kg m-2</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area.  The &quot;soil content&quot; of a quantity refers to the vertical integral from the surface down to the bottom of the soil model. For the content between specified levels in the soil, standard names including content_of_soil_layer are used.  &quot;Soil carbon&quot; is the organic matter present in soil quantified by the mass of carbon it contains. Soil carbon is returned to the atmosphere as the organic matter decays. The decay process takes varying amounts of time depending on the composition of the organic matter, the temperature and the availability of moisture. A carbon &quot;soil pool&quot; means the carbon contained in organic matter which has a characteristic period over which it decays and releases carbon into the atmosphere. &quot;Fast soil pool&quot; refers to the decay of organic matter in soil with a characteristic period of less than ten years under reference climate conditions of a temperature of 20 degrees Celsius and no water limitations.</description>
   </entry>
   <entry id="floating_ice_thickness">
     <canonical_units>m</canonical_units>
@@ -1896,6 +1950,10 @@
     <amip>hfcorr</amip>
     <description>Flux correction is also called &quot;flux adjustment&quot;. A positive flux correction is downward i.e. added to the ocean. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
   </entry>
+  <entry id="heat_flux_into_sea_water_due_to_freezing_of_frazil_ice">
+    <canonical_units>Wm-2</canonical_units>
+    <description> In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  &quot;Frazil&quot; consists of needle like crystals of ice, typically between three and four millimeters in diameter, which form as sea water begins to freeze. Salt is expelled during the freezing process and frazil ice consists of nearly pure fresh water.</description>
+  </entry>
   <entry id="heat_flux_into_sea_water_due_to_iceberg_thermodynamics">
     <canonical_units> W m-2</canonical_units>
     <description> In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot; Iceberg thermodynamics&quot; refers to the addition or subtraction of mass due to surface and basal fluxes, i.e., due to melting, sublimation and fusion.</description>
@@ -1961,6 +2019,10 @@
   <entry id="integral_of_air_temperature_excess_wrt_time">
     <canonical_units>K s</canonical_units>
     <description>&quot;integral_of_Y_wrt_X&quot; means int Y dX. The data variable should have an axis for X specifying the limits of the integral as bounds. &quot;wrt&quot; means with respect to. Air temperature is the bulk temperature of the air, not the surface (skin) temperature. The air temperature excess is the air temperature minus the air temperature threshold. Its integral with respect to time is often called after its units of &quot;degree-days&quot;.</description>
+  </entry>
+  <entry id="integral_of_sea_ice_temperature_wrt_depth_expressed_as_heat_content">
+    <canonical_units>J m-2</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area.  Depth is the vertical distance below the surface.  The quantity with standard name integral_of_sea_ice_temperature_wrt_depth_expressed_as_heat_content is calculated relative to the heat content of ice at zero degrees Celsius, which is assumed to have a heat content of zero Joules. &quot;integral_of_Y_wrt_X&quot; means int Y dX. The data variable should have an axis for X specifying the limits of the integral as bounds.  &quot;wrt&quot; means with respect to.</description>
   </entry>
   <entry id="integral_of_sea_water_potential_temperature_wrt_depth_expressed_as_heat_content">
     <canonical_units>J m-2</canonical_units>
@@ -2139,6 +2201,14 @@
   <entry id="leaf_area_index">
     <canonical_units>1</canonical_units>
     <description>&quot;X_area&quot; means the horizontal area occupied by X within the grid cell.</description>
+  </entry>
+  <entry id="leaf_carbon_content">
+    <canonical_units>kg m-2</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area. </description>
+  </entry>
+  <entry id="liquid_water_content_of_permafrost_layer">
+    <canonical_units>kg m-2</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area.  Permafrost is soil or rock that has remained at a temperature at or below zero degrees Celsius throughout the seasonal cycle for two or more years.</description>
   </entry>
   <entry id="liquid_water_content_of_soil_layer">
     <canonical_units>kg m-2</canonical_units>
@@ -2334,6 +2404,10 @@ tip of the vector after the time interval associated with the displacement varia
     <canonical_units> kg m-3</canonical_units>
     <description> Mass concentration means mass per unit volume and is used in the construction mass_concentration_of_X_in_Y, where X is a material constituent of Y.  A chemical species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. &quot;nmvoc&quot; means non methane volatile organic compounds. &quot;Biogenic&quot; means influenced, caused, or created by natural processes.
  The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.</description>
+  </entry>
+  <entry id="mass_concentration_of_biomass_burning_dry_aerosol_in_air">
+    <canonical_units>kg m-3</canonical_units>
+    <description>  'Mass concentration' means mass per unit volume and is used in the construction mass_concentration_of_X_in_Y, where X is a material constituent of Y.  A chemical or biological species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. &quot;Dry aerosol&quot; means aerosol without water.</description>
   </entry>
   <entry id="mass_concentration_of_black_carbon_dry_aerosol_in_air">
     <canonical_units> kg m-3</canonical_units>
@@ -3288,6 +3362,10 @@ tip of the vector after the time interval associated with the displacement varia
     <canonical_units> 1 </canonical_units>
     <description> Mass fraction is used in the construction mass_fraction_of_X_in_Y, whereX is a material constituent of Y. It means the ratio of the mass of X to the mass of Y (including X).  A chemical species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. The chemical formula for xylene is C6H4C2H6. In chemistry, xylene is a generic term for a group of three isomers of dimethylbenzene. The IUPAC names for the isomers are 1,2-dimethylbenzene, 1,3-dimethylbenzene and 1,4-dimethylbenzene. Xylene is an aromatic hydrocarbon. There are standard names that refer toaromatic_compounds as a group, as well as those for individual species.</description>
   </entry>
+  <entry id="medium_soil_pool_carbon_content">
+    <canonical_units>kg m-2</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area.  The &quot;soil content&quot; of a quantity refers to the vertical integral from the surface down to the bottom of the soil model. For the content between specified levels in the soil, standard names including content_of_soil_layer are used.  &quot;Soil carbon&quot; is the organic matter present in soil quantified by the mass of carbon it contains. Soil carbon is returned to the atmosphere as the organic matter decays. The decay process takes varying amounts of time depending on the composition of the organic matter, the temperature and the availability of moisture. A carbon &quot;soil pool&quot; means the carbon contained in organic matter which has a characteristic period over which it decays and releases carbon into the atmosphere. &quot;Medium soil pool&quot; refers to the decay of organic matter in soil with a characteristic period of between ten and one hundred years under reference climate conditions of a temperature of 20 degrees Celsius and no water limitations.</description>
+  </entry>
   <entry id="minimum_depth_of_aragonite_undersaturation_in_sea_water">
     <canonical_units>m</canonical_units>
     <description> Depth is the vertical distance below the surface.   'Undersaturation' means that a solution is unsaturated with respect to a solute. Aragonite is a mineral that is a polymorph of calcium carbonate. The chemical formula of aragonite is CaCO3. Standard names also exist for calcite, another polymorph of calcium carbonate. The &quot;minimum depth of undersaturation&quot;, sometimes called the &quot;saturation horizon&quot;, is the shallowest depth at which a body of water is an undersaturated solution of a named solute.</description>
@@ -3311,6 +3389,10 @@ tip of the vector after the time interval associated with the displacement varia
   <entry id="minus_one_times_water_flux_into_sea_water_from_rivers">
     <canonical_units>kg m-2 s-1</canonical_units>
     <description>The quantity minus_one_times_water_flux_into_sea_water_from_rivers is the quantity with standard name water_flux_into_sea_water_from_rivers multiplied by -1. &quot;Water&quot; means water in all phases. The water flux or volume transport into sea water from rivers is the inflow to the ocean, often applied to the surface in ocean models. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
+  </entry>
+  <entry id="miscellaneous_living_matter_carbon_content">
+    <canonical_units>kg m-2</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area.  &quot;Miscellaneous living matter&quot; means all those parts of living vegetation that are not leaf, wood, root or other separately named components.</description>
   </entry>
   <entry id="model_level_number">
     <canonical_units>1</canonical_units>
@@ -4275,6 +4357,10 @@ tip of the vector after the time interval associated with the displacement varia
     <amip>rtmt</amip>
     <description>Fluxes at the top_of_atmosphere_model differ from TOA fluxes only if the model TOA fluxes make some allowance for the atmosphere above the top of the model; if not, it is usual to give standard names with toa to the fluxes at the top of the model atmosphere. &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward). Net downward radiation is the difference between radiation from above (downwelling) and radiation from below (upwelling). Radiative flux is the sum of shortwave and longwave radiative fluxes. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
   </entry>
+  <entry id="net_downward_shortwave_flux_at_sea_water_surface">
+    <canonical_units>W m-2</canonical_units>
+    <description> &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward).  Net downward radiation is the difference between radiation from above (downwelling) and radiation from below (upwelling).  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  &quot;shortwave&quot; means shortwave radiation. </description>
+  </entry>
   <entry id="net_downward_shortwave_flux_in_air">
     <canonical_units>W m-2</canonical_units>
     <description>&quot;shortwave&quot; means shortwave radiation. &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward). Net downward radiation is the difference between radiation from above (downwelling) and radiation from below (upwelling). In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
@@ -4313,6 +4399,18 @@ tip of the vector after the time interval associated with the displacement varia
     <description> &quot;Productivity of carbon&quot; refers to the production of biomass expressed as the mass of carbon which it contains.  &quot;Productivity&quot; means production per unit area. Net primary productivity is the excess of gross primary productivity of organic carbon (the rate of synthesis of biomass from inorganic precursors) by autotrophs (&quot;producers&quot;), for example,  photosynthesis in phytoplankton, over the rate at which the autotrophs themselves respire some of this biomass. &quot;Nitrate utilization&quot; means net primary production by phytoplankton based on nitrate alone. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  The chemical formula for the nitrate anion is NO3-.</description>
   </entry>
   <entry id="net_primary_productivity_of_carbon">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> Net primary productivity is the excess of gross_primary_producivity (rate of synthesis of biomass per unit area from inorganic precursors by autotrophs, or &quot;producers&quot;, especially by photosynthesising plants using sunlight for energy) over the rate at which they themselves respire some of this biomass (plant_respiration, assuming all producers to be plants).  &quot;Productivity of carbon&quot; refers to the production of biomass expressed as the mass of carbon which it contains.  &quot;Productivity&quot; means production per unit area.</description>
+  </entry>
+  <entry id="net_primary_productivity_of_carbon_accumulated_in_leaves">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> Net primary productivity is the excess of gross_primary_producivity (rate of synthesis of biomass per unit area from inorganic precursors by autotrophs, or &quot;producers&quot;, especially by photosynthesising plants using sunlight for energy) over the rate at which they themselves respire some of this biomass (plant_respiration, assuming all producers to be plants).  &quot;Productivity of carbon&quot; refers to the production of biomass expressed as the mass of carbon which it contains.  &quot;Productivity&quot; means production per unit area.</description>
+  </entry>
+  <entry id="net_primary_productivity_of_carbon_accumulated_in_roots">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> Net primary productivity is the excess of gross_primary_producivity (rate of synthesis of biomass per unit area from inorganic precursors by autotrophs, or &quot;producers&quot;, especially by photosynthesising plants using sunlight for energy) over the rate at which they themselves respire some of this biomass (plant_respiration, assuming all producers to be plants).  &quot;Productivity of carbon&quot; refers to the production of biomass expressed as the mass of carbon which it contains.  &quot;Productivity&quot; means production per unit area.</description>
+  </entry>
+  <entry id="net_primary_productivity_of_carbon_accumulated_in_wood">
     <canonical_units>kg m-2 s-1</canonical_units>
     <description> Net primary productivity is the excess of gross_primary_producivity (rate of synthesis of biomass per unit area from inorganic precursors by autotrophs, or &quot;producers&quot;, especially by photosynthesising plants using sunlight for energy) over the rate at which they themselves respire some of this biomass (plant_respiration, assumingall producers to be plants).  &quot;Productivity of carbon&quot; refers to the productionof biomass expressed as the mass of carbon which it contains.  &quot;Productivity&quot; means production per unit area.</description>
   </entry>
@@ -4362,6 +4460,10 @@ tip of the vector after the time interval associated with the displacement varia
   <entry id="northward_atmosphere_water_vapor_transport_across_unit_distance">
     <canonical_units>kg m-1 s-1</canonical_units>
     <description>&quot;Northward&quot; indicates a vector component which is positive when directed northward (negative southward). Transport across_unit_distance means expressed per unit distance normal to the direction of transport.</description>
+  </entry>
+  <entry id="northward_derivative_of_eastward_sea_ice_velocity">
+    <canonical_units>s-1</canonical_units>
+    <description> A velocity is a vector quantity.  &quot;Eastward&quot; indicates a vector component which is positive when directed eastward (negative westward).  &quot;Northward&quot; indicates a vector component which is positive when directed northward (negative southward).  Sea ice velocity is defined as a two-dimensional vector, with no vertical component.  &quot;component_derivative_of_X&quot; means  derivative of X with respect to distance in the component  direction, which may be northward, southward, eastward, westward, x or y. The last two indicate derivatives along the axes of the grid, in the case where they are not true longitude and latitude. The named quantity is a component of the strain rate tensor for sea ice.</description>
   </entry>
   <entry id="northward_eliassen_palm_flux_in_air">
     <canonical_units>m3 s-2</canonical_units>
@@ -4486,6 +4588,34 @@ tip of the vector after the time interval associated with the displacement varia
     <canonical_units>s-1</canonical_units>
     <grib>46</grib>
     <description>&quot;Northward&quot; indicates a vector component which is positive when directed northward (negative southward). Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) Wind shear is the derivative of wind with respect to height.</description>
+  </entry>
+  <entry id="number_concentration_of_ambient_aerosol_in_air">
+    <canonical_units>m-3</canonical_units>
+    <description> &quot;Number concentration&quot; means the number of particles or other specified objects per unit volume. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  &quot;Ambient aerosol&quot; is aerosol that has taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol.</description>
+  </entry>
+  <entry id="number_concentration_of_cloud_liquid_water_particles_in_air">
+    <canonical_units>m-3</canonical_units>
+    <description> &quot;Number concentration&quot; means the number of particles or other specified objects per unit volume.</description>
+  </entry>
+  <entry id="number_concentration_of_cloud_liquid_water_particles_in_air_at_liquid_water_cloud_top">
+    <canonical_units>m-3</canonical_units>
+    <description> &quot;Number concentration&quot; means the number of particles or other specified objects per unit volume. cloud_top refers to the top of the highest cloud. </description>
+  </entry>
+  <entry id="number_concentration_of_coarse_mode_ambient_aerosol_in_air">
+    <canonical_units>m-3</canonical_units>
+    <description> &quot;Number concentration&quot; means the number of particles or other specified objects per unit volume. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  &quot;Ambient aerosol&quot; is aerosol that has taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol. Coarse mode aerosol is aerosol having a diameter of more than 1 micrometer.</description>
+  </entry>
+  <entry id="number_concentration_of_ice_crystals_in_air">
+    <canonical_units>m-3</canonical_units>
+    <description> &quot;Number concentration&quot; means the number of particles or other specified objects per unit volume.</description>
+  </entry>
+  <entry id="number_concentration_of_ice_crystals_in_air_at_ice_cloud_top">
+    <canonical_units>m-3</canonical_units>
+    <description> &quot;Number concentration&quot; means the number of particles or other specified objects per unit volume. cloud_top refers to the top of the highest cloud. </description>
+  </entry>
+  <entry id="number_concentration_of_nucleation_mode_ambient_aerosol_in_air">
+    <canonical_units>m-3</canonical_units>
+    <description> &quot;Number concentration&quot; means the number of particles or other specified objects per unit volume. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  &quot;Ambient aerosol&quot; is aerosol that has taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol. Nucleation mode aerosol is aerosol having a diameter of less than 3 nanometers.</description>
   </entry>
   <entry id="number_of_days_with_air_temperature_above_threshold">
     <canonical_units> 1 </canonical_units>
@@ -4758,6 +4888,10 @@ tip of the vector after the time interval associated with the displacement varia
     <canonical_units>1</canonical_units>
     <description>&quot;Layer&quot; means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.  The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path.  A coordinate variable of radiation_wavelength or radiation_frequency can be specified to indicate that the optical thickness applies at specific wavelengths or frequencies. &quot;Aerosol&quot; means the suspended liquid or solid particles in air (except cloud droplets).  &quot;Ambient aerosol&quot; is aerosol that has taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.</description>
   </entry>
+  <entry id="permafrost_layer_thickness">
+    <canonical_units>m</canonical_units>
+    <description> Permafrost is soil or rock that has remained at a temperature at or below zero degrees Celsius throughout the seasonal cycle for two or more years. &quot;Thickness&quot; means the vertical extent of a layer. </description>
+  </entry>
   <entry id="planetary_albedo">
     <canonical_units>1</canonical_units>
     <description></description>
@@ -5012,6 +5146,10 @@ tip of the vector after the time interval associated with the displacement varia
     <canonical_units> 1 </canonical_units>
     <description>Richardson number is a measure of dynamic stability and can be used to diagnose the existence of turbulent flow.  It is defined as the ratio of the buoyant suppression of turbulence (i.e. how statically stable or unstable the conditions are)  to the kinetic energy available to generate turbulence  in a shear flow.</description>
   </entry>
+  <entry id="root_carbon_content">
+    <canonical_units>kg m-2</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area. </description>
+  </entry>
   <entry id="root_depth">
     <canonical_units>m</canonical_units>
     <description>Depth is the vertical distance below the surface. The root depth is maximum depth of soil reached by plant roots, from which they can extract moisture.</description>
@@ -5066,6 +5204,10 @@ tip of the vector after the time interval associated with the displacement varia
     <canonical_units>kg m-2</canonical_units>
     <description>&quot;Amount&quot; means mass per unit area.</description>
   </entry>
+  <entry id="sea_ice_and_surface_snow_amount">
+    <canonical_units>kg m-2</canonical_units>
+    <description> &quot;Amount&quot; means mass per unit area.  Surface amount refers to the amount on the ground, excluding that on the plant or vegetation canopy.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere. </description>
+  </entry>
   <entry id="sea_ice_area">
     <canonical_units>m2</canonical_units>
     <description>&quot;X_area&quot; means the horizontal area occupied by X within the grid cell.</description>
@@ -5092,10 +5234,18 @@ tip of the vector after the time interval associated with the displacement varia
     <canonical_units>kg</canonical_units>
     <description></description>
   </entry>
+  <entry id="sea_ice_salinity">
+    <canonical_units>psu</canonical_units>
+    <description> The unit of salinity is PSU, which is dimensionless. The units attribute should be given as 1e-3 or 0.001 i.e. parts per thousand if salinity is in PSU. </description>
+  </entry>
   <entry id="sea_ice_speed">
     <canonical_units>m s-1</canonical_units>
     <grib>94</grib>
     <description>Speed is the magnitude of velocity.</description>
+  </entry>
+  <entry id="sea_ice_surface_temperature">
+    <canonical_units>K</canonical_units>
+    <description> The surface temperature is the (skin) temperature at the interface, not the bulk temperature of the medium above or below.  &quot;Sea ice surface temperature&quot; is the temperature that exists at the interface of sea ice and an overlying medium which may be air or snow.  In areas of snow covered sea ice, sea_ice_surface_temperature is not the same as the quantity with standard name surface_temperature.</description>
   </entry>
   <entry id="sea_ice_temperature">
     <canonical_units>K</canonical_units>
@@ -5119,6 +5269,10 @@ tip of the vector after the time interval associated with the displacement varia
     <canonical_units>m</canonical_units>
     <description>&quot;x&quot; indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.  &quot;Displacement&quot; means the change in geospatial position of an object that has moved over time. If possible, the time interval over which the motion took place should be specified using a bounds variable for the time coordinate variable.  A displacement can be represented as a vector. Such a vector should however not be interpreted as describing a rectilinear, constant speed motion but merely as an indication that the start point of the vector is found at the tip of the vector after the time interval associated with the displacement variable.  A displacement does not prescribe a trajectory. Sea ice displacement can be defined as a two-dimensional vector, with no vertical component. An x displacement is calculated from the difference in the moving object's grid x coordinate between the start and end of the time interval associated with the displacement variable.</description>
   </entry>
+  <entry id="sea_ice_x_transport">
+    <canonical_units>kg s-1</canonical_units>
+    <description> &quot;x&quot; indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x. </description>
+  </entry>
   <entry id="sea_ice_x_velocity">
     <canonical_units>m s-1</canonical_units>
     <description>A velocity is a vector quantity. &quot;x&quot; indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.</description>
@@ -5126,6 +5280,10 @@ tip of the vector after the time interval associated with the displacement varia
   <entry id="sea_ice_y_displacement">
     <canonical_units>m</canonical_units>
     <description>&quot;y&quot; indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.  &quot;Displacement&quot; means the change in geospatial position of an object that has moved over time. If possible, the time interval over which the motion took place should be specified using a bounds variable for the time coordinate variable.  A displacement can be represented as a vector. Such a vector should however not be interpreted as describing a rectilinear, constant speed motion but merely as an indication that the start point of the vector is found at the tip of the vector after the time interval associated with the displacement variable.  A displacement does not prescribe a trajectory. Sea ice displacement can be defined as a two-dimensional vector, with no vertical component. A y displacement is calculated from the difference in the moving object's grid y coordinate between the start and end of the time interval associated with the displacement variable.</description>
+  </entry>
+  <entry id="sea_ice_y_transport">
+    <canonical_units>kg s-1</canonical_units>
+    <description> &quot;y&quot; indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y. </description>
   </entry>
   <entry id="sea_ice_y_velocity">
     <canonical_units>m s-1</canonical_units>
@@ -5378,6 +5536,10 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
     <amip>to</amip>
     <description></description>
   </entry>
+  <entry id="sea_water_transport_across_line">
+    <canonical_units>kg s-1</canonical_units>
+    <description> Transport across_line means that which crosses a particular line on the Earth's surface; formally this means the integral along the line of the normal component of the transport. </description>
+  </entry>
   <entry id="sea_water_volume">
     <canonical_units> m3</canonical_units>
     <description> The quantity with standard name &quot;sea_water_volume&quot; is the total volume of liquid seawater in the global oceans, including enclosed seas.</description>
@@ -5393,6 +5555,10 @@ Sea surface foundation temperature is measured at the base of the diurnal thermo
   <entry id="secchi_depth_of_sea_water">
     <canonical_units>m</canonical_units>
     <description> Depth is the vertical distance below the surface.  A Secchi disk is a patterned disk that is used to measure water transparency in oceans and lakes. The disk is lowered into the water and the depth at which the pattern is no longer visible is the called the secchi depth.</description>
+  </entry>
+  <entry id="shallow_convection_time_fraction">
+    <canonical_units> 1 </canonical_units>
+    <description> &quot;Time fraction&quot; means a fraction of a time interval. The interval in question must be specified by the values or bounds of the time coordinate variable associated with the data. &quot;X_time_fraction&quot; means the fraction of the time interval during which X occurs.</description>
   </entry>
   <entry id="sinking_mole_flux_of_aragonite_expressed_as_carbon_in_sea_water">
     <canonical_units>mol m-2 s-1</canonical_units>
@@ -5422,6 +5588,10 @@ calcite is CaCO3. Standard names also exist for aragonite, another polymorph of 
   <entry id="sinking_mole_flux_of_particulate_silicon_in_sea_water">
     <canonical_units>mol m-2 s-1</canonical_units>
     <description> In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.   'Sinking' is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid.</description>
+  </entry>
+  <entry id="slow_soil_pool_carbon_content">
+    <canonical_units>kg m-2</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area.  The &quot;soil content&quot; of a quantity refers to the vertical integral from the surface down to the bottom of the soil model. For the content between specified levels in the soil, standard names including content_of_soil_layer are used.  &quot;Soil carbon&quot; is the organic matter present in soil quantified by the mass of carbon it contains. Soil carbon is returned to the atmosphere as the organic matter decays. The decay process takes varying amounts of time depending on the composition of the organic matter, the temperature and the availability of moisture. A carbon &quot;soil pool&quot; means the carbon contained in organic matter which has a characteristic period over which it decays and releases carbon into the atmosphere. &quot;Slow soil pool&quot; refers to the decay of organic matter in soil with a characteristic period of more than a hundred years under reference climate conditions of a temperature of 20 degrees Celsius and no water limitations.</description>
   </entry>
   <entry id="snow_density">
     <canonical_units>kg m-3</canonical_units>
@@ -5690,6 +5860,10 @@ calcite is CaCO3. Standard names also exist for aragonite, another polymorph of 
     <canonical_units>kg m-2 s-1</canonical_units>
     <description> In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud. </description>
   </entry>
+  <entry id="subsurface_litter_carbon_content">
+    <canonical_units>kg m-2</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area.  &quot;Litter carbon&quot; is dead plant material in or above the soil quantified as the mass of carbon which it contains.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere. </description>
+  </entry>
   <entry id="subsurface_runoff_amount">
     <canonical_units>kg m-2</canonical_units>
     <description>&quot;Amount&quot; means mass per unit area. Runoff is the liquid water which drains from land. If not specified, &quot;runoff&quot; refers to the sum of surface runoff and subsurface drainage.</description>
@@ -5746,6 +5920,10 @@ calcite is CaCO3. Standard names also exist for aragonite, another polymorph of 
     <canonical_units>W m-2</canonical_units>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. Downwelling radiation is radiation from above. It does not mean &quot;net downward&quot;. Radiative flux is the sum of shortwave and longwave radiative fluxes. &quot;Photosynthetic&quot; radiation is the part of the spectrum which is used in photosynthesis e.g. 300-700 nm. The range of wavelengths could be specified precisely by the bounds of a coordinate of radiation_wavelength. When thought of as being incident on a surface, a radiative flux is sometimes called &quot;irradiance&quot;. In addition, it is identical with the quantity measured by a cosine-collector light-meter and sometimes called &quot;vector irradiance&quot;. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
   </entry>
+  <entry id="surface_diffuse_downwelling_shortwave_flux_in_air">
+    <canonical_units>W m-2</canonical_units>
+    <description> Downwelling radiation is radiation from above. It does not mean &quot;net downward&quot;.  &quot;Diffuse&quot; radiation is radiation that has been scattered by particles in the atmosphere such as cloud droplets and aerosols. When thought of as being incident on a surface, a radiative flux is sometimes called &quot;irradiance&quot;.  In addition, it is identical with the quantity measured by a cosine-collector light-meter and sometimes called &quot;vector irradiance&quot;.  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  &quot;shortwave&quot; means shortwave radiation. </description>
+  </entry>
   <entry id="surface_downward_eastward_stress">
     <canonical_units>Pa</canonical_units>
     <grib>E180</grib>
@@ -5760,6 +5938,10 @@ calcite is CaCO3. Standard names also exist for aragonite, another polymorph of 
   <entry id="surface_downward_heat_flux_in_sea_water">
     <canonical_units>W m-2</canonical_units>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. &quot;Water&quot; means water in all phases, including frozen i.e. ice and snow. &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward). In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
+  </entry>
+  <entry id="surface_downward_heat_flux_in_snow">
+    <canonical_units>Wm-2</canonical_units>
+    <description> &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward).  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere. </description>
   </entry>
   <entry id="surface_downward_latent_heat_flux">
     <canonical_units>W m-2</canonical_units>
@@ -5965,6 +6147,10 @@ upward. The standard name &quot;surface_carbon_dioxide_mole_flux&quot; is deprec
     <canonical_units>m s-1</canonical_units>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  A velocity is a vector quantity. &quot;y&quot; indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.  &quot;Geostrophic&quot; indicates that geostrophic balance is assumed.  &quot;sea_level&quot; means mean sea level. The geoid is a surface of constant geopotential with which mean sea level would coincide if the ocean were at rest.  surface_geostrophic_sea_water_x_velocity_assuming_sea_level_for_geoid is the variable part of surface_geostrophic_sea_water_x_velocity.  The assumption that sea level is equal to the geoid means that the stationary component of ocean circulation is equal to zero.</description>
   </entry>
+  <entry id="surface_litter_carbon_content">
+    <canonical_units>kg m-2</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area.  &quot;Litter carbon&quot; is dead plant material in or above the soil quantified as the mass of carbon which it contains.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere. </description>
+  </entry>
   <entry id="surface_longwave_emissivity">
     <canonical_units> 1 </canonical_units>
     <description> Emissivity is the ratio of the power emitted by an object to the power that would be emitted by a perfect black body having the same temperature as the object. The emissivity is assumed to be an integral over all wavelengths, unless a coordinate of radiation_wavelength or radiation_frequency is included to specify either the wavelength or frequency. The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  &quot;longwave&quot; means longwave radiation. </description>
@@ -5987,6 +6173,14 @@ upward. The standard name &quot;surface_carbon_dioxide_mole_flux&quot; is deprec
     <grib>E211</grib>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. A phrase assuming_condition indicates that the named quantity is the value which would obtain if all aspects of the system were unaltered except for the assumption of the circumstances specified by the condition. &quot;longwave&quot; means longwave radiation. &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward). Net downward radiation is the difference between radiation from above (downwelling) and radiation from below (upwelling). In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
   </entry>
+  <entry id="surface_net_downward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_all_land_processes">
+    <canonical_units>kg m-2 s-1</canonical_units>
+        <description> &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward).  The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. &quot;All land processes&quot; means plant and soil respiration, photosynthesis, animal grazing, crop harvesting, natural fires and anthropogenic land use change. &quot;Anthropogenic land use change&quot; means human changes to land, excluding forest regrowth. It includes fires ignited by humans for the purpose of land use change and the processes of eventual disposal and decomposition of wood products such as paper, cardboard, furniture and timber for construction. The quantity with standard name surface_net_downward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_all_land_processes is  equal to the difference  between the quantities with standard names surface_net_downward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_all_land_processes_excluding_anthropogenic_land_use_change and surface_net_upward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_emission_from_anthropogenic_land_use_change. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  The chemical formula for carbon dioxide is CO2.</description>
+  </entry>
+  <entry id="surface_net_downward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_all_land_processes_excluding_anthropogenic_land_use_change">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Downward&quot; indicates a vector component which is positive when directed downward (negative upward).  The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. &quot;All land processes&quot; means plant and soil respiration, photosynthesis, animal grazing, crop harvesting, natural fires and anthropogenic land use change. &quot;Anthropogenic land use change&quot; means human changes to land, excluding forest regrowth. It includes fires ignited by humans for the purpose of land use change and the processes of eventual disposal and decomposition of wood products such as paper, cardboard, furniture and timber for construction. The quantity with standard name surface_net_downward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_all_land_processes is  equal to the difference  between the quantities with standard names surface_net_downward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_all_land_processes_excluding_anthropogenic_land_use_change and surface_net_upward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_emission_from_anthropogenic_land_use_change. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  The chemical formula for carbon dioxide is CO2.</description>
+  </entry>
   <entry id="surface_net_downward_radiative_flux">
     <canonical_units>W m-2</canonical_units>
     <description>The surface called "surface" means the lower boundary of the atmosphere. "Downward" indicates a vector component which is positive when directed downward (negative upward). Net downward radiation is the difference between radiation from above (downwelling) and radiation from below (upwelling). Radiative flux is the sum of shortwave and longwave radiative fluxes. In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. Unless indicated in the cell_methods attribute, a quantity is assumed to apply to the whole area of each horizontal grid box. Previously, the qualifier where_type was used to specify that the quantity applies only to the part of the grid box of the named type.  Names containing the where_type qualifier are deprecated and newly created data should use the cell_methods attribute to indicate the horizontal area to which the quantity applies.</description>
@@ -6006,6 +6200,10 @@ upward. The standard name &quot;surface_carbon_dioxide_mole_flux&quot; is deprec
     <grib>112 E176</grib>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. &quot;longwave&quot; means longwave radiation. &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward). Net upward radiation is the difference between radiation from below (upwelling) and radiation from above (downwelling). In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
   </entry>
+  <entry id="surface_net_upward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_emission_from_anthropogenic_land_use_change">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward).  The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. &quot;Anthropogenic land use change&quot; means human changes to land, excluding forest regrowth. It includes fires ignited by humans for the purpose of land use change and the processes of eventual disposal and decomposition of wood products such as paper, cardboard, furniture and timber for construction. The quantity with standard name surface_net_downward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_all_land_processes is  equal to the difference  between the quantities with standard names surface_net_downward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_all_land_processes_excluding_anthropogenic_land_use_change and surface_net_upward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_emission_from_anthropogenic_land_use_change. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names. The chemical formula for carbon dioxide is CO2.</description>
+    </entry>
   <entry id="surface_net_upward_radiative_flux">
     <canonical_units>W m-2</canonical_units>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward). Net upward radiation is the difference between radiation from below (upwelling) and radiation from above (downwelling). Radiative flux is the sum of shortwave and longwave radiative fluxes. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
@@ -6119,6 +6317,14 @@ upward. The standard name &quot;surface_carbon_dioxide_mole_flux&quot; is deprec
     <canonical_units>K</canonical_units>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. &quot;anomaly&quot; means difference from climatology. The surface temperature is the (skin) temperature at the interface, not the bulk temperature of the medium above or below.</description>
   </entry>
+  <entry id="surface_upward_carbon_mass_flux_due_to_plant_respiration_for_biomass_growth">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward).  Plant respiration is the sum of respiration by parts of plants both above and below the soil. Plants which photosynthesise are autotrophs i.e.&quot;producers&quot; of the biomass which they respire from inorganic precursors using sunlight for energy.  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. </description>
+  </entry>
+  <entry id="surface_upward_carbon_mass_flux_due_to_plant_respiration_for_biomass_maintenance">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward).  Plant respiration is the sum of respiration by parts of plants both above and below the soil. Plants which photosynthesise are autotrophs i.e.&quot;producers&quot; of the biomass which they respire from inorganic precursors using sunlight for energy.  In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. </description>
+  </entry>
   <entry id="surface_upward_heat_flux_in_air">
     <canonical_units>W m-2</canonical_units>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward). The vertical heat flux in air is the sum of all heat fluxes i.e. radiative, latent and sensible. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
@@ -6128,6 +6334,23 @@ upward. The standard name &quot;surface_carbon_dioxide_mole_flux&quot; is deprec
     <grib>121 E147</grib>
     <amip>hfls</amip>
     <description>The surface called &quot;surface&quot; means the lower boundary of the atmosphere. &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward). The surface latent heat flux is the exchange of heat between the surface and the air on account of evaporation (including sublimation). In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
+  </entry>
+  <entry id="surface_upward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_emission_from_crop_harvesting">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward).  The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names. The chemical formula for carbon dioxide is CO2.</description>
+  </entry>
+  <entry id="surface_upward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_emission_from_fires_excluding_anthropogenic_land_use_change">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward).  The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. &quot;Fires excluding anthropogenic land use change&quot; means all natural fires and human ignited fires that are not associated with change of land use. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names. The chemical formula for carbon dioxide is CO2. &quot;Anthropogenic&quot; means influenced, caused, or created by human activity.
+</description>
+  </entry>
+  <entry id="surface_upward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_emission_from_grazing">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward).  The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names. The chemical formula for carbon dioxide is CO2.</description>
+  </entry>
+  <entry id="surface_upward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_emission_from_natural_sources">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward).  The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names. The chemical formula for carbon dioxide is CO2.</description>
   </entry>
   <entry id="surface_upward_mole_flux_of_carbon_dioxide">
     <canonical_units>mol m-2 s-1</canonical_units>
@@ -6419,6 +6642,14 @@ downward. The standard name &quot;surface_carbon_dioxide_mole_flux&quot; is depr
   <entry id="tendency_of_atmosphere_mass_content_of_carbon_dioxide_due_to_emission">
     <canonical_units> kg m-2 s-1</canonical_units>
     <description> &quot;Content&quot; indicates a quantity per unit area.  The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names. The chemical formula for carbon dioxide is CO2.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_carbon_dioxide_expressed_as_carbon_due_to_anthropogenic_emission">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area.  The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names. The chemical formula for carbon dioxide is CO2. &quot;Anthropogenic&quot; means influenced, caused, or created by human activity. Anthropogenic emission of carbon dioxide includes fossil fuel use, cement production, agricultural burning and sources associated with anthropogenic land use change, except forest regrowth.</description>
+  </entry>
+  <entry id="tendency_of_atmosphere_mass_content_of_carbon_dioxide_expressed_as_carbon_due_to_emission_from_fossil_fuel_combustion">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area.  The &quot;atmosphere content&quot; of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Emission&quot; means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). &quot;Emission&quot; is a process entirely distinct from &quot;re-emission&quot; which is used in some standard names. The chemical formula for carbon dioxide is CO2. Fossil fuel combustion includes cement production and flaring of natural gas.</description>
   </entry>
   <entry id="tendency_of_atmosphere_mass_content_of_carbon_monoxide_due_to_dry_deposition">
     <canonical_units> kg m-2 s-1</canonical_units>
@@ -7776,9 +8007,37 @@ downward. The standard name &quot;surface_carbon_dioxide_mole_flux&quot; is depr
     <canonical_units>W m-2</canonical_units>
     <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;tendency_of_X&quot; means derivative of X with respect to time. &quot;Content&quot; indicates a quantity per unit area. &quot;Layer&quot; means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well. Potential energy is the sum of the gravitational potential energy relative to the geoid and the centripetal potential energy. (The geopotential is the specific potential energy.)</description>
   </entry>
+  <entry id="tendency_of_sea_ice_amount_due_to_basal_melting">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Amount&quot; means mass per unit area.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time. </description>
+  </entry>
+  <entry id="tendency_of_sea_ice_amount_due_to_congelation_ice_accumulation">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Amount&quot; means mass per unit area.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Congelation ice&quot; means the freezing of sea water onto the underside of thin, new sea ice that has been formed by small areas of frazil ice crystals joining together into a continuous layer at the sea surface.  Congelation ice forms under calm water conditions; it thickens and stabilizes the layer of sea ice and produces a smooth bottom surface.</description>
+  </entry>
+  <entry id="tendency_of_sea_ice_amount_due_to_frazil_ice_accumulation_in_leads">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Amount&quot; means mass per unit area.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Frazil&quot; consists of needle like crystals of ice, typically between three and four millimeters in diameter, which form as sea water begins to freeze. Salt is expelled during the freezing process and frazil ice consists of nearly pure fresh water. Leads are stretches of open water within wider areas of sea ice.</description>
+  </entry>
+  <entry id="tendency_of_sea_ice_amount_due_to_lateral_growth_of_ice_floes">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Amount&quot; means mass per unit area.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time.  An ice floe is a flat expanse of sea ice, generally taken to be less than 10 km across.  &quot;Lateral growth of ice floe&quot; means the accumulation of ice at the extreme edges of the ice area.</description>
+  </entry>
+  <entry id="tendency_of_sea_ice_amount_due_to_snow_conversion">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Amount&quot; means mass per unit area.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;Snow to sea ice conversion&quot; occurs when the mass of snow accumulated on an area of sea ice is sufficient to cause the ice to become mostly submerged.  Waves can then wash over the ice and snow surface and freeze into a layer that becomes &quot;snow ice&quot;.</description>
+  </entry>
+  <entry id="tendency_of_sea_ice_amount_due_to_surface_melting">
+    <canonical_units>kg m-2 s-1</canonical_units>
+    <description> &quot;Amount&quot; means mass per unit area.  The surface called &quot;surface&quot; means the lower boundary of the atmosphere.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time. </description>
+  </entry>
   <entry id="tendency_of_sea_ice_area_fraction_due_to_dynamics">
     <canonical_units>s-1</canonical_units>
     <description>&quot;tendency_of_X&quot; means derivative of X with respect to time.  &quot;X_area_fraction&quot; means the fraction of horizontal area occupied by X. Sea ice area fraction is area of the sea surface occupied by sea ice. It is also called &quot;sea ice concentration&quot;.  &quot;Sea ice dynamics&quot; refers to the motion of sea ice.</description>
+  </entry>
+  <entry id="tendency_of_sea_ice_area_fraction_due_to_ridging">
+    <canonical_units>s-1</canonical_units>
+    <description> &quot;X_area_fraction&quot; means the fraction of horizontal area occupied by X.  Sea ice area fraction is area of the sea surface occupied by sea ice. It is also called &quot;sea ice concentration&quot;.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  &quot;tendency_of_X&quot; means derivative of X with respect to time.  Sea ice &quot;ridging&quot; occurs in rough sea conditions.  The motion of the sea surface can cause areas of sea ice to deform and fold resulting in ridged upper and lower surfaces. The ridges can be as much as twenty metres thick if thick ice is deformed.</description>
   </entry>
   <entry id="tendency_of_sea_ice_area_fraction_due_to_thermodynamics">
     <canonical_units>s-1</canonical_units>
@@ -8223,6 +8482,14 @@ downward. The standard name &quot;surface_carbon_dioxide_mole_flux&quot; is depr
     <canonical_units>kg m-2 s-1</canonical_units>
     <description>The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward). In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
   </entry>
+  <entry id="upward_x_stress_at_sea_ice_base">
+    <canonical_units>Pa</canonical_units>
+    <description> &quot;x&quot; indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.  &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward). </description>
+  </entry>
+  <entry id="upward_y_stress_at_sea_ice_base">
+    <canonical_units>Pa</canonical_units>
+    <description> &quot;y&quot; indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.  &quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward). </description>
+  </entry>
   <entry id="upwelling_longwave_flux_in_air">
     <canonical_units>W m-2</canonical_units>
     <description>&quot;longwave&quot; means longwave radiation. Upwelling radiation is radiation from below. It does not mean &quot;net upward&quot;. When thought of as being incident on a surface, a radiative flux is sometimes called &quot;irradiance&quot;. In addition, it is identical with the quantity measured by a cosine-collector light-meter and sometimes called &quot;vector irradiance&quot;. In accordance with common usage in geophysical disciplines, &quot;flux&quot; implies per unit area, called &quot;flux density&quot; in physics.</description>
@@ -8534,6 +8801,14 @@ downward. The standard name &quot;surface_carbon_dioxide_mole_flux&quot; is depr
   <entry id="wind_to_direction">
     <canonical_units>degree</canonical_units>
     <description>Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) In meteorological reports, the direction of the wind vector is usually (but not always) given as the direction from which it is blowing (wind_from_direction) (westerly, northerly, etc.). In other contexts, such as atmospheric modelling, it is often natural to give the direction in the usual manner of vectors as the heading or the direction to which it is blowing (wind_to_direction) (eastward, southward, etc.) &quot;to_direction&quot; is used in the construction X_to_direction and indicates the direction towards which the velocity vector of X is headed.</description>
+  </entry>
+  <entry id="wood_carbon_content">
+    <canonical_units>kg m-2</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area. </description>
+  </entry>
+  <entry id="wood_debris_carbon_content">
+    <canonical_units>kg m-2</canonical_units>
+    <description> &quot;Content&quot; indicates a quantity per unit area.  &quot;Wood debris&quot; means dead organic matter composed of coarse wood.  It is distinct from litter.</description>
   </entry>
   <entry id="x_derivative_of_ocean_rigid_lid_pressure">
     <canonical_units>Pa m-1</canonical_units>
