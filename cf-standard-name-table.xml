@@ -1,6 +1,7 @@
+<?xml version="1.0"?>
 <standard_name_table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cf-standard-name-table-1.1.xsd">
-   <version_number>20</version_number>
-   <last_modified>2012-09-11T00:45:15Z</last_modified>
+   <version_number>21</version_number>
+   <last_modified>2013-01-12T13:23:06Z</last_modified>
    <institution>Program for Climate Model Diagnosis and Intercomparison</institution>
    <contact>webmaster@pcmdi.llnl.gov</contact>
    <entry id="age_of_sea_ice">
@@ -708,6 +709,10 @@
       <canonical_units>kg m-2</canonical_units>
       <description>"X_area" means the horizontal area occupied by X within the grid cell.</description>
    </entry>
+   <entry id="atmosphere_mole_content_of_ozone">
+      <canonical_units>mol m-2</canonical_units>
+      <description>"Content" indicates a quantity per unit area.  The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including "content_of_atmosphere_layer" are used. The construction "atmosphere_mole_content_of_X" means the vertically integrated number of moles of X above a unit area. The chemical formula for ozone is O3. atmosphere_mole_content_of_ozone is usually measured in Dobson Units which are equivalent to 446.2 micromoles m-2. N.B. Data variables containing column content of ozone can be given the standard name of either equivalent_thickness_at_stp_of_atmosphere_ozone_content or atmosphere_mole_content_of_ozone.The latter name is recommended for consistency with mole content names for chemical species other than ozone.</description>
+   </entry>
    <entry id="atmosphere_moles_of_acetic_acid">
       <canonical_units>mol</canonical_units>
       <description>The construction "atmosphere_moles_of_X" means the total number of moles of X in the entire atmosphere, i.e. summed over the atmospheric column and over the entire globe. The chemical formula for acetic_acid is CH3COOH. The IUPAC name for acetic acid is ethanoic acid.</description>
@@ -1207,11 +1212,11 @@
    </entry>
    <entry id="barotropic_sea_water_x_velocity">
       <canonical_units>m s-1</canonical_units>
-      <description>A velocity is a vector quantity.  "x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.</description>
+      <description>A velocity is a vector quantity.  "x" indicates a vector component along the grid x-axis, positive with increasing x.</description>
    </entry>
    <entry id="barotropic_sea_water_y_velocity">
       <canonical_units>m s-1</canonical_units>
-      <description>A velocity is a vector quantity.  "y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.</description>
+      <description>A velocity is a vector quantity.  "y" indicates a vector component along the grid y-axis, positive with increasing y.</description>
    </entry>
    <entry id="baseflow_amount">
       <canonical_units>kg m-2</canonical_units>
@@ -1246,11 +1251,11 @@
    </entry>
    <entry id="bolus_sea_water_x_velocity">
       <canonical_units>m s-1</canonical_units>
-      <description>A velocity is a vector quantity. "x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x. Bolus velocity in an ocean model means the velocity due to a scheme representing eddy-induced effects which are not resolved on the grid scale of the model.  bolus_sea_water_x_velocity is used in some parameteris a tions of lateral diffusion in the ocean.</description>
+      <description>A velocity is a vector quantity. "x" indicates a vector component along the grid x-axis, positive with increasing x. Bolus velocity in an ocean model means the velocity due to a scheme representing eddy-induced effects which are not resolved on the grid scale of the model. bolus_sea_water_x_velocity is used in some parameterisations of lateral diffusion in the ocean.</description>
    </entry>
    <entry id="bolus_sea_water_y_velocity">
       <canonical_units>m s-1</canonical_units>
-      <description>A velocity is a vector quantity. "y" indicates a vector component along the grid y-axis, when this is not true longitude, positive with increasing y. Bolus velocity in an ocean model means the velocity due to a scheme representing eddy-induced effects which are not resolved on the grid scale of the model. bolus_sea_water_y_velocity is used in some parameteris a tions of lateral diffusion in the ocean.</description>
+      <description>A velocity is a vector quantity. "y" indicates a vector component along the grid y-axis, positive with increasing y. Bolus velocity in an ocean model means the velocity due to a scheme representing eddy-induced effects which are not resolved on the grid scale of the model. bolus_sea_water_y_velocity is used in some parameterisations of lateral diffusion in the ocean.</description>
    </entry>
    <entry id="bolus_upward_sea_water_velocity">
       <canonical_units>m s-1</canonical_units>
@@ -1625,11 +1630,11 @@
    </entry>
    <entry id="downward_x_stress_at_sea_ice_base">
       <canonical_units>Pa</canonical_units>
-      <description>"x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x. "Downward" indicates a vector component which is positive when directed downward (negative upward).</description>
+      <description>"x" indicates a vector component along the grid x-axis, positive with increasing x. "Downward" indicates a vector component which is positive when directed downward (negative upward).</description>
    </entry>
    <entry id="downward_y_stress_at_sea_ice_base">
       <canonical_units>Pa</canonical_units>
-      <description>"y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y. "Downward" indicates a vector component which is positive when directed downward (negative upward).</description>
+      <description>"y" indicates a vector component along the grid y-axis, positive with increasing y. "Downward" indicates a vector component which is positive when directed downward (negative upward).</description>
    </entry>
    <entry id="downwelling_longwave_flux_in_air">
       <canonical_units>W m-2</canonical_units>
@@ -1887,7 +1892,7 @@
    <entry id="equivalent_thickness_at_stp_of_atmosphere_ozone_content">
       <canonical_units>m</canonical_units>
       <grib>10</grib>
-      <description>"stp" means standard temperature (0 degC) and pressure (101325 Pa). "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. The equivalent thickness at STP of a particular constituent of the atmosphere is the thickness of the layer that the gas would occupy if it was separated from the other constituents and gathered together at STP.</description>
+      <description>"stp" means standard temperature (0 degC) and pressure (101325 Pa). "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. The equivalent thickness at STP of a particular constituent of the atmosphere is the thickness of the layer that the gas would occupy if it was separated from the other constituents and gathered together at STP. equivalent_thickness_at_stp_of_atmosphere_ozone_content is usually measured in Dobson Units which are equivalent to 446.2 micromoles m-2 or an equivalent thickness at STP of 10 micrometers. N.B. Data variables containing column content of ozone can be given the standard name of either equivalent_thickness_at_stp_of_atmosphere_ozone_content or atmosphere_mole_content_of_ozone. The latter name is recommended for consistency with mole content names for chemical species other than ozone.</description>
    </entry>
    <entry id="ertel_potential_vorticity">
       <canonical_units>K m2 kg-1 s-1</canonical_units>
@@ -2020,6 +2025,10 @@
    <entry id="heterotrophic_respiration_carbon_flux">
       <canonical_units>kg m-2 s-1</canonical_units>
       <description>"Respiration carbon" refers to the rate at which biomass is respired expressed as the mass of carbon which it contains. Heterotrophic respiration is respiration by heterotrophs ("consumers"), which are organisms (including animals and decomposers) that consume other organisms or dead organic material, rather than synthesising organic material from inorganic precursors using energy from the environment (especially sunlight) as autotrophs ("producers") do. Heterotrophic respiration goes on both above and within the soil. In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.</description>
+   </entry>
+   <entry id="high_type_cloud_area_fraction">
+      <canonical_units>1</canonical_units>
+      <description>High type clouds are: Cirrus, Cirrostratus, Cirrocumulus. "X_area_fraction" means the fraction of horizontal area occupied by X. Cloud area fraction is also called "cloud amount" and "cloud cover". X_type_cloud_area_fraction is determined on the basis of cloud type and not on the vertical location of the cloud.</description>
    </entry>
    <entry id="histogram_of_backscattering_ratio_over_height_above_reference_ellipsoid">
       <canonical_units>1</canonical_units>
@@ -2157,6 +2166,9 @@
       <grib>E172</grib>
       <description>X_binary_mask has 1 where condition X is met, 0 elsewhere. 1 = land, 0 = sea.</description>
    </entry>
+   <entry id="land_cover_lccs">
+      <description>A variable with the standard name of land_cover_sccs contains strings which indicate the nature of the surface, e.g. cropland_..., tree_... . These strings are standardised. Values must be combinations of classifiers from the Land Cover Classification System (LCCS; Di Gregorio A., 2005, UN Land Cover Classification System (LCCS) - Classification concepts and user manual for Software version 2; available at www.fao.org/DOCREP/003/X0596E/X0596e00.htm).</description>
+   </entry>
    <entry id="land_ice_area_fraction">
       <canonical_units>1</canonical_units>
       <amip>sftgif</amip>
@@ -2168,11 +2180,11 @@
    </entry>
    <entry id="land_ice_basal_x_velocity">
       <canonical_units>m s-1</canonical_units>
-      <description>A velocity is a vector quantity. "x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x. "Land ice" means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.</description>
+      <description>A velocity is a vector quantity. "x" indicates a vector component along the grid x-axis, positive with increasing x. "Land ice" means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.</description>
    </entry>
    <entry id="land_ice_basal_y_velocity">
       <canonical_units>m s-1</canonical_units>
-      <description>A velocity is a vector quantity. "y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y. "Land ice" means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.</description>
+      <description>A velocity is a vector quantity. "y" indicates a vector component along the grid y-axis, positive with increasing y. "Land ice" means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.</description>
    </entry>
    <entry id="land_ice_calving_rate">
       <canonical_units>m s-1</canonical_units>
@@ -2208,19 +2220,19 @@
    </entry>
    <entry id="land_ice_vertical_mean_x_velocity">
       <canonical_units>m s-1</canonical_units>
-      <description>A velocity is a vector quantity. "x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x. "Land ice" means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves. The vertical mean land ice velocity is the average from the bedrock to the surface of the ice.</description>
+      <description>A velocity is a vector quantity. "x" indicates a vector component along the grid x-axis, positive with increasing x. "Land ice" means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves. The vertical mean land ice velocity is the average from the bedrock to the surface of the ice.</description>
    </entry>
    <entry id="land_ice_vertical_mean_y_velocity">
       <canonical_units>m s-1</canonical_units>
-      <description>A velocity is a vector quantity. "y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y. "Land ice" means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves. The vertical mean land ice velocity is the average from the bedrock to the surface of the ice.</description>
+      <description>A velocity is a vector quantity. "y" indicates a vector component along the grid y-axis, positive with increasing y. "Land ice" means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves. The vertical mean land ice velocity is the average from the bedrock to the surface of the ice.</description>
    </entry>
    <entry id="land_ice_x_velocity">
       <canonical_units>m s-1</canonical_units>
-      <description>A velocity is a vector quantity. "x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x. "Land ice" means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.</description>
+      <description>A velocity is a vector quantity. "x" indicates a vector component along the grid x-axis, positive with increasing x. "Land ice" means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.</description>
    </entry>
    <entry id="land_ice_y_velocity">
       <canonical_units>m s-1</canonical_units>
-      <description>A velocity is a vector quantity. "y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y. "Land ice" means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.</description>
+      <description>A velocity is a vector quantity. "y" indicates a vector component along the grid y-axis, positive with increasing y. "Land ice" means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.</description>
    </entry>
    <entry id="latitude">
       <canonical_units>degree_north</canonical_units>
@@ -2259,6 +2271,10 @@
       <canonical_units>degree_east</canonical_units>
       <amip>longitude</amip>
       <description>Longitude is positive eastward; its units of degree_east (or equivalent) indicate this explicitly. In a latitude-longitude system defined with respect to a rotated North Pole, the standard name of grid_longitude should be used instead of longitude. Grid longitude is positive in the grid-eastward direction, but its units should be plain degree.</description>
+   </entry>
+   <entry id="low_type_cloud_area_fraction">
+      <canonical_units>1</canonical_units>
+      <description>Low type clouds are: Stratus, Stratocumulus, Cumulus, Cumulonimbus. "X_area_fraction" means the fraction of horizontal area occupied by X. Cloud area fraction is also called "cloud amount" and "cloud cover". X_type_cloud_area_fraction is determined on the basis of cloud type and not on the vertical location of the cloud.</description>
    </entry>
    <entry id="lwe_convective_precipitation_rate">
       <canonical_units>m s-1</canonical_units>
@@ -3337,7 +3353,7 @@
    <entry id="mass_fraction_of_peroxy_radicals_in_air">
       <canonical_units>1</canonical_units>
       <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, whereX is a material constituent of Y. It means the ratio of the mass of X to the mass of Y (including X).  A chemical species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. The term "peroxy_radicals" means all organic and inorganic peroxy radicals. This includes HO2 and all organic peroxyradicals, sometimes referred to as RO2. In chemistry, a 'radical' is a highly reactive, and therefore shortlived, species.</description>
-  </entry>
+   </entry>
    <entry id="mass_fraction_of_peroxyacetyl_nitrate_in_air">
       <canonical_units>1</canonical_units>
       <description>Mass fraction is used in the construction mass_fraction_of_X_in_Y, whereX is a material constituent of Y. It means the ratio of the mass of X to the mass of Y (including X).  A chemical species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox_expressed_as_nitrogen'. The chemical formula for peroxyacetyl nitrate, sometimes referred to as PAN, is CH3COO2NO2.  The IUPAC name for peroxyacetyl_nitrate is nitroethaneperoxoate.</description>
@@ -3441,6 +3457,10 @@
    <entry id="medium_soil_pool_carbon_content">
       <canonical_units>kg m-2</canonical_units>
       <description>"Content" indicates a quantity per unit area.  The "soil content" of a quantity refers to the vertical integral from the surface down to the bottom of the soil model. For the content between specified levels in the soil, standard names including content_of_soil_layer are used.  "Soil carbon" is the organic matter present in soil quantified by the mass of carbon it contains. Soil carbon is returned to the atmosphere as the organic matter decays. The decay process takes varying amounts of time depending on the composition of the organic matter, the temperature and the availability of moisture. A carbon "soil pool" means the carbon contained in organic matter which has a characteristic period over which it decays and releases carbon into the atmosphere. "Medium soil pool" refers to the decay of organic matter in soil with a characteristic period of between ten and one hundred years under reference climate conditions of a temperature of 20 degrees Celsius and no water limitations.</description>
+   </entry>
+   <entry id="medium_type_cloud_area_fraction">
+      <canonical_units>1</canonical_units>
+      <description>Middle type clouds are: Altostratus, Altocumulus, Nimbostratus. "X_area_fraction" means the fraction of horizontal area occupied by X. Cloud area fraction is also called "cloud amount" and "cloud cover". X_type_cloud_area_fraction is determined on the basis of cloud type and not on the vertical location of the cloud.</description>
    </entry>
    <entry id="minimum_depth_of_aragonite_undersaturation_in_sea_water">
       <canonical_units>m</canonical_units>
@@ -4748,27 +4768,27 @@
    </entry>
    <entry id="ocean_heat_x_transport">
       <canonical_units>W</canonical_units>
-      <description>"x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.</description>
+      <description>"x" indicates a vector component along the grid x-axis, positive with increasing x.</description>
    </entry>
    <entry id="ocean_heat_x_transport_due_to_bolus_advection">
       <canonical_units>W</canonical_units>
-      <description>"x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.  Transport by bolus advection in an ocean model means the part due to a scheme representing eddy-induced effects not included in the velocity field.  The specification of a physical process by the phrase due_to_processmeans that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.</description>
+      <description>"x" indicates a vector component along the grid x-axis, positive with increasing x.  Transport by bolus advection in an ocean model means the part due to a scheme representing eddy-induced effects not included in the velocity field.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity named by omitting the phrase.</description>
    </entry>
    <entry id="ocean_heat_x_transport_due_to_diffusion">
       <canonical_units>W</canonical_units>
-      <description>"x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.</description>
+      <description>"x" indicates a vector component along the grid x-axis, positive with increasing x. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.</description>
    </entry>
    <entry id="ocean_heat_y_transport">
       <canonical_units>W</canonical_units>
-      <description>"y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.</description>
+      <description>"y" indicates a vector component along the grid y-axis, positive with increasing y.</description>
    </entry>
    <entry id="ocean_heat_y_transport_due_to_bolus_advection">
       <canonical_units>W</canonical_units>
-      <description>"y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.  Transport by bolus advection in an ocean model means the part due to a scheme representing eddy-induced effects not included inthe velocity field.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.</description>
+      <description>"y" indicates a vector component along the grid y-axis, positive with increasing y. Transport by bolus advection in an ocean model means the part due to a scheme representing eddy-induced effects not included in the velocity field.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity named by omitting the phrase.</description>
    </entry>
    <entry id="ocean_heat_y_transport_due_to_diffusion">
       <canonical_units>W</canonical_units>
-      <description>"y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.</description>
+      <description>"y" indicates a vector component along the grid y-axis, positive with increasing y. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity named by omitting the phrase.</description>
    </entry>
    <entry id="ocean_integral_of_sea_water_temperature_wrt_depth">
       <canonical_units>K m</canonical_units>
@@ -4791,27 +4811,27 @@
    </entry>
    <entry id="ocean_mass_x_transport">
       <canonical_units>kg s-1</canonical_units>
-      <description>"x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.</description>
+      <description>"x" indicates a vector component along the grid x-axis, positive with increasing x.</description>
    </entry>
    <entry id="ocean_mass_x_transport_due_to_advection">
       <canonical_units>kg s-1</canonical_units>
-      <description>"x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.</description>
+      <description>"x" indicates a vector component along the grid x-axis, positive with increasing x. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity named by omitting the phrase.</description>
    </entry>
    <entry id="ocean_mass_x_transport_due_to_advection_and_bolus_advection">
       <canonical_units>kg s-1</canonical_units>
-      <description>"x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  Transport by bolus advection in an ocean model means the part due to a scheme representing eddy-induced effects not included in the velocity field.</description>
+      <description>"x" indicates a vector component along the grid x-axis, positive with increasing x. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity named by omitting the phrase. Transport by bolus advection in an ocean model means the part due to a scheme representing eddy-induced effects not included in the velocity field.</description>
    </entry>
    <entry id="ocean_mass_y_transport">
       <canonical_units>kg s-1</canonical_units>
-      <description>"y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.</description>
+      <description>"y" indicates a vector component along the grid y-axis, positive with increasing y.</description>
    </entry>
    <entry id="ocean_mass_y_transport_due_to_advection">
       <canonical_units>kg s-1</canonical_units>
-      <description>"y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.</description>
+      <description>"y" indicates a vector component along the grid y-axis, positive with increasing y. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity named by omitting the phrase.</description>
    </entry>
    <entry id="ocean_mass_y_transport_due_to_advection_and_bolus_advection">
       <canonical_units>kg s-1</canonical_units>
-      <description>"y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.  Transport by bolus advection in an ocean model means the part due to a scheme representing eddy-induced effects not included inthe velocity field.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.</description>
+      <description>"y" indicates a vector component along the grid y-axis, positive with increasing y. Transport by bolus advection in an ocean model means the part due to a scheme representing eddy-induced effects not included in the velocity field. The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.</description>
    </entry>
    <entry id="ocean_meridional_overturning_mass_streamfunction">
       <canonical_units>kg s-1</canonical_units>
@@ -4877,11 +4897,11 @@
    </entry>
    <entry id="ocean_salt_x_transport">
       <canonical_units>1e-3 kg s-1</canonical_units>
-      <description>"x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x. Salt transport refers to the mass ofsalt being transported.</description>
+      <description>"x" indicates a vector component along the grid x-axis, positive with increasing x. Salt transport refers to the mass of salt being transported.</description>
    </entry>
    <entry id="ocean_salt_y_transport">
       <canonical_units>1e-3 kg s-1</canonical_units>
-      <description>"y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y. Salt transport refers to the mass of salt being transported.</description>
+      <description>"y" indicates a vector component along the grid y-axis, positive with increasing y. Salt transport refers to the mass of salt being transported.</description>
    </entry>
    <entry id="ocean_sigma_coordinate">
       <canonical_units>1</canonical_units>
@@ -4972,11 +4992,11 @@
    </entry>
    <entry id="ocean_y_overturning_mass_streamfunction">
       <canonical_units>kg s-1</canonical_units>
-      <description>"y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.  In contrast to the quantity with standard name ocean_meridional_overturning_streamfunction, this quantity includes all physicalprocesses, resolved or parameterized, that impact mass/volume transport.  Thus it includescontributions from the bolus and Gent-McWilliams velocity.</description>
+      <description>"y" indicates a vector component along the grid y-axis, positive with increasing y. In contrast to the quantity with standard name ocean_meridional_overturning_streamfunction, this quantity includes all physical processes, resolved or parameterized, that impact mass/volume transport.  Thus it includes contributions from the bolus and Gent-McWilliams velocity.</description>
    </entry>
    <entry id="ocean_y_overturning_mass_streamfunction_due_to_bolus_advection">
       <canonical_units>kg s-1</canonical_units>
-      <description>"y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.</description>
+      <description>"y" indicates a vector component along the grid y-axis, positive with increasing y. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.</description>
    </entry>
    <entry id="omnidirectional_photosynthetic_spherical_irradiance_in_sea_water">
       <canonical_units>W m-2</canonical_units>
@@ -5221,11 +5241,11 @@
    </entry>
    <entry id="ratio_of_x_derivative_of_ocean_rigid_lid_pressure_to_sea_surface_density">
       <canonical_units>m s-2</canonical_units>
-      <description>"x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.  Sea surface density is the density of sea water near the surface (including the part under sea-ice, if any). "component_derivative_of_X" means  derivative of X with respect to distance in the component  direction, which may be northward, southward, eastward, westward, x or y. The last two indicatederivatives along the axes of the grid, in the case where they are not true longitude and latitude.  "ratio_of_X_to_Y"  means X/Y.  "Ocean rigid lid pressure" means the pressure at the surface of an ocean model assuming that it is bounded above by a rigid lid.</description>
+      <description>Sea surface density is the density of sea water near the surface (including the part under sea-ice, if any). "component_derivative_of_X" means derivative of X with respect to distance in the component direction, which may be northward, southward, eastward, westward, x or y. The last two indicate derivatives along the axes of the grid, whether or not they are true longitude and latitude.  "ratio_of_X_to_Y"  means X/Y.  "Ocean rigid lid pressure" means the pressure at the surface of an ocean model assuming that it is bounded above by a rigid lid.</description>
    </entry>
    <entry id="ratio_of_y_derivative_of_ocean_rigid_lid_pressure_to_sea_surface_density">
       <canonical_units>m s-2</canonical_units>
-      <description>"y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.  Sea surface density is the density of sea water near the surface (including the part under sea-ice, if any). "component_derivative_of_X" means  derivative of X with respect to distance in the component  direction, which may be northward, southward, eastward, westward, x or y. The last two indicate derivatives along the axes of the grid, in the case where they are not true longitude and latitude.  "ratio_of_X_to_Y"  means X/Y.  "Ocean rigid lid pressure" means the pressure at the surface of an ocean model assuming that it is bounded above by a rigid lid.</description>
+      <description>Sea surface density is the density of sea water near the surface (including the part under sea-ice, if any). "component_derivative_of_X" means derivative of X with respect to distance in the component direction, which may be northward, southward, eastward, westward, x or y. The last two indicate derivatives along the axes of the grid, whether or not they are true longitude and latitude.  "ratio_of_X_to_Y" means X/Y.  "Ocean rigid lid pressure" means the pressure at the surface of an ocean model assuming that it is bounded above by a rigid lid.</description>
    </entry>
    <entry id="realization">
       <canonical_units>1</canonical_units>
@@ -5320,6 +5340,10 @@
       <amip>sic</amip>
       <description>"X_area_fraction" means the fraction of horizontal area occupied by X. "X_area" means the horizontal area occupied by X within the grid cell. Sea ice area fraction is area of the sea surface occupied by sea ice. It is also called "sea ice concentration".</description>
    </entry>
+   <entry id="sea_ice_classification">
+      <canonical_units>1</canonical_units>
+      <description>A variable with the standard name of sea_ice_classification contains strings which indicate the character of the ice surface e.g. open_ice, or first_year_ice. These strings have not yet been standardised. However, and whenever possible, they should follow the terminology defined in the WMO Standard Nomenclature for Sea Ice Classification. Alternatively, the data variable may contain integers which can be translated to strings using flag_values and flag_meanings attributes.</description>
+   </entry>
    <entry id="sea_ice_draft">
       <canonical_units>m</canonical_units>
       <description>Sea ice draft is the depth of the sea-ice lower surface below the water surface.</description>
@@ -5364,27 +5388,27 @@
    </entry>
    <entry id="sea_ice_x_displacement">
       <canonical_units>m</canonical_units>
-      <description>"x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.  "Displacement" means the change in geospatial position of an object that has moved over time. If possible, the time interval over which the motion took place should be specified using a bounds variable for the time coordinate variable.  A displacement can be represented as a vector. Such a vector should however not be interpreted as describing a rectilinear, constant speed motion but merely as an indication that the start point of the vector is found at the tip of the vector after the time interval associated with the displacement variable.  A displacement does not prescribe a trajectory. Sea ice displacement can be defined as a two-dimensional vector, with no vertical component. An x displacement is calculated from the difference in the moving object's grid x coordinate between the start and end of the time interval associated with the displacement variable.</description>
+      <description>"x" indicates a vector component along the grid x-axis, positive with increasing x. "Displacement" means the change in geospatial position of an object that has moved over time. If possible, the time interval over which the motion took place should be specified using a bounds variable for the time coordinate variable.  A displacement can be represented as a vector. Such a vector should however not be interpreted as describing a rectilinear, constant speed motion but merely as an indication that the start point of the vector is found at the tip of the vector after the time interval associated with the displacement variable.  A displacement does not prescribe a trajectory. Sea ice displacement can be defined as a two-dimensional vector, with no vertical component. An x displacement is calculated from the difference in the moving object's grid x coordinate between the start and end of the time interval associated with the displacement variable.</description>
    </entry>
    <entry id="sea_ice_x_transport">
       <canonical_units>kg s-1</canonical_units>
-      <description>"x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.</description>
+      <description>"x" indicates a vector component along the grid x-axis, positive with increasing x.</description>
    </entry>
    <entry id="sea_ice_x_velocity">
       <canonical_units>m s-1</canonical_units>
-      <description>A velocity is a vector quantity. "x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.</description>
+      <description>A velocity is a vector quantity. "x" indicates a vector component along the grid x-axis, positive with increasing x.</description>
    </entry>
    <entry id="sea_ice_y_displacement">
       <canonical_units>m</canonical_units>
-      <description>"y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.  "Displacement" means the change in geospatial position of an object that has moved over time. If possible, the time interval over which the motion took place should be specified using a bounds variable for the time coordinate variable.  A displacement can be represented as a vector. Such a vector should however not be interpreted as describing a rectilinear, constant speed motion but merely as an indication that the start point of the vector is found at the tip of the vector after the time interval associated with the displacement variable.  A displacement does not prescribe a trajectory. Sea ice displacement can be defined as a two-dimensional vector, with no vertical component. A y displacement is calculated from the difference in the moving object's grid y coordinate between the start and end of the time interval associated with the displacement variable.</description>
+      <description>"y" indicates a vector component along the grid y-axis, positive with increasing y. "Displacement" means the change in geospatial position of an object that has moved over time. If possible, the time interval over which the motion took place should be specified using a bounds variable for the time coordinate variable. A displacement can be represented as a vector. Such a vector should however not be interpreted as describing a rectilinear, constant speed motion but merely as an indication that the start point of the vector is found at the tip of the vector after the time interval associated with the displacement variable.  A displacement does not prescribe a trajectory. Sea ice displacement can be defined as a two-dimensional vector, with no vertical component. A y displacement is calculated from the difference in the moving object's grid y coordinate between the start and end of the time interval associated with the displacement variable.</description>
    </entry>
    <entry id="sea_ice_y_transport">
       <canonical_units>kg s-1</canonical_units>
-      <description>"y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.</description>
+      <description>"y" indicates a vector component along the grid y-axis, positive with increasing y.</description>
    </entry>
    <entry id="sea_ice_y_velocity">
       <canonical_units>m s-1</canonical_units>
-      <description>A velocity is a vector quantity. "y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.</description>
+      <description>A velocity is a vector quantity. "y" indicates a vector component along the grid y-axis, positive with increasing y.</description>
    </entry>
    <entry id="sea_surface_density">
       <canonical_units>kg m-3</canonical_units>
@@ -5676,11 +5700,11 @@
    </entry>
    <entry id="sea_water_x_velocity">
       <canonical_units>m s-1</canonical_units>
-      <description>A velocity is a vector quantity. "x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.</description>
+      <description>A velocity is a vector quantity. "x" indicates a vector component along the grid x-axis, positive with increasing x.</description>
    </entry>
    <entry id="sea_water_y_velocity">
       <canonical_units>m s-1</canonical_units>
-      <description>A velocity is a vector quantity. "y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.</description>
+      <description>A velocity is a vector quantity. "y" indicates a vector component along the grid y-axis, positive with increasing y.</description>
    </entry>
    <entry id="secchi_depth_of_sea_water">
       <canonical_units>m</canonical_units>
@@ -6031,6 +6055,10 @@
       <canonical_units>1</canonical_units>
       <description>The scattering/absorption/attenuation coefficient is assumed to be an integral over all wavelengths, unless a coordinate of radiation_wavelength is included to specify the wavelength. Scattering of radiation is its deflection from its incident path without loss of energy. Backwards scattering refers to the sum of scattering into all backward angles i.e. scattering_angle exceeding pi/2 radians. A scattering_angle should not be specified with this quantity.</description>
    </entry>
+   <entry id="surface_bidirectional_reflectance">
+      <canonical_units>1</canonical_units>
+      <description>The surface called "surface" means the lower boundary of the atmosphere. "Bidirectional_reflectance" depends on the angles of incident and measured radiation. Reflectance is the ratio of the energy of the reflected to the incident radiation. A coordinate variable of radiation_wavelength or radiation_frequency can be used to specify the wavelength or frequency, respectively, of the radiation.</description>
+   </entry>
    <entry id="surface_brightness_temperature">
       <canonical_units>K</canonical_units>
       <description>The surface called "surface" means the lower boundary of the atmosphere.The brightness temperature of a body is the temperature of a black body which radiates the same power per unit solid angle per unit area.</description>
@@ -6106,19 +6134,19 @@
    </entry>
    <entry id="surface_downward_x_stress">
       <canonical_units>Pa</canonical_units>
-      <description>The surface called "surface" means the lower boundary of the atmosphere. "x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x. "Downward" indicates a vector component which is positive when directed downward (negative upward).</description>
+      <description>The surface called "surface" means the lower boundary of the atmosphere. "x" indicates a vector component along the grid x-axis, positive with increasing x. "Downward" indicates a vector component which is positive when directed downward (negative upward).</description>
    </entry>
    <entry id="surface_downward_x_stress_correction">
       <canonical_units>Pa</canonical_units>
-      <description>"x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.  "Downward" indicates a vector component which is positive when directed downward (negative upward).  The surface called "surface" means the lower boundary of the atmosphere.  A downward x stress is a downward flux of momentum towards the positive direction of the model's x-axis.</description>
+      <description>"x" indicates a vector component along the grid x-axis, positive with increasing x. "Downward" indicates a vector component which is positive when directed downward (negative upward). The surface called "surface" means the lower boundary of the atmosphere. A downward x stress is a downward flux of momentum towards the positive direction of the model's x-axis.</description>
    </entry>
    <entry id="surface_downward_y_stress">
       <canonical_units>Pa</canonical_units>
-      <description>The surface called "surface" means the lower boundary of the atmosphere. "y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y. "Downward" indicates a vector component which is positive when directed downward (negative upward).</description>
+      <description>The surface called "surface" means the lower boundary of the atmosphere. "y" indicates a vector component along the grid y-axis, positive with increasing y. "Downward" indicates a vector component which is positive when directed downward (negative upward).</description>
    </entry>
    <entry id="surface_downward_y_stress_correction">
       <canonical_units>Pa</canonical_units>
-      <description>"y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.  "Downward" indicates a vector component which is positive when directed downward (negative upward).  The surface called "surface" means the lower boundary of the atmosphere.  A downward y stress is a downward flux of momentum towards the positive direction of the model's y-axis.</description>
+      <description>"y" indicates a vector component along the grid y-axis, positive with increasing y. "Downward" indicates a vector component which is positive when directed downward (negative upward). The surface called "surface" means the lower boundary of the atmosphere. A downward y stress is a downward flux of momentum towards the positive direction of the model's y-axis.</description>
    </entry>
    <entry id="surface_downwelling_longwave_flux_in_air">
       <canonical_units>W m-2</canonical_units>
@@ -6267,19 +6295,19 @@
    </entry>
    <entry id="surface_geostrophic_sea_water_x_velocity">
       <canonical_units>m s-1</canonical_units>
-      <description>The surface called "surface" means the lower boundary of the atmosphere.  A velocity is a vector quantity. "x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.  "Geostrophic" indicates that geostrophic balance is assumed.  surface_geostrophic_sea_water_x_velocity is the sum of a variable part, surface_geostrophic_sea_water_x_velocity_assuming_sea_level_for_geoid, and a constant part due to the stationary component of ocean circulation.</description>
+      <description>The surface called "surface" means the lower boundary of the atmosphere. A velocity is a vector quantity. "x" indicates a vector component along the grid x-axis, positive with increasing x.  "Geostrophic" indicates that geostrophic balance is assumed.  surface_geostrophic_sea_water_x_velocity is the sum of a variable part, surface_geostrophic_sea_water_x_velocity_assuming_sea_level_for_geoid, and a constant part due to the stationary component of ocean circulation.</description>
    </entry>
    <entry id="surface_geostrophic_sea_water_x_velocity_assuming_sea_level_for_geoid">
       <canonical_units>m s-1</canonical_units>
-      <description>The surface called "surface" means the lower boundary of the atmosphere.  A velocity is a vector quantity. "x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.  "Geostrophic" indicates that geostrophic balance is assumed.  "sea_level" means mean sea level. The geoid is a surface of constant geopotential with which mean sea level would coincide if the ocean were at rest.  surface_geostrophic_sea_water_x_velocity_assuming_sea_level_for_geoid is the variable part of surface_geostrophic_sea_water_x_velocity.  The assumption that sea level is equal to the geoid means that the stationary component of ocean circulation is equal to zero.</description>
+      <description>The surface called "surface" means the lower boundary of the atmosphere. A velocity is a vector quantity. "x" indicates a vector component along the grid x-axis, positive with increasing x.  "Geostrophic" indicates that geostrophic balance is assumed. "sea_level" means mean sea level. The geoid is a surface of constant geopotential with which mean sea level would coincide if the ocean were at rest.  surface_geostrophic_sea_water_x_velocity_assuming_sea_level_for_geoid is the variable part of surface_geostrophic_sea_water_x_velocity. The assumption that sea level is equal to the geoid means that the stationary component of ocean circulation is equal to zero.</description>
    </entry>
    <entry id="surface_geostrophic_sea_water_y_velocity">
       <canonical_units>m s-1</canonical_units>
-      <description>The surface called "surface" means the lower boundary of the atmosphere.  A velocity is a vector quantity. "y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.  "Geostrophic" indicates that geostrophic balance is assumed.  surface_geostrophic_sea_water_y_velocity is the sum of a variable part, surface_geostrophic_sea_water_y_velocity_assuming_sea_level_for_geoid, and a constant part due to the stationary component of ocean circulation.</description>
+      <description>The surface called "surface" means the lower boundary of the atmosphere. A velocity is a vector quantity. "y" indicates a vector component along the grid y-axis, positive with increasing y. "Geostrophic" indicates that geostrophic balance is assumed.  surface_geostrophic_sea_water_y_velocity is the sum of a variable part, surface_geostrophic_sea_water_y_velocity_assuming_sea_level_for_geoid, and a constant part due to the stationary component of ocean circulation.</description>
    </entry>
    <entry id="surface_geostrophic_sea_water_y_velocity_assuming_sea_level_for_geoid">
       <canonical_units>m s-1</canonical_units>
-      <description>The surface called "surface" means the lower boundary of the atmosphere.  A velocity is a vector quantity. "y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.  "Geostrophic" indicates that geostrophic balance is assumed.  "sea_level" means mean sea level. The geoid is a surface of constant geopotential with which mean sea level would coincide if the ocean were at rest.  surface_geostrophic_sea_water_x_velocity_assuming_sea_level_for_geoid is the variable part of surface_geostrophic_sea_water_x_velocity.  The assumption that sea level is equal to the geoid means that the stationary component of ocean circulation is equal to zero.</description>
+      <description>The surface called "surface" means the lower boundary of the atmosphere. A velocity is a vector quantity. "y" indicates a vector component along the grid y-axis, positive with increasing y. "Geostrophic" indicates that geostrophic balance is assumed. "sea_level" means mean sea level. The geoid is a surface of constant geopotential with which mean sea level would coincide if the ocean were at rest.  surface_geostrophic_sea_water_y_velocity_assuming_sea_level_for_geoid is the variable part of surface_geostrophic_sea_water_y_velocity. The assumption that sea level is equal to the geoid means that the stationary component of ocean circulation is equal to zero.</description>
    </entry>
    <entry id="surface_litter_carbon_content">
       <canonical_units>kg m-2</canonical_units>
@@ -6951,7 +6979,7 @@
    </entry>
    <entry id="tendency_of_atmosphere_mass_content_of_butane_due_to_emission_from_savanna_and_grassland_fires">
       <canonical_units>kg m-2 s-1</canonical_units>
-                  <description>"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including "content_of_atmosphere_layer" are used. The mass is the total mass of the molecules. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. The chemical formula for butane is C4H10. Butane is a member of the group of hydrocarbons known as alkanes. There are standard names for the alkane group as well as for some of the individual species. The "savanna and grassland fires" sector comprises the burning (natural and human-induced) of living or dead vegetation in non-forested areas. It excludes field burning of agricultural residues. "Savanna and grassland fires" is the term used in standard names to describe a collection of emission sources. A variable which has this value for the standard_name attribute should be accompanied by a comment attribute which lists the source categories and provides a reference to the categorization scheme, for example, "IPCC (Intergovernmental Panel on Climate Change) source category 5 as defined in the 2006 IPCC guidelines for national greenhouse gas inventories".</description>
+      <description>"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including "content_of_atmosphere_layer" are used. The mass is the total mass of the molecules. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. The chemical formula for butane is C4H10. Butane is a member of the group of hydrocarbons known as alkanes. There are standard names for the alkane group as well as for some of the individual species. The "savanna and grassland fires" sector comprises the burning (natural and human-induced) of living or dead vegetation in non-forested areas. It excludes field burning of agricultural residues. "Savanna and grassland fires" is the term used in standard names to describe a collection of emission sources. A variable which has this value for the standard_name attribute should be accompanied by a comment attribute which lists the source categories and provides a reference to the categorization scheme, for example, "IPCC (Intergovernmental Panel on Climate Change) source category 5 as defined in the 2006 IPCC guidelines for national greenhouse gas inventories".</description>
    </entry>
    <entry id="tendency_of_atmosphere_mass_content_of_butane_due_to_emission_from_waste_treatment_and_disposal">
       <canonical_units>kg m-2 s-1</canonical_units>
@@ -7129,7 +7157,6 @@
       <canonical_units>kg m-2 s-1</canonical_units>
       <description>"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including "content_of_atmosphere_layer" are used. The mass is the total mass of the molecules. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. The chemical formula for ethane is C2H6. Ethane is a member of the group of hydrocarbons known as alkanes. There are standard names for the alkane group as well as for some of the individual species. The "energy production and distribution" sector comprises fuel combustion activities related to energy industries and fugitive emissions from fuels. It may also include any not-classified or "other" combustion, which is commonly included in energy-related inventory data. "Energy production and distribution" is the term used in standard names to describe a collection of emission sources. A variable which has this value for the standard_name attribute should be accompanied by a comment attribute which lists the source categories and provides a reference to the categorization scheme, for example, "IPCC (Intergovernmental Panel on Climate Change) source categories 1A1 and 1B as defined in the 2006 IPCC guidelines for national greenhouse gas inventories".</description>
    </entry>
-
    <entry id="tendency_of_atmosphere_mass_content_of_ethane_due_to_emission_from_forest_fires">
       <canonical_units>kg m-2 s-1</canonical_units>
       <description>"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including "content_of_atmosphere_layer" are used. The mass is the total mass of the molecules. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. The chemical formula for ethane is C2H6. Ethane is a member of the group of hydrocarbons known as alkanes. There are standard names for the alkane group as well as for some of the individual species. The "forest fires" sector comprises the burning (natural and human-induced) of living or dead vegetation in forests. "Forest fires" is the term used in standard names to describe a collection of emission sources. A variable which has this value for the standard_name attribute should be accompanied by a comment attribute which lists the source categories and provides a reference to the categorization scheme, for example, "IPCC (Intergovernmental Panel on Climate Change) source category 5 as defined in the 2006 IPCC guidelines for national greenhouse gas inventories".</description>
@@ -7153,7 +7180,7 @@
    <entry id="tendency_of_atmosphere_mass_content_of_ethane_due_to_emission_from_savanna_and_grassland_fires">
       <canonical_units>kg m-2 s-1</canonical_units>
       <description>"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including "content_of_atmosphere_layer" are used. The mass is the total mass of the molecules. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. The chemical formula for ethane is C2H6. Ethane is a member of the group of hydrocarbons known as alkanes. There are standard names for the alkane group as well as for some of the individual species. The "savanna and grassland fires" sector comprises the burning (natural and human-induced) of living or dead vegetation in non-forested areas. It excludes field burning of agricultural residues. "Savanna and grassland fires" is the term used in standard names to describe a collection of emission sources. A variable which has this value for the standard_name attribute should be accompanied by a comment attribute which lists the source categories and provides a reference to the categorization scheme, for example, "IPCC (Intergovernmental Panel on Climate Change) source category 5 as defined in the 2006 IPCC guidelines for national greenhouse gas inventories".</description>
-            </entry>
+   </entry>
    <entry id="tendency_of_atmosphere_mass_content_of_ethane_due_to_emission_from_waste_treatment_and_disposal">
       <canonical_units>kg m-2 s-1</canonical_units>
       <description>"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including "content_of_atmosphere_layer" are used. The mass is the total mass of the molecules. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. The chemical formula for ethane is C2H6. Ethane is a member of the group of hydrocarbons known as alkanes. There are standard names for the alkane group as well as for some of the individual species. The "waste treatment and disposal" sector comprises solid waste disposal on land, wastewater handling, waste incineration and other waste disposal. "Waste treatment and disposal" is the term used in standard names to describe a collection of emission sources. A variable which has this value for the standard_name attribute should be accompanied by a comment attribute which lists the source categories and provides a reference to the categorization scheme, for example, "IPCC (Intergovernmental Panel on Climate Change) source categories 6A, 6B, 6C and 6D as defined in the 2006 IPCC guidelines for national greenhouse gas inventories".</description>
@@ -7456,7 +7483,7 @@
    </entry>
    <entry id="tendency_of_atmosphere_mass_content_of_ketones_due_to_emission_from_savanna_and_grassland_fires">
       <canonical_units>kg m-2 s-1</canonical_units>
-       <description>"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including "content_of_atmosphere_layer" are used. The mass is the total mass of the molecules. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. In organic chemistry, a ketone is a compound with the structure RC(=O)R', where R and R' can be a variety of atoms and groups of atoms. It features a carbonyl group (C=O) bonded to two other carbon atoms. Acetone is the simplest example of a ketone. In standard names "ketones" is the term used to describe the group of ketone species that are represented within a given model. The list of individual species that are included in a quantity having a group chemical standard name can vary between models. Where possible, the data variable should be accompanied by a complete description of the species represented, for example, by using a comment attribute. The "savanna and grassland fires" sector comprises the burning (natural and human-induced) of living or dead vegetation in non-forested areas. It excludes field burning of agricultural residues. "Savanna and grassland fires" is the term used in standard names to describe a collection of emission sources. A variable which has this value for the standard_name attribute should be accompanied by a comment attribute which lists the source categories and provides a reference to the categorization scheme, for example, "IPCC (Intergovernmental Panel on Climate Change) source category 5 as defined in the 2006 IPCC guidelines for national greenhouse gas Inventories".</description>
+      <description>"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including "content_of_atmosphere_layer" are used. The mass is the total mass of the molecules. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. In organic chemistry, a ketone is a compound with the structure RC(=O)R', where R and R' can be a variety of atoms and groups of atoms. It features a carbonyl group (C=O) bonded to two other carbon atoms. Acetone is the simplest example of a ketone. In standard names "ketones" is the term used to describe the group of ketone species that are represented within a given model. The list of individual species that are included in a quantity having a group chemical standard name can vary between models. Where possible, the data variable should be accompanied by a complete description of the species represented, for example, by using a comment attribute. The "savanna and grassland fires" sector comprises the burning (natural and human-induced) of living or dead vegetation in non-forested areas. It excludes field burning of agricultural residues. "Savanna and grassland fires" is the term used in standard names to describe a collection of emission sources. A variable which has this value for the standard_name attribute should be accompanied by a comment attribute which lists the source categories and provides a reference to the categorization scheme, for example, "IPCC (Intergovernmental Panel on Climate Change) source category 5 as defined in the 2006 IPCC guidelines for national greenhouse gas Inventories".</description>
    </entry>
    <entry id="tendency_of_atmosphere_mass_content_of_ketones_due_to_emission_from_solvent_production_and_use">
       <canonical_units>kg m-2 s-1</canonical_units>
@@ -7650,7 +7677,7 @@
       <canonical_units>kg m-2 s-1</canonical_units>
       <description>"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including "content_of_atmosphere_layer" are used. The mass is the total mass of the molecules. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. "nmvoc" means non methane volatile organic compounds. The "land transport" sector includes fuel combustion activities related to road transportation, railways and other transportation.  "Land transport" is the term used in standard names to describe a collection of emission sources. A variable which has this value for the standard_name attribute should be accompanied by a comment attribute which lists the source categories and provides a reference to the categorization scheme, for example, "IPCC (Intergovernmental Panel on Climate Change) source categories 1A3b, 1A3c and 1A3e as defined in the 2006 IPCC guidelines for national greenhouse gas inventories".</description>
    </entry>
-      <entry id="tendency_of_atmosphere_mass_content_of_nmvoc_due_to_emission_from_maritime_transport">
+   <entry id="tendency_of_atmosphere_mass_content_of_nmvoc_due_to_emission_from_maritime_transport">
       <canonical_units>kg m-2 s-1</canonical_units>
       <description>"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including "content_of_atmosphere_layer" are used. The mass is the total mass of the molecules. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. "nmvoc" means non methane volatile organic compounds. The "maritime transport" sector includes fuel combustion activities related to maritime transport. "Maritime transport" is the term used in standard names to describe a collection of emission sources. A variable which has this value for the standard_name attribute should be accompanied by a comment attribute which lists the source categories and provides a reference to the categorization scheme, for example, "IPCC (Intergovernmental Panel on Climate Change) source category 1A3d as defined in the 2006 IPCC guidelines for national greenhouse gas Inventories".</description>
    </entry>
@@ -7660,7 +7687,7 @@
    </entry>
    <entry id="tendency_of_atmosphere_mass_content_of_nmvoc_due_to_emission_from_savanna_and_grassland_fires">
       <canonical_units>kg m-2 s-1</canonical_units>
-       <description>"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including "content_of_atmosphere_layer" are used. The mass is the total mass of the molecules. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. "nmvoc" means non methane volatile organic compounds. The "savanna and grassland fires" sector comprises the burning (natural and human-induced) of living or dead vegetation in non-forested areas. It excludes field burning of agricultural residues. "Savanna and grassland fires" is the term used in standard names to describe a collection of emission sources. A variable which has this value for the standard_name attribute should be accompanied by a comment attribute which lists the source categories and provides a reference to the categorization scheme, for example, "IPCC (Intergovernmental Panel on Climate Change) source category 5 as defined in the 2006 IPCC guidelines for national greenhouse gas inventories".</description>
+      <description>"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including "content_of_atmosphere_layer" are used. The mass is the total mass of the molecules. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. "nmvoc" means non methane volatile organic compounds. The "savanna and grassland fires" sector comprises the burning (natural and human-induced) of living or dead vegetation in non-forested areas. It excludes field burning of agricultural residues. "Savanna and grassland fires" is the term used in standard names to describe a collection of emission sources. A variable which has this value for the standard_name attribute should be accompanied by a comment attribute which lists the source categories and provides a reference to the categorization scheme, for example, "IPCC (Intergovernmental Panel on Climate Change) source category 5 as defined in the 2006 IPCC guidelines for national greenhouse gas inventories".</description>
    </entry>
    <entry id="tendency_of_atmosphere_mass_content_of_nmvoc_due_to_emission_from_solvent_production_and_use">
       <canonical_units>kg m-2 s-1</canonical_units>
@@ -7831,8 +7858,8 @@
       <description>"Content" indicates a quantity per unit area.  The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  "tendency_of_X" means derivative of X with respect to time.  "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. The chemical formula for propane is C3H8. Propane is a member of the group of hydrocarbons known as alkanes.  There are standard names for the alkane group as well as for some of the individual species.</description>
    </entry>
    <entry id="tendency_of_atmosphere_mass_content_of_propane_due_to_emission_from_agricultural_production">
-      <canonical_units>kg m-2 s-1</canonical_units> 
-      <description>"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including "content_of_atmosphere_layer" are used. The mass is the total mass of the molecules. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. The chemical formula for propane is C3H8. Propane is a member of the group of hydrocarbons known as alkanes. There are standard names for the alkane group as well as for some of the individual species. The "agricultural production" sector comprises the agricultural processes of enteric fermentation, manure management, rice cultivation, agricultural soils and other. It may also include any not-classified or "other" combustion, which is commonly included in agriculture-related inventory data. "Agricultural production" is the term used in standard names to describe a collection of emission sources. A variable which has this value for the standard_name attribute should be accompanied by a comment attribute which lists the source categories and provides a reference to the categorization scheme, for example, "IPCC (Intergovernmental Panel on Climate Change) source categories 4A, 4B, 4C, 4D and 4G as defined in the 2006 IPCC guidelines for national greenhouse gas inventories". </description>
+      <canonical_units>kg m-2 s-1</canonical_units>
+      <description>"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including "content_of_atmosphere_layer" are used. The mass is the total mass of the molecules. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. The chemical formula for propane is C3H8. Propane is a member of the group of hydrocarbons known as alkanes. There are standard names for the alkane group as well as for some of the individual species. The "agricultural production" sector comprises the agricultural processes of enteric fermentation, manure management, rice cultivation, agricultural soils and other. It may also include any not-classified or "other" combustion, which is commonly included in agriculture-related inventory data. "Agricultural production" is the term used in standard names to describe a collection of emission sources. A variable which has this value for the standard_name attribute should be accompanied by a comment attribute which lists the source categories and provides a reference to the categorization scheme, for example, "IPCC (Intergovernmental Panel on Climate Change) source categories 4A, 4B, 4C, 4D and 4G as defined in the 2006 IPCC guidelines for national greenhouse gas inventories".</description>
    </entry>
    <entry id="tendency_of_atmosphere_mass_content_of_propane_due_to_emission_from_agricultural_waste_burning">
       <canonical_units>kg m-2 s-1</canonical_units>
@@ -8012,7 +8039,7 @@
    </entry>
    <entry id="tendency_of_atmosphere_mass_content_of_sulfur_dioxide_due_to_emission_from_savanna_and_grassland_fires">
       <canonical_units>kg m-2 s-1</canonical_units>
-       <description>"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including "content_of_atmosphere_layer" are used. The mass is the total mass of the molecules. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. The chemical formula for sulfur dioxide is SO2. The "savanna and grassland fires" sector comprises the burning (natural and human-induced) of living or dead vegetation in non-forested areas. It excludes field burning of agricultural residues. "Savanna and grassland fires" is the term used in standard names to describe a collection of emission sources. A variable which has this value for the standard_name attribute should be accompanied by a comment attribute which lists the source categories and provides a reference to the categorization scheme, for example, "IPCC (Intergovernmental Panel on Climate Change) source category 5 as defined in the 2006 IPCC guidelines for national greenhouse gas inventories".</description>
+      <description>"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including "content_of_atmosphere_layer" are used. The mass is the total mass of the molecules. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth's surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. The chemical formula for sulfur dioxide is SO2. The "savanna and grassland fires" sector comprises the burning (natural and human-induced) of living or dead vegetation in non-forested areas. It excludes field burning of agricultural residues. "Savanna and grassland fires" is the term used in standard names to describe a collection of emission sources. A variable which has this value for the standard_name attribute should be accompanied by a comment attribute which lists the source categories and provides a reference to the categorization scheme, for example, "IPCC (Intergovernmental Panel on Climate Change) source category 5 as defined in the 2006 IPCC guidelines for national greenhouse gas inventories".</description>
    </entry>
    <entry id="tendency_of_atmosphere_mass_content_of_sulfur_dioxide_due_to_emission_from_waste_treatment_and_disposal">
       <canonical_units>kg m-2 s-1</canonical_units>
@@ -8333,19 +8360,19 @@
    <entry id="tendency_of_atmosphere_moles_of_halon1211">
       <canonical_units>mol s-1</canonical_units>
       <description>"tendency_of_X" means derivative of X with respect to time.  The construction "atmosphere_moles_of_X" means the total number of moles of X in the entire atmosphere, i.e. summed over the atmospheric column and over the entire globe. The chemical formula for halon1211 is CBrClF2. The IUPAC name for halon1211 is bromo-chloro-difluoro-methane.</description>
-    </entry>
+   </entry>
    <entry id="tendency_of_atmosphere_moles_of_halon1301">
       <canonical_units>mol s-1</canonical_units>
       <description>"tendency_of_X" means derivative of X with respect to time.  The construction "atmosphere_moles_of_X" means the total number of moles of X in the entire atmosphere, i.e. summed over the atmospheric column and over the entire globe. The chemical formula for halon1301 is CBrF3. The IUPAC name for halon1301 is bromo-trifluoro-methane.</description>
-    </entry>
+   </entry>
    <entry id="tendency_of_atmosphere_moles_of_halon2402">
       <canonical_units>mol s-1</canonical_units>
       <description>"tendency_of_X" means derivative of X with respect to time.  The construction "atmosphere_moles_of_X" means the total number of moles of X in the entire atmosphere, i.e. summed over the atmospheric column and over the entire globe. The chemical formula for halo2402 is C2Br2F4. The IUPAC name for halon2402 is 1,2-dibromo-1,1,2,2-tetrafluoro-ethane.</description>
-    </entry>
+   </entry>
    <entry id="tendency_of_atmosphere_moles_of_hcc140a">
       <canonical_units>mol s-1</canonical_units>
       <description>"tendency_of_X" means derivative of X with respect to time.  The construction "atmosphere_moles_of_X" means the total number of moles of X in the entire atmosphere, i.e. summed over the atmospheric column and over the entire globe. The chemical formula for hcc140a is CH3CCl3. The IUPAC name for hcc140a is 1,1,1-trichloro-ethane.</description>
-    </entry>
+   </entry>
    <entry id="tendency_of_atmosphere_moles_of_hcfc141b">
       <canonical_units>mol s-1</canonical_units>
       <description>"tendency_of_X" means derivative of X with respect to time.  The construction "atmosphere_moles_of_X" means the total number of moles of X in the entire atmosphere, i.e. summed over the atmospheric column and over the entire globe. The chemical formula for HCFC141b is CH3CCl2F. The IUPAC name for HCFC141b is 1,1-dichloro-1-fluoroethane.</description>
@@ -9571,11 +9598,11 @@
    </entry>
    <entry id="upward_x_stress_at_sea_ice_base">
       <canonical_units>Pa</canonical_units>
-      <description>"x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x.  "Upward" indicates a vector component which is positive when directed upward (negative downward).</description>
+      <description>"x" indicates a vector component along the grid x-axis, positive with increasing x. "Upward" indicates a vector component which is positive when directed upward (negative downward).</description>
    </entry>
    <entry id="upward_y_stress_at_sea_ice_base">
       <canonical_units>Pa</canonical_units>
-      <description>"y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y.  "Upward" indicates a vector component which is positive when directed upward (negative downward).</description>
+      <description>"y" indicates a vector component along the grid y-axis, positive with increasing y. "Upward" indicates a vector component which is positive when directed upward (negative downward).</description>
    </entry>
    <entry id="upwelling_longwave_flux_in_air">
       <canonical_units>W m-2</canonical_units>
@@ -9894,19 +9921,19 @@
    </entry>
    <entry id="x_derivative_of_ocean_rigid_lid_pressure">
       <canonical_units>Pa m-1</canonical_units>
-      <description>"component_derivative_of_X " means the derivative of X with respect to distance in the component direction, which may be northward, southward, eastward, westward, x or y. The last two indicate derivatives along the axes of the grid, in the case where they are not true longitude and latitude. x_derivative_of_ocean_rigid_lid_pressure means (d/dx) of the ocean surface pressure, as derived by a rigid lid approximation, keeping the other horizontal coordinate (y, presumably) constant.</description>
+      <description>"component_derivative_of_X" means the derivative of X with respect to distance in the component direction, which may be northward, southward, eastward, westward, x or y. The last two indicate derivatives along the axes of the grid,  whether or not they are true longitude and latitude. x_derivative_of_ocean_rigid_lid_pressure means (d/dx) of the ocean surface pressure, as derived by a rigid lid approximation, keeping the other horizontal coordinate (y, presumably) constant.</description>
    </entry>
    <entry id="x_wind">
       <canonical_units>m s-1</canonical_units>
-      <description>"x" indicates a vector component along the grid x-axis, when this is not true longitude, positive with increasing x. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.)</description>
+      <description>"x" indicates a vector component along the grid x-axis, positive with increasing x. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.)</description>
    </entry>
    <entry id="y_derivative_of_ocean_rigid_lid_pressure">
       <canonical_units>Pa m-1</canonical_units>
-      <description>"component_derivative_of_X " means the derivative of X with respect to distance in the component direction, which may be northward, southward, eastward, westward, x or y. The last two indicate derivatives along the axes of the grid, in the case where they are not true longitude and latitude. y_derivative_of_ocean_rigid_lid_pressure means (d/dy) of the ocean surface pressure, as derived by a rigid lid approximation, keeping the other horizontal coordinate (x, presumably) constant.</description>
+      <description>"component_derivative_of_X" means the derivative of X with respect to distance in the component direction, which may be northward, southward, eastward, westward, x or y. The last two indicate derivatives along the axes of the grid, whether or not they are true longitude and latitude. y_derivative_of_ocean_rigid_lid_pressure means (d/dy) of the ocean surface pressure, as derived by a rigid lid approximation, keeping the other horizontal coordinate (x, presumably) constant.</description>
    </entry>
    <entry id="y_wind">
       <canonical_units>m s-1</canonical_units>
-      <description>"y" indicates a vector component along the grid y-axis, when this is not true latitude, positive with increasing y. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.)</description>
+      <description>"y" indicates a vector component along the grid y-axis, positive with increasing y. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.)</description>
    </entry>
    <entry id="zenith_angle">
       <canonical_units>degree</canonical_units>
