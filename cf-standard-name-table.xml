@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <standard_name_table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cf-standard-name-table-1.1.xsd">
-   <version_number>24</version_number>
-   <last_modified>2013-06-27T21:28:18Z</last_modified>
+   <version_number>25</version_number>
+   <last_modified>2013-07-05T05:40:30Z</last_modified>
    <institution>Program for Climate Model Diagnosis and Intercomparison</institution>
    <contact>webmaster@pcmdi.llnl.gov</contact>
 
@@ -213,7 +213,7 @@
       <canonical_units>degree</canonical_units>
       <grib></grib>
       <amip></amip>
-      <description>Standard names for &quot;platform&quot; describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane or ship. An angle of rotation is reckoned positive in the anticlockwise direction. The &quot;angle_of_rotation_from_solar_azimuth_to_platform_azimuth&quot; is the angle of rotation between the solar azimuth angle and the platform azimuth angle. Solar azimuth angle is the horizontal angle between the line of sight to the sun and a reference direction which is often due north. The angle is measured clockwise. Platform azimuth angle is the horizontal angle between the line of sight to the platform and a reference direction which is often due north. The angle is measured clockwise.</description>
+      <description>Standard names for &quot;platform&quot; describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane, ship or satellite. An angle of rotation is reckoned positive in the anticlockwise direction. The &quot;angle_of_rotation_from_solar_azimuth_to_platform_azimuth&quot; is the angle of rotation between the solar azimuth angle and the platform azimuth angle. Solar azimuth angle is the horizontal angle between the line of sight from the observation point to the sun and a reference direction at the observation point, which is often due north. The angle is measured clockwise, starting from the reference direction. Platform azimuth angle is the horizontal angle between the line of sight from the observation point to the platform and a reference direction at the observation point, which is often due north. The angle is measured clockwise, starting from the reference direction.</description>
    </entry>
   
    <entry id="angstrom_exponent_of_ambient_aerosol_in_air">
@@ -8732,63 +8732,78 @@
       <canonical_units>degree</canonical_units>
       <grib></grib>
       <amip></amip>
-      <description>Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane or ship. The platform course is the direction in which the platform is travelling (not necessarily the same as the direction in which it is pointing, called platform_orientation).</description>
+      <description>Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane, ship or satellite. The platform course is the direction in which the platform is travelling (not necessarily the same as the direction in which it is pointing, called platform_orientation).</description>
+   </entry>
+  
+   <entry id="platform_id">
+      <canonical_units></canonical_units>
+      <grib></grib>
+      <amip></amip>
+      <description>A variable with the standard name of platform_id contains strings which help to identify the platform from which an observation was made. For example, this may be a WMO station identification number.</description>
+   </entry>
+  
+   <entry id="platform_name">
+      <canonical_units></canonical_units>
+      <grib></grib>
+      <amip></amip>
+      <description>A variable with the standard name of platform_name contains strings which help to identify the platform from which an observation was made. For example, this may be a geographical place name such as &quot;South Pole&quot; or the name of a meteorological observing station.
+</description>
    </entry>
   
    <entry id="platform_orientation">
       <canonical_units>degree</canonical_units>
       <grib></grib>
       <amip></amip>
-      <description>Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane or ship. The platform orientation is the direction in which the &quot;front&quot; or longitudinal axis of the platform is pointing (not necessarily the same as the direction in which it is travelling, called platform_course).</description>
+      <description>Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane, ship or satellite. The platform orientation is the direction in which the &quot;front&quot; or longitudinal axis of the platform is pointing (not necessarily the same as the direction in which it is travelling, called platform_course).</description>
    </entry>
   
    <entry id="platform_pitch_angle">
       <canonical_units>degree</canonical_units>
       <grib></grib>
       <amip></amip>
-      <description>Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane or ship.</description>
+      <description>Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane, ship or satellite.</description>
    </entry>
   
    <entry id="platform_pitch_rate">
       <canonical_units>degree s-1</canonical_units>
       <grib></grib>
       <amip></amip>
-      <description>Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane or ship.</description>
+      <description>Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane, ship or satellite.</description>
    </entry>
   
    <entry id="platform_roll_angle">
       <canonical_units>degree</canonical_units>
       <grib></grib>
       <amip></amip>
-      <description>Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane or ship.</description>
+      <description>Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane, ship or satellite.</description>
    </entry>
   
    <entry id="platform_roll_rate">
       <canonical_units>degree s-1</canonical_units>
       <grib></grib>
       <amip></amip>
-      <description>Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane or ship.</description>
+      <description>Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane, ship or satellite.</description>
    </entry>
   
    <entry id="platform_speed_wrt_air">
       <canonical_units>m s-1</canonical_units>
       <grib></grib>
       <amip></amip>
-      <description>&quot;wrt&quot; means with respect to. Speed is the magnitude of velocity. Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane or ship. The platform speed with respect to air is often called the &quot;air speed&quot; of the platform.</description>
+      <description>&quot;wrt&quot; means with respect to. Speed is the magnitude of velocity. Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane, ship or satellite. The platform speed with respect to air is often called the &quot;air speed&quot; of the platform.</description>
    </entry>
   
    <entry id="platform_speed_wrt_ground">
       <canonical_units>m s-1</canonical_units>
       <grib></grib>
       <amip></amip>
-      <description>&quot;wrt&quot; means with respect to. Speed is the magnitude of velocity. Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane or ship. The platform speed with respect to ground is relative to the solid Earth beneath it i.e. the sea floor for a ship. It is often called the &quot;ground speed&quot; of the platform.</description>
+      <description>&quot;wrt&quot; means with respect to. Speed is the magnitude of velocity. Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane, ship or satellite. The platform speed with respect to ground is relative to the solid Earth beneath it, i.e. the sea floor for a ship. It is often called the &quot;ground speed&quot; of the platform.</description>
    </entry>
   
    <entry id="platform_speed_wrt_sea_water">
       <canonical_units>m s-1</canonical_units>
       <grib></grib>
       <amip></amip>
-      <description>&quot;wrt&quot; means with respect to. Speed is the magnitude of velocity. Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane or ship.</description>
+      <description>&quot;wrt&quot; means with respect to. Speed is the magnitude of velocity. Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane, ship or satellite.</description>
    </entry>
   
    <entry id="platform_view_angle">
@@ -8803,21 +8818,21 @@
       <canonical_units>degree</canonical_units>
       <grib></grib>
       <amip></amip>
-      <description>Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane or ship.</description>
+      <description>Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane, ship or satellite.</description>
    </entry>
   
    <entry id="platform_yaw_rate">
       <canonical_units>degree s-1</canonical_units>
       <grib></grib>
       <amip></amip>
-      <description>Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane or ship.</description>
+      <description>Standard names for platform describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane, ship or satellite.</description>
    </entry>
   
    <entry id="platform_zenith_angle">
       <canonical_units>degree</canonical_units>
       <grib></grib>
       <amip></amip>
-      <description>Standard names for &quot;platform&quot; describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane or ship. Platform zenith angle is the the angle between the line of sight to the platform and the local vertical.</description>
+      <description>Standard names for &quot;platform&quot; describe the motion and orientation of the vehicle from which observations are made e.g. aeroplane, ship or satellite. Platform zenith angle is the the angle between the line of sight to the platform and the local zenith at the observation target. This angle is measured starting from directly overhead and its range is from zero (directly overhead the observation target) to 180 degrees (directly below the observation target). Local zenith is a line perpendicular to the Earth&#39;s surface at a given location. &quot;Observation target&quot; means a location on the Earth defined by the sensor performing the observations. A standard name also exists for sensor_zenith_angle. For some viewing geometries the sensor and the platform cannot be assumed to be close enough to neglect the difference in calculated zenith angle.</description>
    </entry>
   
    <entry id="potential_energy_content_of_atmosphere_layer">
@@ -10401,21 +10416,6 @@
       <grib></grib>
       <amip></amip>
       <description>&quot;Upward&quot; indicates a vector component which is positive when directed upward (negative downward).  Ocean transport means transport by all processes, both sea water and sea ice.  &quot;square_of_X&quot; means X*X.</description>
-   </entry>
-  
-   <entry id="station_description">
-      <canonical_units></canonical_units>
-      <grib></grib>
-      <amip></amip>
-      <description>A variable with the standard name of station_description contains strings which help to identify the platform from which an observation was made. For example, this may be a geographical place name such as &quot;South Pole&quot; or the name of a meteorological observing station.
-</description>
-   </entry>
-  
-   <entry id="station_wmo_id">
-      <canonical_units></canonical_units>
-      <grib></grib>
-      <amip></amip>
-      <description>A variable with the standard name of station_wmo_id contains strings which help to identify the platform from which an observation was made. For example, this may be a WMO station identification number.</description>
    </entry>
   
    <entry id="stratiform_cloud_area_fraction">
@@ -18493,6 +18493,14 @@ monitored sensor. This TOA brightness temperature difference is a measure of the
   
   <alias id="downwelling_spectral_radiative_flux_in_sea_water">
     <entry_id>downwelling_radiative_flux_per_unit_wavelength_in_sea_water</entry_id>
+  </alias>
+  
+  <alias id="station_description">
+    <entry_id>platform_name</entry_id>
+  </alias>
+  
+  <alias id="station_wmo_id">
+    <entry_id>platform_id</entry_id>
   </alias>
  
 
