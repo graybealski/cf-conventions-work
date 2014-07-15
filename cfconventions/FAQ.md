@@ -144,7 +144,9 @@ An effort is made to avoid changing specific aspects of previous versions of the
 
 <a name="vertical_coords_positive_attribute"</a>
 ### For vertical coordinates, how does the `positive` attribute work? 
+
 ***more needed here, check ticket 109 too***
+
 If your vertical coordinate is some form of pressure, you won't have to worry about the `positive` attribute -- increasing pressure is always 'down' (closer to the center of the earth). 
 
 If your vertical coordinate is anything else, you must provide a `positive` attribute. This takes a value of 'up' or 'down', indicating whether more positive values are further away from earth center (up), or toward earth center. There is a default direction for most vertical coordinate standard names. For example, altitude has positive direction up, while depth has positive direction down (depth > 0 is below sea level). However, in some data sets (particularly oceanographic ones) depth values take the opposite sign; so if you specify a coordinate standard name of depth, and a positive attribute value of up, the variable will be interpreted as having an inverted depth direction (but a warning will be issued).
@@ -185,9 +187,10 @@ CF section 5.7 has an [example of the first case](http://cfconventions.org/Data/
 CF ticket #117 has an [example of the second case](http://kitt.llnl.gov/trac/ticket/117), drawn from the email above.
 
 ### Point values in intervals
-There is no requirement about how point values should be chosen in intervals, when it's arbitrary (i.e. if the bounds are really what you care about). The mid-point is a sensible choice.
+
 `IN CONSTRUCTION`
 
+There is no requirement about how point values should be chosen in intervals, when it's arbitrary (i.e. if the bounds are really what you care about). The mid-point is a sensible choice.
 
 <a name="dsg"></a>
 ### What are Discrete Sampling Geometries? Do I need to worry about them?
@@ -256,6 +259,7 @@ Yes, there are phrases and patterns that reappear in different names. If you hav
 
 <a name="stdnames_facets"></a>
 ### What can be described in a standard name?
+
 `IN CONSTRUCTION`
 
 For an example, one comprehensive list of the standard name facets, based on the SWEET mapping and subsequent re-analysis for the last item above, is:
@@ -300,10 +304,12 @@ Several other sites represent alternative views of knowledge artifacts of the st
 * NERC Vocabulary Server
 * MMI Ontology Registry and Repository
 * The MARIS Vocabulary Server
-These have been republished from the original XML, and as of 2014 are updated quickly after the original XML is changed. (The NERC Vocabulary Server is updated simultaneously with the publication of the original XML document.)
+
+These have been derived from the original XML, and as of 2014 are updated quickly whenever the original XML is changed. (The NERC Vocabulary Server is updated simultaneously with the publication of the original XML document.)
 
 <a name="stdnames_mappings"></a>
 ### Are there mappings of the standard name terms to other terms?
+
 `To be confirmed and links provided.`
 
 Yes, perhaps most important of these is a mapping within the CF standard names vocabulary. This provides SKOS-based relationships among CF terms, for example broader and narrower relations.
@@ -314,7 +320,7 @@ As of 2014, none of these mappings are not regularly updated with the release  n
 
 <a name="udunits"></a>
 ## Units in CF (UDUNITS)
-,
+
 <a name="udunits_why"></a>
 ### Why does CF use UDUNITS as its standard?
 [UDUNITS](http://www.unidata.ucar.edu/software/udunits/) was specified in the original COARDS convention ("Where possible the units attribute should be formatted as per the recommendations in the Unidata udunits package"), and is a widely used standard with many tools and libraries. The package contains an extensive unit database, which is in XML format and user-extensible (though the extensions will not be compliant with CF).
@@ -387,7 +393,7 @@ The strings corresponding to accepted UDUNITS can be found in the MMI Ontology R
 
 <a name="who_docs"></a>
 ### Who physically maintains the standards documentation?
-`Who maintains the CF standard?`
+`Who DOES update the CF standard?`
 
 Alison Pamment of the [Science and Technologies Facility Council](http://stfc.ac.uk) maintains the CF Standard Names.
 
@@ -396,6 +402,7 @@ A team at Lawrence Livermore National Lab maintains documents and content on the
 <a name="where_docs"></a>
 ### Where is the documentation stored?
 `To be confirmed and links provided.`
+
 The documentation is stored on a GitHub repository, and its format is converted for presentation on the CF web site. 
 
 <a name="access_docs"></a>
