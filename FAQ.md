@@ -181,7 +181,7 @@ CF offers a rich set of options for specifying coordinate axes. Here is a short 
 * Isotherms are described as a data variable of depth with a coordinate of (potential) temperature. 
 * Various other vertical coordinate systems that are dimensionless are explicitly listed in [Appendix D](http://cfconventions.org/Data/cf-convetions/cf-conventions-1.7/build/cf-conventions.html#dimensionless-v-coord), and are specified as described in [Dimensionless Vertical Coordinates section](http://cfconventions.org/Data/cf-convetions/cf-conventions-1.7/build/cf-conventions.html#dimensionless-vertical-coordinate).
 * Swath coordinates (e.g., 'along-track' and 'across-track' values often obtained from platforms following a path, like satellites, planes, and autonomous underwater vehicles) can be expressed as x,y coordinates that are mapped to latitude and longitude.
-```need example for swath, [these](http://kitt.llnl.gov/trac/wiki/SatelliteData) don't seem quite illustrative```
+`need example for swath, [these](http://kitt.llnl.gov/trac/wiki/SatelliteData) don't seem quite illustrative`
 * Degree-day integrals are described as integral_of_air_temperature_deficit|excess_wrt_time with a coordinate of air_temperature_threshold. 
 * Electromagnetic radiation at particular wavelengths uses a coordinate of radiation_wavelength or radiation_frequency.
 
@@ -328,13 +328,12 @@ As of 2014, none of these mappings are regularly updated with the release of new
 ### What tools exist to work with standard names?
 
 In addition to the tools mentioned in the [mappings](#stdnames_mappings), other tools include:
-`To be confirmed and links provided.`
-* NERC Vocabulary Server
-* MMI Ontology Registry and Repository
-* The MARIS Vocabulary Server
+* NERC Vocabulary Server (RDF): http://vocab.nerc.ac.uk/collection/P07/current/
+* MMI Ontology Registry and Repository (RDF/SPARQL): http://mmisw.org/ont/cf/parameter
+* MARIS Vocabulary Server: http://seadatanet.maris2.nl/v_bodc_vocab_v2/search.asp?lib=P07
 * MMI's prototype CF Standard Name search service: http://mmisw.org/experimental/cfsn
 
-These have been derived from the original XML, and as of 2014 are updated quickly whenever the original XML is changed. (The NERC Vocabulary Server is updated simultaneously with the publication of the original XML document.)
+These have been derived from the original XML, and as of this writing (2014) are being updated quickly whenever the original XML is changed. In fact, the NERC Vocabulary Server is updated simultaneously with the publication of the original XML document.
 
 
 <a name="udunits"></a>
