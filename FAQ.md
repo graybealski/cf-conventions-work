@@ -60,6 +60,7 @@ General and specific information about purpose and mechanisms of standard names
 * [Are there common standard name phrases that get re-used?](#stdnames_phrases)
 * [Is there a grammar for standard names?](#stdnames_grammar)
 * [Are there mappings of standard names to other vocabularies?](#stdnames_mappings)
+* [What tools exist to work with standard names?](#stdnames_tools)
 
 ## CF and COARDS Units (UDUNITS)
 
@@ -184,7 +185,7 @@ CF offers a rich set of options for specifying coordinate axes. Here is a short 
 * Degree-day integrals are described as integral_of_air_temperature_deficit|excess_wrt_time with a coordinate of air_temperature_threshold. 
 * Electromagnetic radiation at particular wavelengths uses a coordinate of radiation_wavelength or radiation_frequency.
 
-<a name=coordinate_axis_time"</a>
+<a name="coordinate_axis_time"></a>
 ### How can I describe a file with multiple time coordinates (e.g., run time AND valid or forecast time)?
 There are several ways that multiple time coordinates may be handled; you may wish to review the details in [this list message](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/2006/001008.html). 
  
@@ -214,13 +215,7 @@ Reference [section 3.3 of the CF Convention, Standard Names](http://cfconvention
 ### What is the official list of standard names?
 The CF site contains [the official list of CF standard names](http://cfconventions.org/standard-names). The XML document pointed to from that page is the primary reference, but the HTML and PDF documents are produced automatically from the XML, and should contain the same information.
 
-Several other sites represent alternative views of knowledge artifacts of the standard names. 
-`To be confirmed and links provided.`
-* NERC Vocabulary Server
-* MMI Ontology Registry and Repository
-* The MARIS Vocabulary Server
-
-These have been derived from the original XML, and as of 2014 are updated quickly whenever the original XML is changed. (The NERC Vocabulary Server is updated simultaneously with the publication of the original XML document.)
+Several other sites represent alternative views of knowledge artifacts of the standard names. See the [Standard Names Tools](#stdnames_tools) section for more details.
 
 <a name="stdnames_purpose"></a>
 ### What is the purpose of the standard name?
@@ -328,6 +323,19 @@ Yes, perhaps most important of these is a mapping within the CF standard names v
 The CF standard names also have been mapped to the Global Change Master Directory science keywords, and terms from the SWEET Ontology. 
 
 As of 2014, none of these mappings are regularly updated with the release of new versions of the CF standard names.
+
+<a name="stdnames_tools"></a>
+### What tools exist to work with standard names?
+
+In addition to the tools mentioned in the [mappings](#stdnames_mappings), other tools include:
+`To be confirmed and links provided.`
+* NERC Vocabulary Server
+* MMI Ontology Registry and Repository
+* The MARIS Vocabulary Server
+* MMI's prototype CF Standard Name search service: http://mmisw.org/experimental/cfsn
+
+These have been derived from the original XML, and as of 2014 are updated quickly whenever the original XML is changed. (The NERC Vocabulary Server is updated simultaneously with the publication of the original XML document.)
+
 
 <a name="udunits"></a>
 ## Units in CF (UDUNITS)
