@@ -262,7 +262,9 @@ Yes, there are phrases and patterns that reappear in different names. If you hav
 
 `IN CONSTRUCTION`
 
-For an example, one comprehensive list of the standard name facets, based on the SWEET mapping and subsequent re-analysis for the last item above, is:
+Most of the descriptive terms central to the nature of a substance or concept, including its relation to environmental context, can be described in the CF standard name. During the review process, the community attempts to normalize the terms to achieve the readability and interoperability goals of the vocabulary.
+
+For an example, one list of the existing standard name facets, based on Raskin SWEET mapping and subsequent re-analysis by Graybeal, is as follows:
 
   |  |  |  |
  --- | --- | --- | ---  
@@ -272,20 +274,12 @@ Spectral Band | Energy | Substance | State
 expressed as (Substance or Property) | Fraction | Salinity | Temperature
 Quantity | with respect to | defined by | ratio of
 ratio to | (product) and | Process | Model 
-difference from | difference to | Angle | at (Surface or Condition)
-in (Substance or Realm) | into | out of | 
+difference from | difference to | Angle | 
+at (Surface or Condition) |in (Substance or Realm) | into | out of
 to | from  | reflected by | over
 above | below | accumulated in | Statistics 
 Condition | assuming (Condition) | due to | excluding  
 for  | by | reported on | Artifact State
-
-A grammar for CF standard names has been considered several times (and produced similar lists). Among these efforts:
-* Karl Taylor ([list post](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/2008/052705.html)): A different approach to standard name construction
-* Robert Muetzeifeldt ([list post](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/2010/053657.html)): [A grammar for CF standard names](http://envarml.pbworks.com/w/page/8988920/FrontPage) / 1103 names
-* Jonathan Gregory et al ([list post](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/2010/048064.html)): [standard name grammar/Parsing CF standard names](http://www.met.reading.ac.uk/~jonathan/CF_metadata/14.1/) / 2072 names
-* Rob Raskin ([list post mention](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/2009/047768.html)): [mapped CF standard name list to SWEET-based ontologolical representation](http://sweet.jpl.nasa.gov/ontology/) (Excel) / 2149 names
-* John Graybeal (no list post):  auto-generated pseudo-CF names from CF components (Excel) / 2523 names
-
 
 <a name="stdnames_nonos"></a>
 ### What shouldn't be described in a standard name?
@@ -294,6 +288,18 @@ The standard name should not include:
 * mathematical transformations such as addition, multiplication, and averaging (these are handled by cell_methods)
 * specialized terms not meaningful to a broad scientific audience, unless widely used and agreed on by the community of origin
 * acronyms
+* geospatial location or similar deployment information, for example wind_speed_at_10_meter_platform
+
+In many cases the standard name is qualified by a specific qualifying detail, whose value may change from one set of observations to another. In these cases the definition for the standard name references one or more attributes where the additional qualifying information may be found. In this way the divergence of the standard names is minimized, and interoperability increased.
+
+<a name="stdnames_grammar"></a>
+### Is there a grammar for standard names?
+There is no adopted grammar for the standard names. One has been considered several times (and produced similar lists). Among these efforts:
+* Karl Taylor ([list post](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/2008/052705.html)): A different approach to standard name construction
+* Robert Muetzeifeldt ([list post](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/2010/053657.html)): [A grammar for CF standard names](http://envarml.pbworks.com/w/page/8988920/FrontPage) / 1103 names
+* Jonathan Gregory et al ([list post](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/2010/048064.html)): [standard name grammar/Parsing CF standard names](http://www.met.reading.ac.uk/~jonathan/CF_metadata/14.1/) / 2072 names
+* Rob Raskin ([list post mention](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/2009/047768.html)): [mapped CF standard name list to SWEET-based ontologolical representation](http://sweet.jpl.nasa.gov/ontology/) (Excel) / 2149 names
+* John Graybeal (no list post):  [auto-generated pseudo-CF names from CF components](https://github.com/graybealski/graybealski/blob/master/cfconventions/CF_SWEET_201401_Redacted.xlsx) (Excel) / 2523 names
 
 <a name="stdnames_official"></a>
 ### What is the official list of standard names?
@@ -328,7 +334,7 @@ As of 2014, none of these mappings are not regularly updated with the release  n
 There are some units CF allows that do not appear in UDUNITS. In particular:
 * sverdrup:  measure of volume transport, equivalent to 1 million cubic metres per second (264,000,000 USgal/s). Its symbol is Sv, which conflicts with the SI unit symbol for sievert.
 * PSU: practical salinity unit, a measure of salinity
-* decibel: a logarithmic measure of relative acoustic or energy intensity; symbol dB, db, or dbel
+* decibel: a logarithmic measure of relative acoustic or energy intensity; symbol dB, db, or dbel (the reference level is specified in the standard names that use this canonical unit)
 
 Note that CF depends on UDUNITS as a standard for formatting the units string, but not as a software package.
 
