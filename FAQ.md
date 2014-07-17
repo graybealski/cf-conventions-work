@@ -44,6 +44,7 @@ The detailed and big picture concepts in CF.
 * [My data variables have an unusual coordinate axis, how do I describe it?](coordinate_axis_unusual)
 * [How can I describe a file with multiple time coordinates (e.g., run time AND valid or forecast time)?](coordinate_axis_time)
 * [What are Discrete Sampling Geometries? Do I need to worry about them?](#dsg)
+* [If a variable's time is a time range, what should be used for the time coordinate?](#time_gridpoint)
 
 ## CF Standard Names
 
@@ -195,17 +196,17 @@ CF section 5.7 has an [example of the first case](http://cfconventions.org/Data/
 
 CF ticket #117 has an [example of the second case](http://kitt.llnl.gov/trac/ticket/117), drawn from the email above.
 
-### Point values in intervals
-
-`IN CONSTRUCTION`
-
-There is no requirement about how point values should be chosen in intervals, when it's arbitrary (i.e. if the bounds are really what you care about). The mid-point is a sensible choice.
-
 <a name="dsg"></a>
 ### What are Discrete Sampling Geometries? Do I need to worry about them?
 Discrete Sampling Geometries, addressed in Section 9 of the CF Conventions, were added to offer greater efficiency and clarity for storing a collection of 'features' in a single file. Here we define a feature by example: it can be a point, a time series, a trajectory, a profile, a time series (of) profile(s), or a trajectory (of) profile(s). All of these can be stored in CF-compliant netCDF files, but there was no consistent way to do so and people and programs could not leverage the features in the files.
 
 You don't have to worry about Discrete Sampling Geometries, or DSGs, in order to be CF-compliant. If you have data that correspond to one of these feature types, you can read the the Discrete Sampling Geometry section to learn how to represent those data so that others can fully leverage them. (Note: The `feature_type attribute` is reserved for files that represent a Discrete Sampling Geometry.)
+
+<a name="time_gridpoint"></a>
+### If a variable's time is a time range, what should be used for its time coordinate?
+For example, if you have a rainfall accumulation value for a 24-hour period from 20140716 0600 to 20140717 0600, it's obvious these should be the time bounds, but what time coordinate should be used? The answer calls for judgment, and depends on the data's context. (The time coordinate might be used for plotting, and also for differentiating in time.) If the data are simple observations, using the midpoint is reasonable. (Of course if sensors have a measurement or reporting lag, this should be adjusted for in representing the time of the observation.) But if the calculation is performed in the context of a model, and the accumulated value is used to trigger calculations that are based on values at the end boundary, it makes more sense to use the endpoint as the time coordinate.
+
+The situation is complicated in the case of a climatology, where the total range of times might include discontinuities.  For instance, specifying 19601201 to 19620301 in climatological bounds defines the northern hemisphere winters (DJF) 1960-1961 and 1961-1962. The middle of the bounds is the middle of July 1961, which would be a silly coordinate for plotting a winter statistic. Instead it should be the middle of the *first* time interval to which the climatological statistic applies, making it mid-January 1961. (Or, if the statistic is an accumulation over multiple years, perhaps the middle of the last time interval.)
 
 ## CF Standard Names
 
