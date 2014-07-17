@@ -21,10 +21,13 @@ This section includes general background about the CF conventions.
 
 ## Working with the CF Convention
 
+Learning about and changing the CF convention.
+
 * [Do the CF conventions stand alone?](#standalone)
 * [How do I ask questions about CF?](#ask)
 * [How do I propose a change?](#propose)
 * [What is the process for accepting a change?](#change_process)
+* [What is the process for fixing errors?](#error_correction)
 * [When are changes added to the CF Convention?](#when_updated)
 
 ## Common questions about CF details
@@ -36,7 +39,7 @@ This section includes general background about the CF conventions.
 
 ## Rich technical questions about CF
 
-These questions address big picture concepts included in CF.
+The detailed and big picture concepts in CF.
 
 * [My data variables have an unusual coordinate axis, how do I describe it?](coordinate_axis_unusual)
 * [How can I describe a file with multiple time coordinates (e.g., run time AND valid or forecast time)?](coordinate_axis_time)
@@ -46,15 +49,16 @@ These questions address big picture concepts included in CF.
 
 General and specific information about purpose and mechanisms of standard names
 
+* [What is the official list of standard names?](#stdnames_official)
 * [What is the purpose of the standard name?](#stdnames_purpose)
-* [What are the components of a standard name?](#stdnames_components)
 * [How can I find the standard name I need?](#stdnames_find)
 * [How do I ask for a new standard name?](#stdnames_ask)
+* [What are the components of a standard name?](#stdnames_components)
 * [What is the structure of a good standard name?](#stdnames_structure)
-* [Are there common standard name phrases that get re-used?](#stdnames_phrases)
 * [What can be described in a standard name?](#stdnames_facets)
 * [What shouldn't be described in a standard name?](#stdnames_nonos)
-* [What is the official list of standard names?](#stdnames_official)
+* [Are there common standard name phrases that get re-used?](#stdnames_phrases)
+* [Is there a grammar for standard names?](#stdnames_grammar)
 * [Are there mappings of standard names to other vocabularies?](#stdnames_mappings)
 
 ## CF and COARDS Units (UDUNITS)
@@ -130,6 +134,10 @@ A change to the CF standard itself will often be discussed in more detail on the
 ### What is the process for accepting a change?
 The community discusses requests for changes via the mail list and trac site, and may ask questions or recommend changes. If no one raises objections or concerns about the change (as modified to address any issues) for a specified period of time, it is considered accepted. The moderators of the list typically make a final statement of acceptance once that stage has been reached.
 
+<a name="error_correction"></a>
+### What is the process for fixing errors?
+Errors have a simpler workflow, but still use a community process, as described in the [Rules for Correcting Errors in CF Documents](http://cfconventions.org/errors.html).
+
 <a name="when_updated"></a>
 ### When are changes added to the CF Convention?
 Changes to the CF Convention itself are grouped into major releases. Because the proposed changes are visible to the community pending the final release of the convention, major releases may take as long as a year or more to finalize, but users may choose to follow the proposed new language in advance of the release date.
@@ -202,26 +210,28 @@ You don't have to worry about Discrete Sampling Geometries, or DSGs, in order to
 
 Reference [section 3.3 of the CF Convention, Standard Names](http://cfconventions.org/Data/cf-convetions/cf-conventions-1.6/build/cf-conventions#standard-name)
 
+<a name="stdnames_official"></a>
+### What is the official list of standard names?
+The CF site contains [the official list of CF standard names](http://cfconventions.org/standard-names). The XML document pointed to from that page is the primary reference, but the HTML and PDF documents are produced automatically from the XML, and should contain the same information.
+
+Several other sites represent alternative views of knowledge artifacts of the standard names. 
+`To be confirmed and links provided.`
+* NERC Vocabulary Server
+* MMI Ontology Registry and Repository
+* The MARIS Vocabulary Server
+
+These have been derived from the original XML, and as of 2014 are updated quickly whenever the original XML is changed. (The NERC Vocabulary Server is updated simultaneously with the publication of the original XML document.)
+
 <a name="stdnames_purpose"></a>
 ### What is the purpose of the standard name?
 The purpose of the standard name is to provide a succinct and distinguishing description of a variable, in a way that encourages interoperability. 
 
-The standard name is useful for listing and discussing the contents of a file, the kind of answer an expert might give to the non-expert's question "What is in that file?" This helps users share files across disciplines and over time.
+The standard name is useful for listing and discussing the contents of a file, providing the kind of answer an expert might give to the non-expert's question "What is in that file?" This helps users share files across disciplines and over time.
 
-The standard name also makee it possible for a computer to assess whether a variables is likely to be mathematically comparable to another.  This increases interoperability by enabling automated discovery. Variables with different standard names are presumably not directly comparable. (Variables with different (i.e., incompatible) canonical units are not mathematically comparable, and so are required to have different standard names.) Of course users must review the details of variables, particularly their `long_name` and `source` attributes, to assess whether they are truly interoperable. 
-
+The standard name also makee it possible for a computer to assess whether a variables is likely to be comparable to another, mathematically and semantically.  This increases interoperability by enabling automated discovery. Variables with different standard names are presumably not directly comparable. (Variables with different (i.e., incompatible) canonical units are not mathematically comparable, and so are required to have different standard names.) Of course users must review the details of variables, particularly their `long_name` and `source` attributes, to assess whether they are truly interoperable. 
 
 References:
 * J Gregory, 2008: [what standard names are for](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/2008/052334.html)
-
-<a name="stdnames_components"></a>
-### What are the components of a standard name?
-A CF standard name is a unique text string, which is associated in the CF Standard Names table to other attributes. 
-The text string is made up of two parts: the name (from the CF Standard Names table), and optionally, following the name and one or more blanks, a standard name modifier. The name contains no white space (underscores separate the words, in practice) and identifies the physical quantity. The modifier is used to describe a quantity which is related to another variable with the modified standard name. Details are provided in the convention section on [Standard Name](http://cfconventions.org/1.6.html#standard-name), and examples of modifiers are given in [Appendix C](http://cfconventions.org/1.6.html#standard-name-modifiers). 
-
-Several attributes are required for every standard name: the canonical units, which are *typical* units of the physical quantity, and the description, which clarifies related quantities and meanings of the standard name (but is not strictly a definition per se). Older standard names may not have a description. 
-
-In addition, standard names that come from certain sources may have GRIB parameter code(s) and/or AMIP identifiers; these are not generally required.
 
 <a name="stdnames_find"></a>
 ### How can I find the standard name I need?
@@ -240,6 +250,15 @@ In the email specify the following for each standard name you want to request:
 
 Use other examples from the Standard Names table to model your request, or review past requests in the mail list archives.
 
+<a name="stdnames_components"></a>
+### What are the components of a standard name?
+A CF standard name is a unique text string, which is associated in the CF Standard Names table to other attributes. 
+The text string is made up of two parts: the name (from the CF Standard Names table), and optionally, following the name and one or more blanks, a standard name modifier. The name contains no white space (underscores separate the words, in practice) and identifies the physical quantity. The modifier is used to describe a quantity which is related to another variable with the modified standard name. Details are provided in the convention section on [Standard Name](http://cfconventions.org/1.6.html#standard-name), and examples of modifiers are given in [Appendix C](http://cfconventions.org/1.6.html#standard-name-modifiers). 
+
+Several attributes are required for every standard name: the canonical units, which are *typical* units of the physical quantity, and the description, which clarifies related quantities and meanings of the standard name (but is not strictly a definition per se). Older standard names may not have a description. 
+
+In addition, standard names that come from certain sources may have GRIB parameter code(s) and/or AMIP identifiers; these are not generally required.
+
 <a name="stdnames_structure"></a>
 ### What is the structure of a good standard name?
 A good standard name will typically include several characteristics that, together, characterize your variable. Common characteristics (or *facets*) include (with examples in parentheses):
@@ -253,14 +272,8 @@ The order is not rule-based; the goal is to make the name as clear and natural a
 
 Several structural analyses have been performed of standard names. For more information, check out [What can be described in a standard name?](#stdnames_facets).
 
-<a name="stdnames_phrases"></a>
-### Are there common standard name phrases that get re-used?
-Yes, there are phrases and patterns that reappear in different names. If you have to build a lot of standard names for different types of variables, some existing analyses may be helpful; send a note to the CF-Metadata list for guidance. If you are creating just a few standard names, it will be easiest to send an initial request using your best guess for the names; the list will perform the needed comparison to existing usage.
-
 <a name="stdnames_facets"></a>
 ### What can be described in a standard name?
-
-`IN CONSTRUCTION`
 
 Most of the descriptive terms central to the nature of a substance or concept, including its relation to environmental context, can be described in the CF standard name. During the review process, the community attempts to normalize the terms to achieve the readability and interoperability goals of the vocabulary.
 
@@ -292,26 +305,18 @@ The standard name should not include:
 
 In many cases the standard name is qualified by a specific qualifying detail, whose value may change from one set of observations to another. In these cases the definition for the standard name references one or more attributes where the additional qualifying information may be found. In this way the divergence of the standard names is minimized, and interoperability increased.
 
+<a name="stdnames_phrases"></a>
+### Are there common standard name phrases that get re-used?
+Yes, there are phrases and patterns that reappear in different names. If you have to build a lot of standard names for different types of variables, some existing analyses may be helpful; send a note to the CF-Metadata list for guidance. If you are creating just a few standard names, it will be easiest to send an initial request using your best guess for the names; the list will perform the needed comparison to existing usage.
+
 <a name="stdnames_grammar"></a>
 ### Is there a grammar for standard names?
-There is no adopted grammar for the standard names. One has been considered several times (and produced similar lists). Among these efforts:
+There is no adopted grammar for the standard names. Several investigations into a standard grammar have been made. Among these efforts:
 * Karl Taylor ([list post](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/2008/052705.html)): A different approach to standard name construction
 * Robert Muetzeifeldt ([list post](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/2010/053657.html)): [A grammar for CF standard names](http://envarml.pbworks.com/w/page/8988920/FrontPage) / 1103 names
 * Jonathan Gregory et al ([list post](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/2010/048064.html)): [standard name grammar/Parsing CF standard names](http://www.met.reading.ac.uk/~jonathan/CF_metadata/14.1/) / 2072 names
 * Rob Raskin ([list post mention](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/2009/047768.html)): [mapped CF standard name list to SWEET-based ontologolical representation](http://sweet.jpl.nasa.gov/ontology/) (Excel) / 2149 names
-* John Graybeal (no list post):  [auto-generated pseudo-CF names from CF components](https://github.com/graybealski/graybealski/blob/master/cfconventions/CF_SWEET_201401_Redacted.xlsx) (Excel) / 2523 names
-
-<a name="stdnames_official"></a>
-### What is the official list of standard names?
-The CF site contains [the official list of CF standard names](http://cfconventions.org/standard-names). The XML document pointed to from that page is the primary reference, but the HTML and PDF documents are produced automatically from the XML, and should contain the same information.
-
-Several other sites represent alternative views of knowledge artifacts of the standard names. 
-`To be confirmed and links provided.`
-* NERC Vocabulary Server
-* MMI Ontology Registry and Repository
-* The MARIS Vocabulary Server
-
-These have been derived from the original XML, and as of 2014 are updated quickly whenever the original XML is changed. (The NERC Vocabulary Server is updated simultaneously with the publication of the original XML document.)
+* John Graybeal (no list post):  [auto-generated pseudo-CF names from CF components](https://github.com/graybealski/cf-conventions-work/blob/master/CF_SWEET_201401_Redacted.xlsx) (Excel) / 2523 names
 
 <a name="stdnames_mappings"></a>
 ### Are there mappings of the standard name terms to other terms?
@@ -322,7 +327,7 @@ Yes, perhaps most important of these is a mapping within the CF standard names v
 
 The CF standard names also have been mapped to the Global Change Master Directory science keywords, and terms from the SWEET Ontology. 
 
-As of 2014, none of these mappings are not regularly updated with the release  new versions of the CF standard names.
+As of 2014, none of these mappings are regularly updated with the release of new versions of the CF standard names.
 
 <a name="udunits"></a>
 ## Units in CF (UDUNITS)
@@ -355,32 +360,23 @@ These combinations can be combined as follows in CF:
 
 You can review [basic examples in the UDUNITS documentation](http://www.unidata.ucar.edu/software/udunits/udunits-2.2.16/doc/udunits/udunits2lib.html#Examples).
 
+More complicated examples of units can be found in the CF Standard Names table, which lists the canonical units for each standard name.
+
 UDUNITS prefixes are shown in the following table.
 
-Name | Symbol | Value
----- | ------ | -----
-yotta | Y | 1e24
-zetta | Z | 1e21
-exa | E | 1e18
-peta | P | 1e15
-tera | T | 1e12
-giga | G | 1e9
-mega | M | 1e6
-kilo | k | 1e3 (1000)
-hecto | h | 100
-deka | da | 10
-deci | d | .1
-centi | c | .01
-milli | m | 1e-3 (.001)
-micro | u | 1e-6
-nano | n | 1e-9
-pico | p | 1e-12
-femto | f | 1e-15
-atto | a | 1e-18
-zepto | z | 1e-21
-yocto | y | 1e-24
+Big Name | Symbol | Value | Small Name | Symbol | Value 
+-------- | ------ | ----- | ----------- | ------ | -----
+yotta | Y | 1e24  | yocto | y | 1e-24
+zetta | Z | 1e21  | zepto | z | 1e-21
+exa | E | 1e18 | atto | a | 1e-18
+peta | P | 1e15 | femto | f | 1e-15
+tera | T | 1e12 | pico | p | 1e-12
+giga | G | 1e9 | nano | n | 1e-9
+mega | M | 1e6 | micro | u | 1e-6
+kilo | k | 1e3 (1000) | milli | m | 1e-3 (.001)
+hecto | h | 100 | centi | c | .01
+deka | da | 10  | deci | d | .1
 
-More complicated examples of units can be found in the CF Standard Names table, which lists the canonical units for each standard name.
 
 <a name="udunits_time"></a>
 ### How do units of time work?
@@ -389,11 +385,14 @@ Most time units in CF are specified as being of the format 'time-unit since time
 <a name="udunits_refs"></a>
 ### Are there other good resources about UDUNITS?
 
+The [UDUNITS-2 GitHub repository](https://github.com/Unidata/UDUNITS-2) contains working code and documentation.
+
 The [API-Guide](http://www.unidata.ucar.edu/software/udunits/udunits-2.2.16/doc/udunits/udunits2lib.html) contains some detailed information, but it is oriented entirely for developers. 
 
 A [units conversion page on the ERDDAP site](http://coastwatch.pfeg.noaa.gov/erddap/convert/units.html) lets you try different unit strings, and provides additional context on UDUNITS (and UCUM units) further down the page.
 
-The strings corresponding to accepted UDUNITS can be found in the MMI Ontology Registry and Repository UDUNITS vocabulary entries
+The strings corresponding to accepted UDUNITS can be found in the MMI Ontology Registry and Repository UDUNITS vocabulary entries:
+* 
 
 ## Maintaining the CF standard
 
