@@ -34,15 +34,15 @@ Learning about and changing the CF convention.
 
 * [My file was written using an earlier version of CF. Is it still compliant?](#version_compliance)
 * [For vertical coordinates, how does the `positive` attribute work?](#vertical_coords_positive_attribute)
-* [How can I encode flag values (or other enumerated lists) with CF?](flag_values)
-* [What good is the auxiliary coordinate axis, how is it different from a regular coordinate axis?](auxiliary_coordinate_axis)
+* [How can I encode flag values (or other enumerated lists) with CF?](#flag_values)
+* [What good is the auxiliary coordinate axis, how is it different from a regular coordinate axis?](#auxiliary_coordinate_axis)
 
 ## Rich technical questions about CF
 
 The detailed and big picture concepts in CF.
 
-* [My data variables have an unusual coordinate axis, how do I describe it?](coordinate_axis_unusual)
-* [How can I describe a file with multiple time coordinates (e.g., run time AND valid or forecast time)?](coordinate_axis_time)
+* [My data variables have an unusual coordinate axis, how do I describe it?](#coordinate_axis_unusual)
+* [How can I describe a file with multiple time coordinates (e.g., run time AND valid or forecast time)?](#coordinate_axis_time)
 * [What are Discrete Sampling Geometries? Do I need to worry about them?](#dsg)
 * [If a variable's time is a time range, what should be used for the time coordinate?](#time_gridpoint)
 
