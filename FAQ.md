@@ -34,16 +34,17 @@ Learning about and changing the CF convention.
 
 * [My file was written using an earlier version of CF. Is it still compliant?](#version_compliance)
 * [For vertical coordinates, how does the `positive` attribute work?](#vertical_coords_positive_attribute)
-* [How can I encode flag values (or other enumerated lists) with CF?](flag_values)
-* [What good is the auxiliary coordinate axis, how is it different from a regular coordinate axis?](auxiliary_coordinate_axis)
+* [How can I encode flag values (or other enumerated lists) with CF?](#flag_values)
+* [What good is the auxiliary coordinate axis, how is it different from a regular coordinate axis?](#auxiliary_coordinate_axis)
 
 ## Rich technical questions about CF
 
 The detailed and big picture concepts in CF.
 
-* [My data variables have an unusual coordinate axis, how do I describe it?](coordinate_axis_unusual)
-* [How can I describe a file with multiple time coordinates (e.g., run time AND valid or forecast time)?](coordinate_axis_time)
+* [My data variables have an unusual coordinate axis, how do I describe it?](#coordinate_axis_unusual)
+* [How can I describe a file with multiple time coordinates (e.g., run time AND valid or forecast time)?](#coordinate_axis_time)
 * [What are Discrete Sampling Geometries? Do I need to worry about them?](#dsg)
+* [If a variable's time is a time range, what should be used for the time coordinate?](#time_gridpoint)
 
 ## CF Standard Names
 
@@ -60,6 +61,7 @@ General and specific information about purpose and mechanisms of standard names
 * [Are there common standard name phrases that get re-used?](#stdnames_phrases)
 * [Is there a grammar for standard names?](#stdnames_grammar)
 * [Are there mappings of standard names to other vocabularies?](#stdnames_mappings)
+* [What tools exist to work with standard names?](#stdnames_tools)
 
 ## CF and COARDS Units (UDUNITS)
 
@@ -180,11 +182,11 @@ CF offers a rich set of options for specifying coordinate axes. Here is a short 
 * Isotherms are described as a data variable of depth with a coordinate of (potential) temperature. 
 * Various other vertical coordinate systems that are dimensionless are explicitly listed in [Appendix D](http://cfconventions.org/Data/cf-convetions/cf-conventions-1.7/build/cf-conventions.html#dimensionless-v-coord), and are specified as described in [Dimensionless Vertical Coordinates section](http://cfconventions.org/Data/cf-convetions/cf-conventions-1.7/build/cf-conventions.html#dimensionless-vertical-coordinate).
 * Swath coordinates (e.g., 'along-track' and 'across-track' values often obtained from platforms following a path, like satellites, planes, and autonomous underwater vehicles) can be expressed as x,y coordinates that are mapped to latitude and longitude.
-```need example for swath, [these](http://kitt.llnl.gov/trac/wiki/SatelliteData) don't seem quite illustrative```
+`need example for swath, [these](http://kitt.llnl.gov/trac/wiki/SatelliteData) don't seem quite illustrative`
 * Degree-day integrals are described as integral_of_air_temperature_deficit|excess_wrt_time with a coordinate of air_temperature_threshold. 
 * Electromagnetic radiation at particular wavelengths uses a coordinate of radiation_wavelength or radiation_frequency.
 
-<a name=coordinate_axis_time"</a>
+<a name="coordinate_axis_time"></a>
 ### How can I describe a file with multiple time coordinates (e.g., run time AND valid or forecast time)?
 There are several ways that multiple time coordinates may be handled; you may wish to review the details in [this list message](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/2006/001008.html). 
  
@@ -194,17 +196,19 @@ CF section 5.7 has an [example of the first case](http://cfconventions.org/Data/
 
 CF ticket #117 has an [example of the second case](http://kitt.llnl.gov/trac/ticket/117), drawn from the email above.
 
-### Point values in intervals
-
-`IN CONSTRUCTION`
-
-There is no requirement about how point values should be chosen in intervals, when it's arbitrary (i.e. if the bounds are really what you care about). The mid-point is a sensible choice.
-
 <a name="dsg"></a>
 ### What are Discrete Sampling Geometries? Do I need to worry about them?
 Discrete Sampling Geometries, addressed in Section 9 of the CF Conventions, were added to offer greater efficiency and clarity for storing a collection of 'features' in a single file. Here we define a feature by example: it can be a point, a time series, a trajectory, a profile, a time series (of) profile(s), or a trajectory (of) profile(s). All of these can be stored in CF-compliant netCDF files, but there was no consistent way to do so and people and programs could not leverage the features in the files.
 
 You don't have to worry about Discrete Sampling Geometries, or DSGs, in order to be CF-compliant. If you have data that correspond to one of these feature types, you can read the the Discrete Sampling Geometry section to learn how to represent those data so that others can fully leverage them. (Note: The `feature_type attribute` is reserved for files that represent a Discrete Sampling Geometry.)
+
+<a name="time_gridpoint"></a>
+### If a variable's time is a time range, what should be used for its time coordinate?
+For example, if you have a rainfall accumulation value for a 24-hour period from 20140716 0600 to 20140717 0600, it's obvious these should be the time bounds, but what time coordinate should be used? The answer calls for judgment, and depends on the data's context. (The time coordinate might be used for plotting, and also for differentiating in time.) If the data are simple observations, using the midpoint is reasonable. (Of course if sensors have a measurement or reporting lag, this should be adjusted for in representing the time of the observation.) But if the calculation is performed in the context of a model, and the value is used to trigger calculations based on values at the end boundary, it makes more sense to use the endpoint as the time coordinate.
+
+When there is no basis for setting the time to a particular point in the interval, the majority of posters seem to favor the midpoint.
+
+The situation is complicated in the case of a climatology, where the total range of times might include discontinuities.  For instance, specifying 19601201 to 19620301 in climatological bounds defines the northern hemisphere winters (DJF) 1960-1961 and 1961-1962. The middle of the bounds is the middle of July 1961, which would be a silly coordinate for plotting a winter statistic. Instead it should be the middle of the *first* time interval to which the climatological statistic applies, making it mid-January 1961. (Or, if the statistic is an accumulation over multiple years, perhaps the middle of the last time interval.) Use your good judgment!
 
 ## CF Standard Names
 
@@ -214,13 +218,7 @@ Reference [section 3.3 of the CF Convention, Standard Names](http://cfconvention
 ### What is the official list of standard names?
 The CF site contains [the official list of CF standard names](http://cfconventions.org/standard-names). The XML document pointed to from that page is the primary reference, but the HTML and PDF documents are produced automatically from the XML, and should contain the same information.
 
-Several other sites represent alternative views of knowledge artifacts of the standard names. These are liste 
-`To be confirmed and links provided.`
-* NERC Vocabulary Server
-* MMI Ontology Registry and Repository
-* The MARIS Vocabulary Server
-
-These have been derived from the original XML, and as of 2014 are updated quickly whenever the original XML is changed. (The NERC Vocabulary Server is updated simultaneously with the publication of the original XML document.)
+Several other sites represent alternative views of knowledge artifacts of the standard names. See the [Standard Names Tools](#stdnames_tools) section for more details.
 
 <a name="stdnames_purpose"></a>
 ### What is the purpose of the standard name?
@@ -330,6 +328,18 @@ Yes, perhaps most important of these is a mapping within the CF standard names v
 The CF standard names also have been mapped to the Global Change Master Directory science keywords, and terms from the SWEET Ontology. 
 
 As of 2014, none of these mappings are regularly updated with the release of new versions of the CF standard names.
+
+<a name="stdnames_tools"></a>
+### What tools exist to work with standard names?
+
+In addition to the tools mentioned in the [mappings](#stdnames_mappings), other tools include:
+* NERC Vocabulary Server (RDF): http://vocab.nerc.ac.uk/collection/P07/current/
+* MMI Ontology Registry and Repository (RDF/SPARQL): http://mmisw.org/ont/cf/parameter
+* MARIS Vocabulary Server: http://seadatanet.maris2.nl/v_bodc_vocab_v2/search.asp?lib=P07
+* MMI's prototype CF Standard Name search service: http://mmisw.org/experimental/cfsn
+
+These have been derived from the original XML, and as of this writing (2014) are being updated quickly whenever the original XML is changed. In fact, the NERC Vocabulary Server is updated simultaneously with the publication of the original XML document.
+
 
 <a name="udunits"></a>
 ## Units in CF (UDUNITS)
