@@ -357,7 +357,7 @@ Note that CF depends on UDUNITS as a standard for formatting the units string, b
 
 <a name="canonical"></a>
 ### Must a variable have the same units as its standard name's canonical units?
-If you have a variable with a standard name, its units must be compatible with (convertible to) the canonical units of the standard name, but not exactly the same as the canonical units. For example, a variable with standard name wind_speed could have units miles/hour, since those can be converted to the canonical units of meters/second. 
+Not exactly. If you have a variable with a standard name, its units must be compatible with (that is, convertible to) the canonical units of the standard name; but your variable's units do not have to be *the same* as the canonical units. For example, a variable with standard name wind_speed could have units miles/hour, since those can be converted to the canonical units of meters/second. 
 
 If the units of the variable are not convertible to the standard name's canonical units, this indicates the variable is not really of the same type as the standard name. 
 
@@ -374,25 +374,11 @@ You can review [basic examples in the UDUNITS documentation](http://www.unidata.
 
 More complicated examples of units can be found in the CF Standard Names table, which lists the canonical units for each standard name.
 
-UDUNITS prefixes are shown in the following table.
-
-Big Name | Symbol | Value | Small Name | Symbol | Value 
--------- | ------ | ----- | ----------- | ------ | -----
-yotta | Y | 1e24  | yocto | y | 1e-24
-zetta | Z | 1e21  | zepto | z | 1e-21
-exa | E | 1e18 | atto | a | 1e-18
-peta | P | 1e15 | femto | f | 1e-15
-tera | T | 1e12 | pico | p | 1e-12
-giga | G | 1e9 | nano | n | 1e-9
-mega | M | 1e6 | micro | u | 1e-6
-kilo | k | 1e3 (1000) | milli | m | 1e-3 (.001)
-hecto | h | 100 | centi | c | .01
-deka | da | 10  | deci | d | .1
-
+UDUNITS terms can be found in XML on the [UDUNITS github pages](https://github.com/Unidata/UDUNITS-2), specifically in the files udunits2-*.xml under the [lib path](https://github.com/Unidata/UDUNITS-2/tree/master/lib). The terms can be easily viewed in the MMI ORR repository referenced in the [UDUNITS resources question](#udunits_refs).
 
 <a name="udunits_time"></a>
 ### How do units of time work?
-Most time units in CF are specified as being of the format 'time-unit since timestamp', where time-unit is often seconds, and the most often used timestamp is 1970-01-01T00:00:00. 
+Most time units in CF are specified as being of the format 'time-unit since timestamp', where time-unit is often 'seconds', and the most often used timestamp is '1970-01-01T00:00:00'. 
 
 <a name="udunits_refs"></a>
 ### Are there other good resources about UDUNITS?
@@ -403,8 +389,13 @@ The [API-Guide](http://www.unidata.ucar.edu/software/udunits/udunits-2.2.16/doc/
 
 A [units conversion page on the ERDDAP site](http://coastwatch.pfeg.noaa.gov/erddap/convert/units.html) lets you try different unit strings, and provides additional context on UDUNITS (and UCUM units) further down the page.
 
-The strings corresponding to accepted UDUNITS can be found in the MMI Ontology Registry and Repository UDUNITS vocabulary entries:
-* 
+The strings (names) corresponding to accepted UDUNITS can be found in the UDUNITS vocabulary entries at the MMI Ontology Registry and Repository:
+* http://mmisw.org/ont/mmi/udunits2-prefixes
+* http://mmisw.org/ont/mmi/udunits2-base
+* http://mmisw.org/ont/mmi/udunits2-common
+* http://mmisw.org/ont/mmi/udunits2-accepted
+* http://mmisw.org/ont/mmi/udunits2-derived
+The repository also contains codes for each of the defined units in UDUNITS, which can be used if a unique identifier is needed to refer to a specific UDUNITS unit.
 
 ## Maintaining the CF standard
 
