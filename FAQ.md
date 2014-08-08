@@ -24,6 +24,7 @@ This section includes general background about the CF conventions.
 Learning about and changing the CF convention.
 
 * [Do the CF conventions stand alone?](#standalone)
+* [How do I find previously asked questions about CF?](#research)
 * [How do I ask questions about CF?](#ask)
 * [How do I propose a change?](#propose)
 * [What is the process for accepting a change?](#change_process)
@@ -71,6 +72,7 @@ These questions are not strictly part of CF, but CF depends on this understandin
 * [Why does CF use UDUNITS as its standard?](#udunits_why)
 * [How do I specify units in CF?](#cf_units)
 * [How do units of time work?](#udunits_time)
+* [Are there units in CF that aren't in UDUNITS?](#udunits_missing)
 * [Are there other good resources about UDUNITS?](#udunits_refs)
 
 ## Maintaining the CF standard
@@ -122,9 +124,15 @@ CF does not replicate the information from these other standards and conventions
 
 Aside from those references, a CF principle is to be self-contained. So for example the CF Standard Names attempt to be as general and well-defined as possible, so the reader does not have to access outside sources to understand the terms.
 
+<a name="research"></a>
+### How do I find previously asked questions about CF?
+The two main ways to research CF questions are checking this FAQ, and visiting the [mail archives](http://mailman.cgd.ucar.edu/pipermail/cf-metadata), to see if your question has already been asked. 
+
+You can use the pipermail search window to see when your topic may have been raised over the years. To follow a particular subject thread, go to the year in which the discussion took place, click on the `by thread` sorting option, and choose the first mail with that subject. The `next message` link will then progress through each of the threads in order.
+
 <a name="ask"></a>
 ### How do I ask questions about CF?
-Questions about the CF standard, including its Standard Names list, may be asked at the [CF-Metadata Mailing List](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/). You are encouraged to check this FAQ, and visit the [mail archives](http://mailman.cgd.ucar.edu/pipermail/cf-metadata), to see if your question has already been asked. CF community members usually respond within a day to simple questions, but allow more time if you have an advanced technical topic.
+First, please see whether your question has already been answered (see [question above](#research).  Questions about the CF standard, including its Standard Names list, may be asked at the [CF-Metadata Mailing List](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/). CF community members usually respond within a day to simple questions, but allow more time if you have an advanced technical topic.
 
 <a name="propose"></a>
 ### How do I propose a change?
@@ -378,7 +386,13 @@ UDUNITS terms can be found in XML on the [UDUNITS github pages](https://github.c
 
 <a name="udunits_time"></a>
 ### How do units of time work?
-Most time units in CF are specified as being of the format 'time-unit since timestamp', where time-unit is often 'seconds', and the most often used timestamp is '1970-01-01T00:00:00'. 
+Most time units in CF are specified as being of the form 'time-unit since timestamp', where time-unit is often 'seconds', and the most often used timestamp is '1970-01-01T00:00:00'. The prefixes specified for UDUNITS prefixes may be applied to the time-unit, for example `milliseconds since 1970-01-01T00:00:00` is a valid unit of time.
+
+<a name="udunits_missing"></a>
+### Are there units in CF that aren't in UDUNITS?
+There are two units acceptable to CF that are not in the UDUNITS library: `sverdrup`, and `decibel` or `dB`. These have been requested for inclusion in future versions of the UDUNITS library. (Note that because the logarithmic units like decibels need a reference level in order to support numerical conversions, the reference level is provided as part of the definition of the standard names that have caonical unit of decibel.) 
+
+The unit `PSU` or `practical salinity unit` was used for salinity terms in CF, but is no longer used; rather, this is considered a dimensionless quantity (unit of 1).
 
 <a name="udunits_refs"></a>
 ### Are there other good resources about UDUNITS?
@@ -395,6 +409,7 @@ The strings (names) corresponding to accepted UDUNITS can be found in the UDUNIT
 * http://mmisw.org/ont/mmi/udunits2-common
 * http://mmisw.org/ont/mmi/udunits2-accepted
 * http://mmisw.org/ont/mmi/udunits2-derived
+
 The repository also contains codes for each of the defined units in UDUNITS, which can be used if a unique identifier is needed to refer to a specific UDUNITS unit.
 
 ## Maintaining the CF standard
