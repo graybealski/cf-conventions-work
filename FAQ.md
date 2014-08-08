@@ -356,10 +356,7 @@ These have been derived from the original XML, and as of this writing (2014) are
 ### Why does CF use UDUNITS as its standard?
 [UDUNITS](http://www.unidata.ucar.edu/software/udunits/) was specified in the original COARDS convention ("Where possible the units attribute should be formatted as per the recommendations in the Unidata udunits package"), and is a widely used standard with many tools and libraries. The package contains an extensive unit database, which is in XML format and user-extensible (though the extensions will not be compliant with CF).
 
-There are some units CF allows that do not appear in UDUNITS. In particular:
-* sverdrup:  measure of volume transport, equivalent to 1 million cubic metres per second (264,000,000 USgal/s). Its symbol is Sv, which conflicts with the SI unit symbol for sievert.
-* PSU: practical salinity unit, a measure of salinity
-* decibel: a logarithmic measure of relative acoustic or energy intensity; symbol dB, db, or dbel (the reference level is specified in the standard names that use this canonical unit)
+There are a few units CF allows that do not appear in UDUNITS; see [the related FAQ question](#udunits_missing).
 
 Note that CF depends on UDUNITS as a standard for formatting the units string, but not as a software package.
 
@@ -390,9 +387,14 @@ Most time units in CF are specified as being of the form 'time-unit since timest
 
 <a name="udunits_missing"></a>
 ### Are there units in CF that aren't in UDUNITS?
-There are two units acceptable to CF that are not in the UDUNITS library: `sverdrup`, and `decibel` or `dB`. These have been requested for inclusion in future versions of the UDUNITS library. (Note that because the logarithmic units like decibels need a reference level in order to support numerical conversions, the reference level is provided as part of the definition of the standard names that have caonical unit of decibel.) 
+There are two units acceptable to CF that are not in the UDUNITS library: `sverdrup`, and `decibel` or `dB`. These have been requested for inclusion in future versions of the UDUNITS library.
 
 The unit `PSU` or `practical salinity unit` was used for salinity terms in CF, but is no longer used; rather, this is considered a dimensionless quantity (unit of 1).
+
+Details of the CF units not in UDUNITS:
+* sverdrup:  measure of volume transport, equivalent to 1 million cubic metres per second (264,000,000 USgal/s). Its symbol is Sv, which conflicts with the SI unit symbol for sievert.
+* decibel: a logarithmic measure of relative acoustic or energy intensity; symbol dB, db, or dbel (the reference level, needed for logarithmic units, is specified in the standard names that use this canonical unit)
+
 
 <a name="udunits_refs"></a>
 ### Are there other good resources about UDUNITS?
