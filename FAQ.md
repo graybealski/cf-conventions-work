@@ -63,6 +63,7 @@ General and specific information about purpose and mechanisms of standard names
 * [Is there a grammar for standard names?](#stdnames_grammar)
 * [Are there mappings of standard names to other vocabularies?](#stdnames_mappings)
 * [What tools exist to work with standard names?](#stdnames_tools)
+* [Are standard names ever removed from use? How?](#stdnames_deprecation)
 
 ## CF and COARDS Units (UDUNITS)
 
@@ -96,11 +97,11 @@ The conventions for CF (Climate and Forecast) metadata are designed to promote t
 
 <a name="principles"></a>
 ### What are the principles of the CF conventions?
-Principles of CF include self-describing data (no external tables needed for understanding); metadata equally readable by humans and software; and focusing on existing needs, with minimum redundancy and maximum simplicity.
+Principles of CF include self-describing data (no external tables needed for understanding); metadata equally readable by humans and software; minimum redundancy and maximum simplicity; and a development process focusing on existing needs.
 
 <a name="why"></a>
 ### Why did we want yet another netCDF convention?
-The existing conventions were (and are) typically much less robust for describing the syntax and semantics of netCDF data. The motivation for developing CF was the need for extra features not found in netCDF or COARDS. These include conventions for grid-cell boundaries, horizontal grids other than latitude-longitude, recording common statistical operations, standardised identification of physical quantities, non-spatiotemporal axes, climatological statistics and data compression. 
+The existing conventions were (and are) typically much less robust for describing the syntax and semantics of netCDF data. The motivation for developing CF was the need for extra features not found in netCDF or COARDS. These include conventions for grid-cell boundaries, horizontal grids other than latitude-longitude, recording common statistical operations, standardised identification of physical quantities, non-spatiotemporal axes, climatological statistics and data compression. These needs were driven by the original user community developing the CF conventions,  the climatology and weather forecasting science community.
 
 <a name="who"></a>
 ### Who manages the CF conventions?
@@ -112,7 +113,9 @@ Work began on CF in 2001 and [Version 1.0](http://cfconventions.org/1.0) was rel
 
 <a name="related_conventions"></a>
 ### How does CF relate to other conventions (especially COARDS and netCDF)?
-CF is a convention built on top of the netCDF standard, and it generalizes and extends the netCDF [COARDS conventions](http://ferret.wrc.noaa.gov/noaa_coop/coop_cdf_profile.html). The information in netCDF and COARDS is not duplicated in CF, and CF is designed to be entirely compatible with the COARDS extension: Where COARDS is adequate, CF does not provide an alternative, while all of CF's extensions to COARDS are optional and provide new functionality. 
+CF is a convention built on top of the netCDF standard, and it generalizes and extends the netCDF [COARDS conventions](http://ferret.wrc.noaa.gov/noaa_coop/coop_cdf_profile.html). Whereas the netCDF conventions are designed to be domain-agnostic, the CF conventions were developed specifically to target climatology and weather forecasting domains. Since then, the CF conventions have targeted earth science domains more broadly, and expanded from a focus on models to include observational data.
+
+The information in netCDF and COARDS is not duplicated in CF, and CF is designed to be entirely compatible with the COARDS extension: Where COARDS is adequate, CF does not provide an alternative, while all of CF's extensions to COARDS are optional and provide new functionality. 
 
 ## Working with the CF Convention
 
@@ -250,9 +253,9 @@ If you can't find any matches, send an email to the CF-Metadata list describing 
 You ask for a new standard name by sending an email to the [CF-Metadata Mailing List](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/). You should sign up to the mailing list before sending your email, so you can follow the discussion of your request.
 
 In the email specify the following for each standard name you want to request:
-* its name
-* its description
-* its canonical units
+* its name,
+* its description, and
+* its canonical units.
 
 Use other examples from the Standard Names table to model your request, or review past requests in the mail list archives.
 
@@ -268,15 +271,15 @@ In addition, standard names that come from certain sources may have GRIB paramet
 <a name="stdnames_structure"></a>
 ### What is the structure of a good standard name?
 A good standard name will typically include several characteristics that, together, characterize your variable. Common characteristics (or *facets*) include (with examples in parentheses):
-* medium or realm of the entity (land, or sea_ice)
-* a transformation component (flux, or concentration_of)
-* a substance (sea_water, or carbon)
-* a state, qualifying the substance or process (atomic, or frozen)
-* a quantity being measured
+* medium or realm of the entity (land, or sea_ice),
+* a transformation component (flux, or concentration_of),
+* a substance (sea_water, or carbon),
+* a state, qualifying the substance or process (atomic, or frozen), and
+* a quantity being measured.
 
-The order is not rule-based; the goal is to make the name as clear and natural as possible. So an example standard name with most of the above is mole_concentration_of_atomic_nitrogen_in_air (quantity-transformation-state-substance-medium).
+The order is not rule-based; the goal is to make the name as clear and natural as possible. An example standard name with most of the above is mole_concentration_of_atomic_nitrogen_in_air (quantity-transformation-state-substance-medium).
 
-Several structural analyses have been performed of standard names. For more information, check out [What can be described in a standard name?](#stdnames_facets).
+Several structural analyses have been performed on standard names. For more information, check out [What can be described in a standard name?](#stdnames_facets).
 
 <a name="stdnames_facets"></a>
 ### What can be described in a standard name?
@@ -303,17 +306,17 @@ for  | by | reported on | Artifact State
 <a name="stdnames_nonos"></a>
 ### What shouldn't be described in a standard name?
 The standard name should not include:
-* provenance of the variable, including details of the process by which the value was obtained
-* mathematical transformations such as addition, multiplication, and averaging (these are handled by cell_methods)
-* specialized terms not meaningful to a broad scientific audience, unless widely used and agreed on by the community of origin
-* acronyms
-* geospatial location or similar deployment information, for example wind_speed_at_10_meter_platform
+* provenance of the variable, including details of the process by which the value was obtained,
+* mathematical transformations such as addition, multiplication, and averaging (these are handled by cell_methods),
+* specialized terms not meaningful to a broad scientific audience, unless widely used and agreed on by the community of origin,
+* acronyms, or
+* geospatial location or similar deployment information, for example wind_speed_at_10_meter_platform.
 
-In many cases the standard name is qualified by a specific qualifying detail, whose value may change from one set of observations to another. In these cases the definition for the standard name references one or more attributes where the additional qualifying information may be found. In this way the divergence of the standard names is minimized, and interoperability increased.
+In many cases the standard name is qualified by a specific qualifying detail, whose value may change from one set of observations to another. In these cases the definition for the standard name references one or more attributes or variables where the additional qualifying information may be found. In this way the divergence of the standard names is minimized, and interoperability increased.
 
 <a name="stdnames_phrases"></a>
 ### Are there common standard name phrases that get re-used?
-Yes, there are phrases and patterns that reappear in different names. If you have to build a lot of standard names for different types of variables, some existing analyses may be helpful; send a note to the CF-Metadata list for guidance. If you are creating just a few standard names, it will be easiest to send an initial request using your best guess for the names; the list will perform the needed comparison to existing usage.
+Yes, there are phrases and patterns that reappear in different names. If you have to build a lot of standard names for different types of variables, some existing analyses may be helpful; send a note to the CF-Metadata list for guidance. If you are creating just a few standard names, it will be easiest to send an initial request using your best guess for the names; the list members will perform the needed comparison to existing usage.
 
 <a name="stdnames_grammar"></a>
 ### Is there a grammar for standard names?
@@ -339,7 +342,6 @@ As of 2014, none of these mappings are regularly updated with the release of new
 
 <a name="stdnames_tools"></a>
 ### What tools exist to work with standard names?
-
 In addition to the tools mentioned in the [mappings](#stdnames_mappings), other tools include:
 * NERC Vocabulary Server (RDF): http://vocab.nerc.ac.uk/collection/P07/current/
 * MMI Ontology Registry and Repository (RDF/SPARQL): http://mmisw.org/ont/cf/parameter
@@ -348,6 +350,14 @@ In addition to the tools mentioned in the [mappings](#stdnames_mappings), other 
 
 These have been derived from the original XML, and as of this writing (2014) are being updated quickly whenever the original XML is changed. In fact, the NERC Vocabulary Server is updated simultaneously with the publication of the original XML document.
 
+
+<a name="stdnames_deprecation"></a>
+### Are standard names ever removed from use? How?
+Standard names can be 'deprecated' to indicate they are no longer recommended for use. Existing uses of the name will not cause an error, but new applications should not use a deprecated name. 
+
+Standard names are deprecated when their use becomes ambiguous or confusing, or to say it another way, when they are replaced by one or more terms that are more appropriate (as determined by the standard names community). 
+
+The technical process involving deprecation of a standard name is that it is turned into an alias in the standard names XML file. The alias includes a pointer to the standard name most closely replacing the deprecated name. The alias is not shown in the HTML table of standard names. (As of August 2014, vocabulary servers typically do not show deprecated standard names in their term list, though the NERC Vocabulary Server has a separate list of the deprecated terms.)
 
 <a name="udunits"></a>
 ## Units in CF (UDUNITS)
