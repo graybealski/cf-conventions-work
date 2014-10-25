@@ -46,6 +46,7 @@ The detailed and big picture concepts in CF.
 * [How can I describe a file with multiple time coordinates (e.g., run time AND valid or forecast time)?](#coordinate_axis_time)
 * [What are Discrete Sampling Geometries? Do I need to worry about them?](#dsg)
 * [If a variable's time is a time range, what should be used for the time coordinate?](#time_gridpoint)
+* [My variable depends on the type of surface. How can I specify the surface type?](#surface_type_coordinate)
 
 ## CF Standard Names
 
@@ -221,9 +222,60 @@ When there is no basis for setting the time to a particular point in the interva
 
 The situation is complicated in the case of a climatology, where the total range of times might include discontinuities.  For instance, specifying 19601201 to 19620301 in climatological bounds defines the northern hemisphere winters (DJF) 1960-1961 and 1961-1962. The middle of the bounds is the middle of July 1961, which would be a silly coordinate for plotting a winter statistic. Instead it should be the middle of the *first* time interval to which the climatological statistic applies, making it mid-January 1961. (Or, if the statistic is an accumulation over multiple years, perhaps the middle of the last time interval.) Use your good judgment!
 
+<a name="surface_type_coordinate"></a>
+### My variable depends on the type of surface. How can I specify the surface type?
+CF maintains a vocabulary specifically for specifying surface and area types; it is available on the CF site as the [Area Type Table](http://cfconventions.org/Data/cf-standard-names/docs/area-type-table.html), and can also be accessed as a [controlled vocabulary](http://mmisw.org/ont/cf/areatype).
+
+Terms from this vocabulary may be used as specified in the CF Convention [section 7.3.3 Statistics applying to portions of cells](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions#statistics-applying-portions). However, it is also possible to attach coordinate variables to quantities to describe the data variable, and the area_type is often needed for such a purpose. The area_type can be attached as a dimensioned coordinate variable, or as a scalar coordinate.
+
+If the area_type you need is not in the list, [request a new area_type name](#stdnames_ask) just as you would a standard name (no units required).
+
+This example adds the area_type as a dimensioned coordinate variable:
+```
+x=12;
+y=15;
+time=UNLIMITED;
+ntypes=3;
+maxlen=40;  # holds any current attribute; can be smaller if your names are shorter
+
+lat(y,x);
+lon(y,x);
+
+# This is a coordinate variable of size 3 (ntypes) for surface type (values are in the `data` section):
+surface_type(ntypes,maxlen);
+surface_type:standard_name="area_type";
+
+surface_temperature(time,ntypes,y,x);
+surface_temperature:coordinates = "lat lon surface_type";
+
+data:
+# Values for surface_type are specified here
+surface_type="crops","natural_grasses","trees";
+```
+
+Alternatively, this example specifies a single surface_type for your variable, by using a scalar coordinate variable:
+```
+x=12;
+y=15;
+time=UNLIMITED;
+ntypes=3;
+maxlen=40;
+
+lat(y,x);
+lon(y,x);
+
+# This specifies a scalar coordinate variable for surface_type
+surface_type(maxlen);
+surface_type:standard_name="area_type";
+surface_type="trees";
+
+surface_temperature(time,y,x);
+surface_temperature:coordinates = "lat lon surface_type";
+```
+
 ## CF Standard Names
 
-Reference [section 3.3 of the CF Convention, Standard Names](http://cfconventions.org/Data/cf-convetions/cf-conventions-1.6/build/cf-conventions#standard-name)
+Reference [section 3.3 of the CF Convention, Standard Names](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions#standard-name)
 
 <a name="stdnames_official"></a>
 ### What is the official list of standard names?
