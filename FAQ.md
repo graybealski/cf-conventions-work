@@ -35,6 +35,7 @@ Learning about and changing the CF convention.
 
 * [My file was written using an earlier version of CF. Is it still compliant?](#version_compliance)
 * [For vertical coordinates, how does the `positive` attribute work?](#vertical_coords_positive_attribute)
+* [How (and why) does CF specify directions in standard names?](#specifying_directions)
 * [How can I encode flag values (or other enumerated lists) with CF?](#flag_values)
 * [What good is the auxiliary coordinate axis, how is it different from a regular coordinate axis?](#auxiliary_coordinate_axis)
 
@@ -174,6 +175,37 @@ If your vertical coordinate is some form of pressure, you won't have to worry ab
 If your vertical coordinate is anything else, you must provide a `positive` attribute. This takes a value of 'up' or 'down', indicating whether more positive values are further away from earth center (up), or toward earth center. There is a default direction for most vertical coordinate standard names. For example, altitude has positive direction up, while depth has positive direction down (depth > 0 is below sea level). However, in some data sets (particularly oceanographic ones) depth values take the opposite sign; so if you specify a coordinate standard name of depth, and a positive attribute value of up, the variable will be interpreted as having an inverted depth direction (but a warning will be issued).
 
 Note that the standard name attribute is not required for the vertical coordinate, but the positive attribute is required if the standard name is not pressure.
+
+<a name="specifying_directions"</a>
+### How (and why) does CF specify directions in standard names?
+With the except of a few names that explicitly specify coordinate directions, many CF parameters  have directional components (up/down, east/west, clockwise/counterclockwise, etc.). To indicate the positive direction of the values, CF will include the direction in the standard_name itself. These directional standard names are added only as each direction is requested, so you may see many 'eastward' standard names, but no 'westward' names, for example. Because CF does not want to be prescriptive about how data is filtered, it will generally accept requests to add names 'in the opposite direction'.
+
+While it would be possible to separate the directionality of the values from the standard_name (and put it in a 'direction'-style attribute like `positive` for vertical coordinates), this has been avoided, to simplify compliance and make interpretation of the values easier for the user.
+
+A list of typical directional components of standard names follows. These lists are not complete, but provide illustrations of the most common terms that are used.
+
+Bi-directional components of standard names 
+*  downward, upward
+*  northward
+*  eastward
+*  east_to_x, east_to_y
+*  x, y
+*  incoming, outgoing
+*  emerging
+*  backwards
+
+Some directional components are not necessarily binary, and so may not be specifying a positive direction per se. For example, `horizontal` is indicating a plane rather than a direction, while `bidirectional` indicates a directional mode.
+
+*  horizontal, xy, vertical
+*  bidirectional, omnidirectional
+*  isotropic, meridional
+*  radial
+
+Finally, some components are coupled with the meaning of the standard name.
+
+*  downdraft, updraft
+*  downwelling, upwelling
+*  sinking
 
 <a name="flag_values"</a>
 ### How can I encode flag values (or other enumerated lists) with CF?
