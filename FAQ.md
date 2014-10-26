@@ -1,3 +1,10 @@
+---
+layout: default
+title: Frequently Asked Questions
+---
+
+
+
 # Frequently Asked Questions (FAQ) about the CF Conventions
 
 This page covers many of the most common questions asked about the Climate and Forecast conventions (and Standard Names). If you have a question that isn't on this list, please ask it of the CF-metadata mail list, so that the CF community can respond. We will use that list as the basis for additional content for this set of questions.
@@ -34,7 +41,7 @@ Learning about and changing the CF convention.
 ## Common questions about CF details
 
 * [My file was written using an earlier version of CF. Is it still compliant?](#version_compliance)
-* [For vertical coordinates, how does the `positive` attribute work?](#vertical_coords_positive_attribute)
+* [For vertical coordinates, how does the _positive_ attribute work?](#vertical_coords_positive_attribute)
 * [How (and why) does CF specify directions in standard names?](#specifying_directions)
 * [How can I encode flag values (or other enumerated lists) with CF?](#flag_values)
 * [What good is the auxiliary coordinate axis, how is it different from a regular coordinate axis?](#auxiliary_coordinate_axis)
@@ -165,10 +172,10 @@ The compliance is determined by the version number you define in the `Convention
 
 An effort is made to avoid changing specific aspects of previous versions of the CF Conventions, though occasionally this is not possible.
 
-<a name="vertical_coords_positive_attribute"</a>
-### For vertical coordinates, how does the `positive` attribute work? 
+<a name="vertical_coords_positive_attribute"></a>
+### For vertical coordinates, how does the _positive_ attribute work? 
 
-***more needed here, check ticket 109 too***
+*** more needed here, check ticket 109 too ***
 
 If your vertical coordinate is some form of pressure, you won't have to worry about the `positive` attribute -- increasing pressure is always 'down' (closer to the center of the earth). 
 
@@ -176,7 +183,7 @@ If your vertical coordinate is anything else, you must provide a `positive` attr
 
 Note that the standard name attribute is not required for the vertical coordinate, but the positive attribute is required if the standard name is not pressure.
 
-<a name="specifying_directions"</a>
+<a name="specifying_directions"></a>
 ### How (and why) does CF specify directions in standard names?
 With the except of a few names that explicitly specify coordinate directions, many CF parameters  have directional components (up/down, east/west, clockwise/counterclockwise, etc.). To indicate the positive direction of the values, CF will include the direction in the standard_name itself. These directional standard names are added only as each direction is requested, so you may see many 'eastward' standard names, but no 'westward' names, for example. Because CF does not want to be prescriptive about how data is filtered, it will generally accept requests to add names 'in the opposite direction'.
 
@@ -207,11 +214,11 @@ Finally, some components are coupled with the meaning of the standard name.
 *  downwelling, upwelling
 *  sinking
 
-<a name="flag_values"</a>
+<a name="flag_values"></a>
 ### How can I encode flag values (or other enumerated lists) with CF?
 Often data values in an enumerated list are given as string codes ("UP", "GOOD", "Warning"), yet it is more useful to encode these values as integers. CF's [flag_values mechanism](http://cfconventions.org/Data/cf-convetions/cf-conventions-1.7/build/ch03s05.html) can encode strings in numeric data variables, while defining flag_meanings to map the numbers to the meanings. The `flag_values` and `flag_meanings` attributes (and, if necessary, the `flag_masks` attribute) describe a status flag consisting of mutually exclusive coded values. The `flag_values` attribute is the same type as the variable to which it is attached, and contains a list of the possible flag values. The `flag_meanings` attribute is a string whose value is a blank separated list of descriptive words or phrases, one for each flag value. 
 
-<a name="auxiliary_coordinate_axis"</a>
+<a name="auxiliary_coordinate_axis"></a>
 ### What good is the auxiliary coordinate axis, how is it different from a regular coordinate axis?
 In NetCDF, a `coordinate variable` is a one-dimensional variable with the same name as its dimension [e.g., time(time)], is a numeric data type, has values that are ordered monotonically (always going in one direction), and has no missing values. If you have a variable that contains coordinate values but does not meet these criteria, in CF you can still indicate that it has coordinate values by naming it as an auxiliary coordinate variable. 
 
@@ -219,7 +226,7 @@ The rules for creating and using auxiliary coordinate variables are described in
 
 ## Rich technical questions about CF
 
-<a name="coordinate_axis_unusual"</a>
+<a name="coordinate_axis_unusual"></a>
 ### My data variables have an unusual coordinate axis, how do I describe it?
 CF offers a rich set of options for specifying coordinate axes. Here is a short list of possibilities; others may be appropriate.
 * [Discrete axes](http://cfconventions.org/Data/cf-convetions/cf-conventions-1.7/build/cf-conventions.html#discrete-axis) can have unordered, enumerated axis values, like days of the week or model levels [example](http://cfconventions.org/Data/cf-convetions/cf-conventions-1.7/build/cf-conventions.html#alternative-coordinates).
@@ -263,6 +270,7 @@ Terms from this vocabulary may be used as specified in the CF Convention [sectio
 If the area_type you need is not in the list, [request a new area_type name](#stdnames_ask) just as you would a standard name (no units required).
 
 This example adds the area_type as a dimensioned coordinate variable:
+
 ```
 x=12;
 y=15;
@@ -286,6 +294,7 @@ surface_type="crops","natural_grasses","trees";
 ```
 
 Alternatively, this example specifies a single surface_type for your variable, by using a scalar coordinate variable:
+
 ```
 x=12;
 y=15;
@@ -531,4 +540,3 @@ Yes, the repository is public and can be forked. We request you contact CF via t
 <a name="update_docs"></a>
 ### How can I submit suggested changes?
 Once you understand the procedure by which your suggested changes should be approved (e.g., email approval on the cF-metadata list, a trac ticket, or some other arrangement), you may be able to submit suggested changes as a pull request on the appropriate content. However, as noted above, this must first be agreed with the person overseeing that content.
-
