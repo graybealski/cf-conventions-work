@@ -20,10 +20,9 @@ This section includes general background about the CF conventions.
 
 * [What are the CF conventions, and what do they include?](#what)
 * [What are the principles of the CF conventions?](#principles)
-* [Why did we want yet another netCDF convention?](#why)
 * [Who manages the CF conventions?](#who)
 * [How long has CF been around? Is it mature?](#when_started) 
-* [How does CF relate to other conventions (especially COARDS and netCDF)?](#related_conventions)
+* [How does CF relate to other conventions/specifications (especially COARDS and netCDF)?](#related_conventions)
 
 ## Working with the CF Convention
 
@@ -33,7 +32,7 @@ Learning about and changing the CF convention.
 * [How do I find previously asked questions about CF?](#research)
 * [How do I ask questions about CF?](#ask)
 * [How do I propose a change?](#propose)
-* [What is the process for accepting a change?](#change_process)
+* [What is the process for accepting a change to the CF convention?](#change_process)
 * [What is the process for fixing errors?](#error_correction)
 * [When are changes added to the CF Convention?](#when_updated)
 
@@ -63,6 +62,7 @@ General and specific information about purpose and mechanisms of standard names
 * [What is the purpose of the standard name?](#stdnames_purpose)
 * [How can I find the standard name I need?](#stdnames_find)
 * [How do I ask for a new standard name?](#stdnames_ask)
+* [How detailed should a standard name be?](#stdnames_detail)
 * [What are the components of a standard name?](#stdnames_components)
 * [What is the structure of a good standard name?](#stdnames_structure)
 * [What can be described in a standard name?](#stdnames_facets)
@@ -109,10 +109,6 @@ The conventions for CF (Climate and Forecast) metadata are designed to promote t
 ### What are the principles of the CF conventions?
 Principles of CF include self-describing data (no external tables needed for understanding); metadata equally readable by humans and software; minimum redundancy and maximum simplicity; and a development process focusing on existing needs.
 
-<a class="anchor" id="why"></a>
-### Why did we want yet another netCDF convention?
-The existing conventions were (and are) typically much less robust for describing the syntax and semantics of netCDF data. The motivation for developing CF was the need for extra features not found in netCDF or COARDS. These include conventions for grid-cell boundaries, horizontal grids other than latitude-longitude, recording common statistical operations, standardised identification of physical quantities, non-spatiotemporal axes, climatological statistics and data compression. These needs were driven by the original user community developing the CF conventions,  the climatology and weather forecasting science community.
-
 <a class="anchor" id="who"></a>
 ### Who manages the CF conventions?
 The CF conventions are maintained by volunteers, led by a Governance Panel and assisted by the Conventions Committee and Standard Names Committee. (See [CF Governance](http://cfconventions.org/governance.html).) Changes to the conventions are proposed and settled by the community, using the [CF-Metadata Mailing List](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/) and [CF Metadata Trac site](http://kitt.llnl.gov/trac). Many of the principles of CF operations follow the proposals at these [rules for CF conventions changes](http://cfconventions.org/rules.html).
@@ -122,10 +118,12 @@ The CF conventions are maintained by volunteers, led by a Governance Panel and a
 Work began on CF in 2001 and [Version 1.0](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.0/build/cf-conventions.html) was released in October 2003. Now at Version 1.6, it has been used for tens of thousands of distinct netCDF products, has an active discussion list with hundreds of participants, and is a mature technical specification. Because it is community-supported and community-driven, turnaround on questions and changes can take a little time, but are generally thoroughly considered.
 
 <a class="anchor" id="related_conventions"></a>
-### How does CF relate to other conventions (especially COARDS and netCDF)?
-CF is a convention built on top of the netCDF standard, and it generalizes and extends the netCDF [COARDS conventions](http://ferret.wrc.noaa.gov/noaa_coop/coop_cdf_profile.html). Whereas the netCDF conventions are designed to be domain-agnostic, the CF conventions were developed specifically to target climatology and weather forecasting domains. Since then, the CF conventions have targeted earth science domains more broadly, and expanded from a focus on models to include observational data.
+### How does CF relate to other conventions/specifications (especially COARDS and netCDF)?
+CF is a convention built on top of the netCDF standard, and it generalizes and extends the netCDF [COARDS conventions](http://ferret.wrc.noaa.gov/noaa_coop/coop_cdf_profile.html). Whereas the netCDF specification is designed to be domain-agnostic, the CF conventions were developed specifically to target climatology and weather forecasting domains. Since then, the CF conventions have targeted earth science domains more broadly, and expanded from a focus on models to include observational data.
 
-The information in netCDF and COARDS is not duplicated in CF, and CF is designed to be entirely compatible with the COARDS extension: Where COARDS is adequate, CF does not provide an alternative, while all of CF's extensions to COARDS are optional and provide new functionality. 
+The conventions of netCDF and COARDS are assumed and upheld by CF. Where COARDS is adequate, CF does not provide an alternative, while all of CF's extensions to COARDS are optional and provide new functionality.
+
+A motivation for developing CF was the need for extra features not found in netCDF or COARDS. These include conventions for grid-cell boundaries, horizontal grids other than latitude-longitude, recording common statistical operations, standardised identification of physical quantities, non-spatiotemporal axes, climatological statistics and data compression. These needs were driven by the original user community developing the CF conventions,  the climatology and weather forecasting science community.
 
 <div style="font-style:italic"><a href="#toc" title="Go to table of contents">Up to TOC</a></div>
 
@@ -150,16 +148,16 @@ If you are going to work with CF a lot, you may want to download the yearly file
 
 <a class="anchor" id="ask"></a>
 ### How do I ask questions about CF?
-First, please see whether your question has already been answered (see [question above](#research).  Questions about the CF standard, including its Standard Names list, may be asked at the [CF-Metadata Mailing List](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/). CF community members usually respond within a day to simple questions, but allow more time if you have an advanced technical topic.
+First, please see whether your question has already been answered (see [question above](#research)).  Questions about the CF Convention, including its Standard Names list, may be asked at the [CF-Metadata Mailing List](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/). CF community members usually respond within a day to simple questions, but allow more time if you have an advanced technical topic.
 
 <a class="anchor" id="propose"></a>
 ### How do I propose a change?
 Changes to the CF standard and the Standard Names are generally proposed first on the [CF-Metadata Mailing List](http://mailman.cgd.ucar.edu/pipermail/cf-metadata/). See [How do I ask for a new standard name?](#stdnames_ask) to learn more about changes to the Standard Names list.
 
-A change to the CF standard itself will often be discussed in more detail on the [CF Metadata Trac site](http://kitt.llnl.gov/trac), where the explicit change being requested can be refined.
+A change to the CF standard itself may be brought up on the mailing list, but must be presented and agreed to in detail on the [CF Metadata Trac site](http://kitt.llnl.gov/trac), where the explicit change being requested can be refined.
 
 <a class="anchor" id="change_process"></a>
-### What is the process for accepting a change?
+### What is the process for accepting a change to the CF convention?
 The community discusses requests for changes via the mail list and trac site, and may ask questions or recommend changes. If no one raises objections or concerns about the change (modified as needed to address any issues) for the period of time required for that document, it is considered accepted. The moderators of the list typically make a final statement of acceptance once that stage has been reached.
 
 More detailed information can be found in the [Rules for CF Conventions Changes](http://cfconventions.org/rules.html).
@@ -179,30 +177,31 @@ Changes to the CF Convention itself are grouped into major releases. Because the
 
 <a class="anchor" id="version_compliance"></a>
 ### My file was written using an earlier version of CF. Is it still compliant?
-The compliance is determined by the version number you define in the `Conventions` attribute within each file. If your file complies with the specifications of the CF version in that attribute, it stays in compliance with CF even as newer versions of the CF Conventions are released. As a general rule, tools that work with files following the CF convention should be backward-compatible with earlier versions. 
+The compliance is determined by the version number you define in the `Conventions` attribute within each file. If your file complies with the specifications of the CF version in that attribute, it stays in compliance with CF even as newer versions of the CF Conventions are released. As a general rule, tools that work with files following the CF Convention should support all versions of the convention.
 
-An effort is made to avoid changing specific aspects of previous versions of the CF Conventions, though occasionally this is not possible.
+Where possible, and to date, previously defined elements of the CF Conventions are not invalidated by subsequent versions.
 
 <a class="anchor" id="vertical_coords_positive_attribute"></a>
 ### For vertical coordinates, how does the _positive_ attribute work? 
 
-_This answer may need further development, for example to incorporate concepts from [Trac ticket #109](http://kitt.llnl.gov/trac/ticket/109); feel free to suggest improvements._
-
 If your vertical coordinate is some form of pressure, you won't have to worry about the `positive` attribute -- increasing pressure is always 'down' (closer to the center of the earth). 
 
-If your vertical coordinate is anything else, you must provide a `positive` attribute. This takes a value of 'up' or 'down', indicating whether more positive values are further away from earth center (up), or toward earth center. There is a default direction for most vertical coordinate standard names. For example, altitude has positive direction up, while depth has positive direction down (depth > 0 is below sea level). However, in some data sets (particularly oceanographic ones) depth values take the opposite sign; so if you specify a coordinate standard name of depth, and a positive attribute value of up, the variable will be interpreted as having an inverted depth direction (but a warning will be issued).
+If your vertical coordinate is anything else, you must provide a positive attribute. This takes a value of 'up' or 'down', indicating whether more positive values are further away from earth center (up), or toward earth center. Many standard names which could be used for vertical coordinates state the convention for positive in their definition. For example, height is defined to have positive direction up, while depth has positive direction down (depth > 0 is below sea level). However, in some data sets (particularly oceanographic ones) depth values take the opposite sign. If you specify a coordinate standard name of depth, and a positive attribute value of up, the variable should be interpreted as having an inverted depth direction. However, this is not recommended; it would be better to use a standard name of height instead.
 
-Note that the standard name attribute is not required for the vertical coordinate, but the `positive` attribute is required if the standard name is not 'pressure'.
+Note that a standard name attribute is not required for the vertical coordinate, but the `positive` attribute is required if the standard name is not 'pressure'.
+
+Reference: [Trac ticket #109](http://kitt.llnl.gov/trac/ticket/109) 
 
 <a class="anchor" id="specifying_directions"></a>
 ### How (and why) does CF specify directions in standard names?
-With the except of a few names that explicitly specify coordinate directions, many CF parameters  have directional components (up/down, east/west, clockwise/counterclockwise, etc.). To indicate the positive direction of the values, CF will include the direction in the standard_name itself. These directional standard names are added only as each direction is requested, so you may see many 'eastward' standard names, but no 'westward' names, for example. Because CF does not want to be prescriptive about how data is filtered, it will generally accept requests to add names 'in the opposite direction'.
+There are just a few names in CF that are dedicated to specific coordinate directions. Beyond those special cases, many CF parameters have directional components (up/down, east/west, clockwise/counterclockwise, etc.). To indicate the positive direction of these parameters' values, CF can include the direction in the standard_name attribute for the variable. These directional standard names are added only as each direction is requested, so you may see many 'eastward' standard names, but no 'westward' ones, for example. Because CF does not want to be prescriptive about how data is filtered, it will generally accept requests to add names 'in the opposite direction'.
 
-While it would be possible to separate the directionality of the values from the standard_name (and put it in a 'direction'-style attribute like `positive` for vertical coordinates), this has been avoided, to simplify compliance and make interpretation of the values easier for the user.
+While it would be possible to separate the directionality of the values from the standard_name (and put it in a 'direction'-style attribute like `positive` for vertical coordinates), this has been avoided, both to simplify compliance and to make interpretation of the values easier for the user.
 
 A list of typical directional components of standard names follows. These lists are not complete, but provide illustrations of the most common terms that are used.
 
-Bi-directional components of standard names 
+Components of standard names that are implicitly signed (note that often there is no standard name for the opposing direction):
+
 *  downward, upward
 *  northward
 *  eastward
@@ -211,19 +210,17 @@ Bi-directional components of standard names
 *  incoming, outgoing
 *  emerging
 *  backwards
-
-Some directional components are not necessarily binary, and so may not be specifying a positive direction per se. For example, `horizontal` is indicating a plane rather than a direction, while `bidirectional` indicates a directional mode.
-
-*  horizontal, xy, vertical
-*  bidirectional, omnidirectional
-*  isotropic, meridional
-*  radial
-
-Finally, some components are coupled with the meaning of the standard name.
-
 *  downdraft, updraft
 *  downwelling, upwelling
 *  sinking
+
+Some directional components are not necessarily signed, and so may not be specifying a positive direction per se. For example, `horizontal` is indicating a plane rather than a direction, while `bidirectional` indicates a directional mode.
+
+*  horizontal, xy, vertical
+*  bidirectional, omnidirectional, isotropic
+*  meridional
+*  radial
+
 
 <a class="anchor" id="flag_values"></a>
 ### How can I encode flag values (or other enumerated lists) with CF?
@@ -242,15 +239,18 @@ The rules for creating and using auxiliary coordinate variables are described in
 
 <a class="anchor" id="coordinate_axis_unusual"></a>
 ### My data variables have an unusual coordinate axis, how do I describe it?
+CF allows coordinate variables to be used for any quantity that you might regard as an independent variable on which your data variable depends. 
+
 CF offers a rich set of options for specifying coordinate axes. Here is a short list of possibilities; others may be appropriate.
 
 * [Discrete axes](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/cf-conventions.html#discrete-axis) can have unordered, enumerated axis values, like days of the week or model levels [example](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/cf-conventions.html#alternative-coordinates).
 * Isotherms are described as a data variable of depth with a coordinate of (potential) temperature. 
 * Various other vertical coordinate systems that are dimensionless are explicitly listed in [Appendix D](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/cf-conventions.html#dimensionless-v-coord), and are specified as described in [Dimensionless Vertical Coordinates section](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/cf-conventions.html#dimensionless-vertical-coordinate).
 * Swath coordinates (e.g., 'along-track' and 'across-track' values often obtained from platforms following a path, like satellites, planes, and autonomous underwater vehicles) can be expressed as x,y coordinates that are mapped to latitude and longitude.
-`need example for swath, [these](http://kitt.llnl.gov/trac/wiki/SatelliteData) don't seem quite illustrative`
 * Degree-day integrals are described as integral_of_air_temperature_deficit|excess_wrt_time with a coordinate of air_temperature_threshold. 
 * Electromagnetic radiation at particular wavelengths uses a coordinate of radiation_wavelength or radiation_frequency.
+
+*Suggestion for improvement: add a good example for swath coordinates. The ones in http://kitt.llnl.gov/trac/wiki/SatelliteData don't seem quite illustrative.*
 
 <a class="anchor" id="coordinate_axis_time"></a>
 ### How can I describe a file with multiple time coordinates (e.g., run time AND valid or forecast time)?
@@ -280,7 +280,7 @@ The situation is complicated in the case of a climatology, where the total range
 ### My variable depends on the type of surface. How can I specify the surface type?
 CF maintains a vocabulary specifically for specifying surface and area types; it is available on the CF site as the [Area Type Table](http://cfconventions.org/Data/cf-standard-names/docs/area-type-table.html), and can also be accessed as a [controlled vocabulary](http://mmisw.org/ont/cf/areatype).
 
-Terms from this vocabulary may be used as specified in the CF Convention [section 7.3.3 Statistics applying to portions of cells](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions#statistics-applying-portions). However, it is also possible to attach coordinate variables to quantities to describe the data variable, and the area_type is often needed for such a purpose. The area_type can be attached as a dimensioned coordinate variable, or as a scalar coordinate.
+Terms from this vocabulary may be used as specified in the CF Convention [section 7.3.3 Statistics applying to portions of cells](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions#statistics-applying-portions). However, it is also possible to describe a data variable by using a named quantity as a coordinate variable, and the area_type is often needed for such a purpose. The area_type can be attached as a dimensioned coordinate variable, or as a scalar coordinate.
 
 If the area_type you need is not in the list, [request a new area_type name](#stdnames_ask) just as you would a standard name (no units required).
 
@@ -355,7 +355,7 @@ References:
 
 <a class="anchor" id="stdnames_find"></a>
 ### How can I find the standard name I need?
-To find standard names that describe your data, open up the latest Standard Name table (as HTML, XML, or PDF) and search through it for words typically used for your data. (Because standard names contain no blanks, you may want to search for one word at a time, or even part of a word, rather than a full phrase like "air temperature".) If you can not find any matches, you can browse the table to see the kinds of names that exist -- names strongly lean toward environmental modeling and observation data, especially in atmosphere and ocean science.
+To find standard names that describe your data, open up the latest [Standard Name table](http://cfconventions.org/standard-names.html) (as HTML or XML) and search through it for words typically used for your data. (Because standard names contain no blanks, you may want to search for one word at a time, or even part of a word, rather than a full phrase like "air temperature".) If you can not find any matches, you can browse the table to see the kinds of names that exist -- names strongly lean toward environmental modeling and observation data, especially in atmosphere and ocean science.
 
 If you can't find any matches, send an email to the CF-Metadata list describing your variables. (See the [question on asking for a new standard name](#stdnames_ask).)
 
@@ -371,6 +371,12 @@ In the email specify the following for each standard name you want to request:
 
 Use other examples from the Standard Names table to model your request, or review past requests in the mail list archives.
 
+<a class="anchor" id="stdnames_detail"></a>
+### How detailed should a standard name be?
+This depends on the application -- there can be standard names for very narrowly defined quantities, and standard names for broad concepts. The appropriate choice depends on which distinctions need to be made to decide whether another quantity is comparable to the one being defined.
+
+Of course, this broad guideline could result in extraordinarily detailed standard names that will rarely be useful to others. Because the goal of standard names is to encourage interoperability, there are [several qualifier types that are actively discouraged](#stdnames_nonos). 
+
 <a class="anchor" id="stdnames_components"></a>
 ### What are the components of a standard name?
 A CF standard name is a unique text string, which is associated in the CF Standard Names table to other attributes. 
@@ -382,7 +388,7 @@ In addition, standard names that come from certain sources may have GRIB paramet
 
 <a class="anchor" id="stdnames_structure"></a>
 ### What is the structure of a good standard name?
-A good standard name will typically include several characteristics that, together, characterize your variable. Common characteristics (or *facets*) include (with examples in parentheses):
+A good standard name will typically include several characteristics that, together, characterize your variable. Common characteristics, or *facets*, include (with examples in parentheses):
 
 * medium or realm of the entity (land, or sea_ice),
 * a transformation component (flux, or concentration_of),
@@ -421,12 +427,12 @@ for  | by | reported on | Artifact State
 The standard name should not include:
 
 * provenance of the variable, including details of the process by which the value was obtained,
-* mathematical transformations such as addition, multiplication, and averaging (these are handled by cell_methods),
+* mathematical transformations such as addition, multiplication, and averaging (these are handled by [cell_methods](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html#cell-methods)),
 * specialized terms not meaningful to a broad scientific audience, unless widely used and agreed on by the community of origin,
 * acronyms, or
 * geospatial location or similar deployment information, for example wind_speed_at_10_meter_platform.
 
-In many cases the standard name is qualified by a specific qualifying detail, whose value may change from one set of observations to another. In these cases the definition for the standard name references one or more attributes or variables where the additional qualifying information may be found. In this way the divergence of the standard names is minimized, and interoperability increased.
+In many cases the standard name is qualified by a specific detail, for example area_type, whose value may change from one set of observations to another or one observation to another. In these cases the definition for the standard name references one or more attributes or variables where the additional qualifying information may be found. ([Standard name *modifiers*](http://cfconventions.org/1.6.html#standard-name-modifiers) and [cell_methods](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html#cell-methods) may also be used for this purpose.) In this way the divergence of the standard names is minimized, and interoperability increased.
 
 <a class="anchor" id="stdnames_phrases"></a>
 ### Are there common standard name phrases that get re-used?
@@ -490,7 +496,7 @@ Note that CF depends on UDUNITS as a standard for formatting the units string, b
 
 <a class="anchor" id="canonical"></a>
 ### Must a variable have the same units as its standard name's canonical units?
-Not exactly. If you have a variable with a standard name, its units must be compatible with (that is, convertible to) the canonical units of the standard name; but your variable's units do not have to be *the same* as the canonical units. For example, a variable with standard name wind_speed could have units miles/hour, since those can be converted to the canonical units of meters/second. 
+No, not exactly. If you have a variable with a standard name, its units must be *compatible with* (that is, convertible to) the canonical units of the standard name; but your variable's units do not have to be *the same* as the canonical units. For example, a variable with standard name wind_speed could have units miles/hour, since those can be converted to the canonical units of meters/second. 
 
 If the units of the variable are not convertible to the standard name's canonical units, this indicates the variable is not really of the same type as the standard name. 
 
